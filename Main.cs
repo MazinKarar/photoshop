@@ -16,5 +16,10 @@ namespace Purchase
             InitializeComponent();
         }
 
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //test mazin karar
+        }
+
     }
 }

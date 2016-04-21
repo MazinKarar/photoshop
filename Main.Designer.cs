@@ -252,6 +252,7 @@
             this.barButtonItem8.Id = 9;
             this.barButtonItem8.LargeGlyph = global::Purchase.Properties.Resources.usergroup_32x32;
             this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // barButtonItem9
             // 
@@ -659,18 +660,18 @@
             // 
             // backstageViewClientControl1
             // 
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(204, 0);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(216, 0);
             this.backstageViewClientControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(1172, 637);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(1146, 628);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewClientControl2
             // 
-            this.backstageViewClientControl2.Location = new System.Drawing.Point(204, 0);
+            this.backstageViewClientControl2.Location = new System.Drawing.Point(216, 0);
             this.backstageViewClientControl2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(1172, 637);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(1146, 628);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // backstageViewClientControl3
@@ -683,26 +684,26 @@
             // 
             // backstageViewClientControl4
             // 
-            this.backstageViewClientControl4.Location = new System.Drawing.Point(204, 0);
+            this.backstageViewClientControl4.Location = new System.Drawing.Point(216, 0);
             this.backstageViewClientControl4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(1172, 637);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(1146, 628);
             this.backstageViewClientControl4.TabIndex = 4;
             // 
             // backstageViewClientControl5
             // 
-            this.backstageViewClientControl5.Location = new System.Drawing.Point(204, 0);
+            this.backstageViewClientControl5.Location = new System.Drawing.Point(216, 0);
             this.backstageViewClientControl5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl5.Name = "backstageViewClientControl5";
-            this.backstageViewClientControl5.Size = new System.Drawing.Size(1172, 637);
+            this.backstageViewClientControl5.Size = new System.Drawing.Size(1146, 628);
             this.backstageViewClientControl5.TabIndex = 5;
             // 
             // backstageViewClientControl6
             // 
-            this.backstageViewClientControl6.Location = new System.Drawing.Point(204, 0);
+            this.backstageViewClientControl6.Location = new System.Drawing.Point(216, 0);
             this.backstageViewClientControl6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl6.Name = "backstageViewClientControl6";
-            this.backstageViewClientControl6.Size = new System.Drawing.Size(1172, 637);
+            this.backstageViewClientControl6.Size = new System.Drawing.Size(1146, 628);
             this.backstageViewClientControl6.TabIndex = 6;
             // 
             // backstageViewTabItem1
