@@ -20,7 +20,7 @@ namespace Purchase
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new MainAr());
+            Application.Run(new MainAr());//test
         }
     }
 }
