@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.Startup), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.UserName = new DevExpress.XtraEditors.TextEdit();
@@ -48,10 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 500;
             // 
             // labelControl1
             // 
@@ -155,10 +150,6 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(Purchase.User);
-            // 
             // Login
             // 
             this.AcceptButton = this.simpleButton1;
@@ -186,6 +177,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تسجيل دخول";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Passoword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.languageCombo.Properties)).EndInit();

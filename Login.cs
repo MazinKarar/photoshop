@@ -67,6 +67,11 @@ namespace Purchase
             }
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            //ayman test
+        }
+
     
     }
 }
