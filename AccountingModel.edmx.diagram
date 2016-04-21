@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a82f538ad87748e5869e45c2a8deeae6" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="AccountingModel.accountmain" Width="1.5" PointX="3.75" PointY="11" />
+        <EntityTypeShape EntityType="AccountingModel.Accounts_Balance" Width="1.5" PointX="5.75" PointY="11" />
+        <EntityTypeShape EntityType="AccountingModel.AreasSet" Width="1.5" PointX="5.75" PointY="2" />
+        <EntityTypeShape EntityType="AccountingModel.BankBranch" Width="1.5" PointX="7.75" PointY="2" />
+        <EntityTypeShape EntityType="AccountingModel.BankSet" Width="1.5" PointX="10.75" PointY="8" />
+        <EntityTypeShape EntityType="AccountingModel.Branch" Width="1.5" PointX="12.75" PointY="7" />
+        <EntityTypeShape EntityType="AccountingModel.CompanyInfo" Width="1.5" PointX="5.75" PointY="14" />
+        <EntityTypeShape EntityType="AccountingModel.CurrencySet" Width="1.5" PointX="13.75" PointY="11" />
+        <EntityTypeShape EntityType="AccountingModel.debenturedetail" Width="1.5" PointX="11" PointY="10.25" />
+        <EntityTypeShape EntityType="AccountingModel.debenture" Width="1.5" PointX="8.75" PointY="10.75" />
+        <EntityTypeShape EntityType="AccountingModel.Group" Width="1.5" PointX="10.75" PointY="15" />
+        <EntityTypeShape EntityType="AccountingModel.InvoiceDetail" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="AccountingModel.Invoice" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AccountingModel.ItemGroup" Width="1.5" PointX="0.75" PointY="6.125" />
+        <EntityTypeShape EntityType="AccountingModel.ItemMeasurementUnit" Width="1.5" PointX="8.25" PointY="5.75" />
+        <EntityTypeShape EntityType="AccountingModel.Item" Width="1.5" PointX="6" PointY="4.75" />
+        <EntityTypeShape EntityType="AccountingModel.PaymentType" Width="1.5" PointX="13.75" PointY="14" />
+        <EntityTypeShape EntityType="AccountingModel.PermissionControl" Width="1.5" PointX="14.75" PointY="7" />
+        <EntityTypeShape EntityType="AccountingModel.SaleInvoiceDetail" Width="1.5" PointX="13" PointY="3.125" />
+        <EntityTypeShape EntityType="AccountingModel.SalesInvoice" Width="1.5" PointX="10.75" PointY="2.25" />
+        <EntityTypeShape EntityType="AccountingModel.SupplierSet" Width="1.5" PointX="1.5" PointY="10.625" />
+        <EntityTypeShape EntityType="AccountingModel.TreeAccount" Width="1.5" PointX="8.75" PointY="14.375" />
+        <EntityTypeShape EntityType="AccountingModel.Tree" Width="1.5" PointX="15.75" PointY="2" />
+        <EntityTypeShape EntityType="AccountingModel.Trees1" Width="1.5" PointX="0.75" PointY="17" />
+        <EntityTypeShape EntityType="AccountingModel.User" Width="1.5" PointX="15.75" PointY="11" />
+        <EntityTypeShape EntityType="AccountingModel.VendorSet" Width="1.5" PointX="12.75" PointY="17" />
+        <EntityTypeShape EntityType="AccountingModel.Wharehous" Width="1.5" PointX="3.75" PointY="1.75" />
+        <EntityTypeShape EntityType="AccountingModel.accountmain1" Width="1.5" PointX="15.75" PointY="15" />
+        <AssociationConnector Association="AccountingModel.FK_debenturedetails_debentures" />
+        <AssociationConnector Association="AccountingModel.FK_debenturedetails_debentures1" />
+        <AssociationConnector Association="AccountingModel.FK_dbo_InvoiceDetails_dbo_Categories_CategoryId" />
+        <AssociationConnector Association="AccountingModel.FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId" />
+        <AssociationConnector Association="AccountingModel.FK_dbo_InvoiceDetails_dbo_Products_ProductId" />
+        <AssociationConnector Association="AccountingModel.FK_dbo_Invoices_dbo_Suppliers_SupplierId" />
+        <AssociationConnector Association="AccountingModel.FK_ItemGroupsItems" />
+        <AssociationConnector Association="AccountingModel.FK_ItemMeasurementUnits_Items" />
+        <AssociationConnector Association="AccountingModel.FK_WharehouseItems" />
+        <AssociationConnector Association="AccountingModel.FK_SaleInvoiceDetails_SalesInvoices" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

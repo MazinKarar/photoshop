@@ -1,0 +1,1737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AccountingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="accountmain">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="dt" Type="datetime" />
+          <Property Name="accountid" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="custid" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="debit" Type="money" />
+          <Property Name="credit" Type="money" />
+          <Property Name="balance" Type="money" />
+          <Property Name="detail" Type="nvarchar" MaxLength="50" />
+          <Property Name="dealing" Type="nvarchar" MaxLength="50" />
+          <Property Name="renum" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="idunique" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="active" Type="bit" />
+          <Property Name="isdeleted" Type="bit" />
+          <Property Name="ship" Type="nvarchar" MaxLength="350" />
+          <Property Name="en_dealing" Type="nvarchar" MaxLength="50" />
+          <Property Name="deal" Type="nvarchar" MaxLength="50" />
+          <Property Name="Myuser" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsUser" Type="bit" />
+          <Property Name="CloseRegnum" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cpu" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="currency" Type="nvarchar" MaxLength="50" />
+          <Property Name="currencyval" Type="float" />
+          <Property Name="BranchID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="CostID" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="accountmains">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="dt" Type="datetime" />
+          <Property Name="accountid" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="custid" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="debit" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="credit" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="balance" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="detail" Type="nvarchar" MaxLength="50" />
+          <Property Name="dealing" Type="nvarchar" MaxLength="50" />
+          <Property Name="renum" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="idunique" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="active" Type="bit" />
+          <Property Name="isdeleted" Type="bit" />
+          <Property Name="ship" Type="nvarchar" MaxLength="350" />
+          <Property Name="en_dealing" Type="nvarchar" MaxLength="50" />
+          <Property Name="deal" Type="nvarchar" MaxLength="50" />
+          <Property Name="Myuser" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsUser" Type="bit" />
+          <Property Name="CloseRegnum" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Cpu" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="currency" Type="nvarchar" MaxLength="50" />
+          <Property Name="currencyval" Type="float" />
+          <Property Name="BranchID" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="CostID" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Accounts_Balance">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="branchid" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="accountid" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="debit" Type="float" />
+          <Property Name="credit" Type="float" />
+          <Property Name="balance" Type="float" />
+        </EntityType>
+        <EntityType Name="AreasSets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AreaName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BankBranches">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="IdBank" Type="varchar" MaxLength="50" />
+          <Property Name="BranchName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="BankSets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BankName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Branches">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BStatus" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BPhone1" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BPhone2" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BAddress" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyInfoes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="phone1" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="phone2" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="WebSite" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CurrencySets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurrencyName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="debenturedetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="DebentureID" Type="int" Nullable="false" />
+          <Property Name="AccountID" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="Notes" Type="varchar(max)" />
+          <Property Name="ChequeID" Type="int" />
+          <Property Name="Narration" Type="int" />
+          <Property Name="ValueDate" Type="datetime" />
+          <Property Name="Payed" Type="int" />
+          <Property Name="CenterID" Type="int" />
+          <Property Name="GridNo" Type="int" />
+          <Property Name="BranchID" Type="int" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="debentures">
+          <Key>
+            <PropertyRef Name="DebentureID" />
+          </Key>
+          <Property Name="DebentureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DebentureNo" Type="varchar" MaxLength="100" />
+          <Property Name="DebentureDate" Type="datetime" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="MDate" Type="datetime" />
+          <Property Name="Sequence" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="remarks" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InvoiceDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="float" Nullable="false" />
+          <Property Name="UnitQuantity" Type="bigint" Nullable="false" />
+          <Property Name="cuid" Type="bigint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="duid" Type="bigint" />
+          <Property Name="DeleteTime" Type="datetime" />
+          <Property Name="State" Type="int" />
+        </EntityType>
+        <EntityType Name="Invoices">
+          <Key>
+            <PropertyRef Name="InvoiceId" />
+          </Key>
+          <Property Name="InvoiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceDate" Type="datetime" Nullable="false" />
+          <Property Name="SupplierId" Type="int" Nullable="false" />
+          <Property Name="Total" Type="float" />
+          <Property Name="WorkflowState" Type="bigint" Nullable="false" />
+          <Property Name="cuid" Type="bigint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="duid" Type="bigint" />
+          <Property Name="DeleteTime" Type="datetime" />
+          <Property Name="State" Type="int" />
+        </EntityType>
+        <EntityType Name="ItemGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="int" />
+        </EntityType>
+        <EntityType Name="ItemMeasurementUnits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="Barcode" Type="nchar" MaxLength="10" />
+          <Property Name="NumOfPieces" Type="int" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="SalePrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PurchasePrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PurchaseDefault" Type="bit" />
+          <Property Name="SaleDefault" Type="bit" />
+        </EntityType>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="ExpireDate" Type="datetime" />
+          <Property Name="ItemGroupsId" Type="int" />
+          <Property Name="WharehouseId" Type="int" />
+          <Property Name="MinQouantity" Type="int" />
+          <Property Name="MonthlySale" Type="int" />
+          <Property Name="FreezDate" Type="int" />
+          <Property Name="ExpireAlarmDays" Type="int" />
+          <Property Name="SupplierId" Type="int" />
+          <Property Name="VendorId" Type="int" />
+          <Property Name="Discription" Type="nvarchar(max)" />
+          <Property Name="HasExpireDate" Type="bit" />
+        </EntityType>
+        <EntityType Name="PaymentTypes">
+          <Key>
+            <PropertyRef Name="PaymentTypeID" />
+          </Key>
+          <Property Name="PaymentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PaymentTypeName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PermissionControls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CGroupId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CAdmin" Type="bit" Nullable="false" />
+          <Property Name="CSells" Type="bit" Nullable="false" />
+          <Property Name="CBuys" Type="bit" Nullable="false" />
+          <Property Name="CWarehouse" Type="bit" Nullable="false" />
+          <Property Name="CAccount" Type="bit" Nullable="false" />
+          <Property Name="CVendorSupplier" Type="bit" Nullable="false" />
+          <Property Name="COther" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SaleInvoiceDetails">
+          <Key>
+            <PropertyRef Name="DetailsId" />
+          </Key>
+          <Property Name="DetailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemID" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="float" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="SalesInvoicesId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SalesInvoices">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InoviceNo" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="InvoiceDate" Type="datetime" Nullable="false" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="CurrencyID" Type="int" Nullable="false" />
+          <Property Name="Rate" Type="float" Nullable="false" />
+          <Property Name="PaymentType" Type="int" Nullable="false" />
+          <Property Name="ChequeNo" Type="nvarchar(max)" />
+          <Property Name="ChequeDate" Type="datetime" />
+          <Property Name="Paid" Type="int" Nullable="false" />
+          <Property Name="Tax" Type="float" Nullable="false" />
+          <Property Name="Discount" Type="float" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="Canceled" Type="int" />
+        </EntityType>
+        <EntityType Name="SupplierSets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SupplierId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SupplierName" Type="nvarchar(max)" />
+          <Property Name="SupplierStartBalance" Type="nvarchar(max)" />
+          <Property Name="SupplierStartBlnsDate" Type="nvarchar(max)" />
+          <Property Name="SupplierTypeOfBalance" Type="nvarchar(max)" />
+          <Property Name="SupplierStatus" Type="varchar" MaxLength="50" />
+          <Property Name="SupplierBranch" Type="nvarchar(max)" />
+          <Property Name="SupplierBranchCurrency" Type="nvarchar(max)" />
+          <Property Name="SupplierLedger" Type="nvarchar(max)" />
+          <Property Name="SupplierSupplementingAccount" Type="nvarchar(max)" />
+          <Property Name="SupplierCompanyName" Type="nvarchar(max)" />
+          <Property Name="SupplierResponsible" Type="nvarchar(max)" />
+          <Property Name="SupplierArea" Type="nvarchar(max)" />
+          <Property Name="SupplierAddress" Type="nvarchar(max)" />
+          <Property Name="SupplierPhone1" Type="nvarchar(max)" />
+          <Property Name="SupplierPhone2" Type="nvarchar(max)" />
+          <Property Name="SupplierWebsite" Type="nvarchar(max)" />
+          <Property Name="SupplierEmail" Type="nvarchar(max)" />
+          <Property Name="SupplierBankNoAccount" Type="nvarchar(max)" />
+          <Property Name="SupplierBankName" Type="nvarchar(max)" />
+          <Property Name="SupplierBankBranach" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TreeAccounts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="levels" Type="int" />
+          <Property Name="parentId" Type="int" />
+          <Property Name="isparent" Type="bit" />
+          <Property Name="related" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="operands" Type="nvarchar" MaxLength="50" />
+          <Property Name="type" Type="int" />
+          <Property Name="sign" Type="nvarchar" MaxLength="50" />
+          <Property Name="active" Type="bit" />
+          <Property Name="debit" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="credit" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="balance" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="cmpnum" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="dt" Type="datetime2" Precision="7" />
+          <Property Name="note" Type="varchar(max)" />
+          <Property Name="ismoney" Type="bit" />
+          <Property Name="tag" Type="nvarchar" MaxLength="50" />
+          <Property Name="BranchID" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="nameEn" Type="nvarchar" MaxLength="50" />
+          <Property Name="typeEn" Type="nvarchar" MaxLength="50" />
+          <Property Name="parentEn" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Trees">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="10" />
+          <Property Name="ParentID" Type="int" />
+        </EntityType>
+        <EntityType Name="Trees1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="10" />
+          <Property Name="ParentID" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UCode" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="UName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="UPassword" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="UGroup" Type="nvarchar(max)" />
+          <Property Name="UBranch" Type="nvarchar(max)" />
+          <Property Name="UStatus" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="VendorSets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VendorId" Type="nvarchar(max)" />
+          <Property Name="VendorName" Type="nvarchar(max)" />
+          <Property Name="VendorStartBalance" Type="nvarchar(max)" />
+          <Property Name="VendorStartBlnsDate" Type="nvarchar(max)" />
+          <Property Name="VendorTypeOfBalance" Type="nvarchar(max)" />
+          <Property Name="VendorStatus" Type="varchar" MaxLength="50" />
+          <Property Name="VendorBranch" Type="nvarchar(max)" />
+          <Property Name="VendorBranchCurrency" Type="nvarchar(max)" />
+          <Property Name="VendorLedger" Type="nvarchar(max)" />
+          <Property Name="VendorSupplementingAccount" Type="nvarchar(max)" />
+          <Property Name="VendorCompanyName" Type="nvarchar(max)" />
+          <Property Name="VendorResponsible" Type="nvarchar(max)" />
+          <Property Name="VendorArea" Type="nvarchar(max)" />
+          <Property Name="VendorAddress" Type="nvarchar(max)" />
+          <Property Name="VendorPhone1" Type="nvarchar(max)" />
+          <Property Name="VendorPhone2" Type="nvarchar(max)" />
+          <Property Name="VendorWebsite" Type="nvarchar(max)" />
+          <Property Name="VendorEmail" Type="nvarchar(max)" />
+          <Property Name="VendorBankNoAccount" Type="nvarchar(max)" />
+          <Property Name="VendorBankName" Type="nvarchar(max)" />
+          <Property Name="VendorBankBranach" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Wharehouses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StoreName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BranchID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Area" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Mobile" Type="nvarchar(max)" />
+          <Property Name="Size" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <Association Name="FK_dbo_InvoiceDetails_dbo_Categories_CategoryId">
+          <End Role="ItemGroups" Type="Self.ItemGroups" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InvoiceDetails" Type="Self.InvoiceDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ItemGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvoiceDetails">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId">
+          <End Role="Invoices" Type="Self.Invoices" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InvoiceDetails" Type="Self.InvoiceDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoices">
+              <PropertyRef Name="InvoiceId" />
+            </Principal>
+            <Dependent Role="InvoiceDetails">
+              <PropertyRef Name="InvoiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_InvoiceDetails_dbo_Products_ProductId">
+          <End Role="Items" Type="Self.Items" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InvoiceDetails" Type="Self.InvoiceDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvoiceDetails">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Invoices_dbo_Suppliers_SupplierId">
+          <End Role="SupplierSets" Type="Self.SupplierSets" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SupplierSets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Invoices">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_debenturedetails_debentures">
+          <End Role="debentures" Type="Self.debentures" Multiplicity="1" />
+          <End Role="debenturedetails" Type="Self.debenturedetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="debentures">
+              <PropertyRef Name="DebentureID" />
+            </Principal>
+            <Dependent Role="debenturedetails">
+              <PropertyRef Name="DebentureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_debenturedetails_debentures1">
+          <End Role="TreeAccounts" Type="Self.TreeAccounts" Multiplicity="0..1" />
+          <End Role="debenturedetails" Type="Self.debenturedetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreeAccounts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="debenturedetails">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemGroupsItems">
+          <End Role="ItemGroups" Type="Self.ItemGroups" Multiplicity="0..1" />
+          <End Role="Items" Type="Self.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ItemGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="ItemGroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemMeasurementUnits_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="ItemMeasurementUnits" Type="Self.ItemMeasurementUnits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ItemMeasurementUnits">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaleInvoiceDetails_SalesInvoices">
+          <End Role="SalesInvoices" Type="Self.SalesInvoices" Multiplicity="1" />
+          <End Role="SaleInvoiceDetails" Type="Self.SaleInvoiceDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SalesInvoices">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleInvoiceDetails">
+              <PropertyRef Name="SalesInvoicesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WharehouseItems">
+          <End Role="Wharehouses" Type="Self.Wharehouses" Multiplicity="0..1" />
+          <End Role="Items" Type="Self.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Wharehouses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="WharehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AccountingModelStoreContainer">
+          <EntitySet Name="accountmains" EntityType="Self.accountmains" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Accounts_Balance" EntityType="Self.Accounts_Balance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AreasSets" EntityType="Self.AreasSets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BankBranches" EntityType="Self.BankBranches" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BankSets" EntityType="Self.BankSets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Branches" EntityType="Self.Branches" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyInfoes" EntityType="Self.CompanyInfoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CurrencySets" EntityType="Self.CurrencySets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="debenturedetails" EntityType="Self.debenturedetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="debentures" EntityType="Self.debentures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InvoiceDetails" EntityType="Self.InvoiceDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invoices" EntityType="Self.Invoices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ItemGroups" EntityType="Self.ItemGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ItemMeasurementUnits" EntityType="Self.ItemMeasurementUnits" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentTypes" EntityType="Self.PaymentTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermissionControls" EntityType="Self.PermissionControls" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaleInvoiceDetails" EntityType="Self.SaleInvoiceDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SalesInvoices" EntityType="Self.SalesInvoices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SupplierSets" EntityType="Self.SupplierSets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TreeAccounts" EntityType="Self.TreeAccounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trees" EntityType="Self.Trees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trees1" EntityType="Self.Trees1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VendorSets" EntityType="Self.VendorSets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Wharehouses" EntityType="Self.Wharehouses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="accountmain" EntityType="Self.accountmain" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [accountmain].[id] AS [id], 
+    [accountmain].[dt] AS [dt], 
+    [accountmain].[accountid] AS [accountid], 
+    [accountmain].[custid] AS [custid], 
+    [accountmain].[debit] AS [debit], 
+    [accountmain].[credit] AS [credit], 
+    [accountmain].[balance] AS [balance], 
+    [accountmain].[detail] AS [detail], 
+    [accountmain].[dealing] AS [dealing], 
+    [accountmain].[renum] AS [renum], 
+    [accountmain].[idunique] AS [idunique], 
+    [accountmain].[active] AS [active], 
+    [accountmain].[isdeleted] AS [isdeleted], 
+    [accountmain].[ship] AS [ship], 
+    [accountmain].[en_dealing] AS [en_dealing], 
+    [accountmain].[deal] AS [deal], 
+    [accountmain].[Myuser] AS [Myuser], 
+    [accountmain].[IsUser] AS [IsUser], 
+    [accountmain].[CloseRegnum] AS [CloseRegnum], 
+    [accountmain].[Cpu] AS [Cpu], 
+    [accountmain].[currency] AS [currency], 
+    [accountmain].[currencyval] AS [currencyval], 
+    [accountmain].[BranchID] AS [BranchID], 
+    [accountmain].[CostID] AS [CostID]
+    FROM [dbo].[accountmain] AS [accountmain]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_dbo_InvoiceDetails_dbo_Categories_CategoryId" Association="Self.FK_dbo_InvoiceDetails_dbo_Categories_CategoryId">
+            <End Role="ItemGroups" EntitySet="ItemGroups" />
+            <End Role="InvoiceDetails" EntitySet="InvoiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId" Association="Self.FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId">
+            <End Role="Invoices" EntitySet="Invoices" />
+            <End Role="InvoiceDetails" EntitySet="InvoiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_InvoiceDetails_dbo_Products_ProductId" Association="Self.FK_dbo_InvoiceDetails_dbo_Products_ProductId">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="InvoiceDetails" EntitySet="InvoiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Invoices_dbo_Suppliers_SupplierId" Association="Self.FK_dbo_Invoices_dbo_Suppliers_SupplierId">
+            <End Role="SupplierSets" EntitySet="SupplierSets" />
+            <End Role="Invoices" EntitySet="Invoices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_debenturedetails_debentures" Association="Self.FK_debenturedetails_debentures">
+            <End Role="debentures" EntitySet="debentures" />
+            <End Role="debenturedetails" EntitySet="debenturedetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_debenturedetails_debentures1" Association="Self.FK_debenturedetails_debentures1">
+            <End Role="TreeAccounts" EntitySet="TreeAccounts" />
+            <End Role="debenturedetails" EntitySet="debenturedetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemGroupsItems" Association="Self.FK_ItemGroupsItems">
+            <End Role="ItemGroups" EntitySet="ItemGroups" />
+            <End Role="Items" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemMeasurementUnits_Items" Association="Self.FK_ItemMeasurementUnits_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="ItemMeasurementUnits" EntitySet="ItemMeasurementUnits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaleInvoiceDetails_SalesInvoices" Association="Self.FK_SaleInvoiceDetails_SalesInvoices">
+            <End Role="SalesInvoices" EntitySet="SalesInvoices" />
+            <End Role="SaleInvoiceDetails" EntitySet="SaleInvoiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WharehouseItems" Association="Self.FK_WharehouseItems">
+            <End Role="Wharehouses" EntitySet="Wharehouses" />
+            <End Role="Items" EntitySet="Items" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AccountingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AccountingSystem" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="accountmains" EntityType="AccountingModel.accountmain" />
+          <EntitySet Name="Accounts_Balance" EntityType="AccountingModel.Accounts_Balance" />
+          <EntitySet Name="AreasSets" EntityType="AccountingModel.AreasSet" />
+          <EntitySet Name="BankBranches" EntityType="AccountingModel.BankBranch" />
+          <EntitySet Name="BankSets" EntityType="AccountingModel.BankSet" />
+          <EntitySet Name="Branches" EntityType="AccountingModel.Branch" />
+          <EntitySet Name="CompanyInfoes" EntityType="AccountingModel.CompanyInfo" />
+          <EntitySet Name="CurrencySets" EntityType="AccountingModel.CurrencySet" />
+          <EntitySet Name="debenturedetails" EntityType="AccountingModel.debenturedetail" />
+          <EntitySet Name="debentures" EntityType="AccountingModel.debenture" />
+          <EntitySet Name="Groups" EntityType="AccountingModel.Group" />
+          <EntitySet Name="InvoiceDetails" EntityType="AccountingModel.InvoiceDetail" />
+          <EntitySet Name="Invoices" EntityType="AccountingModel.Invoice" />
+          <EntitySet Name="ItemGroups" EntityType="AccountingModel.ItemGroup" />
+          <EntitySet Name="ItemMeasurementUnits" EntityType="AccountingModel.ItemMeasurementUnit" />
+          <EntitySet Name="Items" EntityType="AccountingModel.Item" />
+          <EntitySet Name="PaymentTypes" EntityType="AccountingModel.PaymentType" />
+          <EntitySet Name="PermissionControls" EntityType="AccountingModel.PermissionControl" />
+          <EntitySet Name="SaleInvoiceDetails" EntityType="AccountingModel.SaleInvoiceDetail" />
+          <EntitySet Name="SalesInvoices" EntityType="AccountingModel.SalesInvoice" />
+          <EntitySet Name="SupplierSets" EntityType="AccountingModel.SupplierSet" />
+          <EntitySet Name="TreeAccounts" EntityType="AccountingModel.TreeAccount" />
+          <EntitySet Name="Trees" EntityType="AccountingModel.Tree" />
+          <EntitySet Name="Trees1" EntityType="AccountingModel.Trees1" />
+          <EntitySet Name="Users" EntityType="AccountingModel.User" />
+          <EntitySet Name="VendorSets" EntityType="AccountingModel.VendorSet" />
+          <EntitySet Name="Wharehouses" EntityType="AccountingModel.Wharehous" />
+          <EntitySet Name="accountmains1" EntityType="AccountingModel.accountmain1" />
+          <AssociationSet Name="FK_debenturedetails_debentures" Association="AccountingModel.FK_debenturedetails_debentures">
+            <End Role="debenture" EntitySet="debentures" />
+            <End Role="debenturedetail" EntitySet="debenturedetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_debenturedetails_debentures1" Association="AccountingModel.FK_debenturedetails_debentures1">
+            <End Role="TreeAccount" EntitySet="TreeAccounts" />
+            <End Role="debenturedetail" EntitySet="debenturedetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_InvoiceDetails_dbo_Categories_CategoryId" Association="AccountingModel.FK_dbo_InvoiceDetails_dbo_Categories_CategoryId">
+            <End Role="ItemGroup" EntitySet="ItemGroups" />
+            <End Role="InvoiceDetail" EntitySet="InvoiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId" Association="AccountingModel.FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="InvoiceDetail" EntitySet="InvoiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_InvoiceDetails_dbo_Products_ProductId" Association="AccountingModel.FK_dbo_InvoiceDetails_dbo_Products_ProductId">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="InvoiceDetail" EntitySet="InvoiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Invoices_dbo_Suppliers_SupplierId" Association="AccountingModel.FK_dbo_Invoices_dbo_Suppliers_SupplierId">
+            <End Role="SupplierSet" EntitySet="SupplierSets" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemGroupsItems" Association="AccountingModel.FK_ItemGroupsItems">
+            <End Role="ItemGroup" EntitySet="ItemGroups" />
+            <End Role="Item" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemMeasurementUnits_Items" Association="AccountingModel.FK_ItemMeasurementUnits_Items">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="ItemMeasurementUnit" EntitySet="ItemMeasurementUnits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WharehouseItems" Association="AccountingModel.FK_WharehouseItems">
+            <End Role="Wharehous" EntitySet="Wharehouses" />
+            <End Role="Item" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaleInvoiceDetails_SalesInvoices" Association="AccountingModel.FK_SaleInvoiceDetails_SalesInvoices">
+            <End Role="SalesInvoice" EntitySet="SalesInvoices" />
+            <End Role="SaleInvoiceDetail" EntitySet="SaleInvoiceDetails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="accountmain">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="dt" Type="DateTime" Precision="3" />
+          <Property Name="accountid" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="custid" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="debit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="credit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="balance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="detail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dealing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="renum" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="idunique" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="isdeleted" Type="Boolean" />
+          <Property Name="ship" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="en_dealing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="deal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Myuser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsUser" Type="Boolean" />
+          <Property Name="CloseRegnum" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cpu" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="currencyval" Type="Double" />
+          <Property Name="BranchID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CostID" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Accounts_Balance">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="branchid" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="accountid" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="debit" Type="Double" />
+          <Property Name="credit" Type="Double" />
+          <Property Name="balance" Type="Double" />
+        </EntityType>
+        <EntityType Name="AreasSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AreaName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BankBranch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="IdBank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BranchName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BankSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BankName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BStatus" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BPhone1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BPhone2" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BAddress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CompanyInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="phone1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="phone2" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebSite" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CurrencySet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="debenturedetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="DebentureID" Type="Int32" Nullable="false" />
+          <Property Name="AccountID" Type="Int32" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ChequeID" Type="Int32" />
+          <Property Name="Narration" Type="Int32" />
+          <Property Name="ValueDate" Type="DateTime" Precision="3" />
+          <Property Name="Payed" Type="Int32" />
+          <Property Name="CenterID" Type="Int32" />
+          <Property Name="GridNo" Type="Int32" />
+          <Property Name="BranchID" Type="Int32" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="debenture" Relationship="AccountingModel.FK_debenturedetails_debentures" FromRole="debenturedetail" ToRole="debenture" />
+          <NavigationProperty Name="TreeAccount" Relationship="AccountingModel.FK_debenturedetails_debentures1" FromRole="debenturedetail" ToRole="TreeAccount" />
+        </EntityType>
+        <EntityType Name="debenture">
+          <Key>
+            <PropertyRef Name="DebentureID" />
+          </Key>
+          <Property Name="DebentureID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DebentureNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DebentureDate" Type="DateTime" Precision="3" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="MDate" Type="DateTime" Precision="3" />
+          <Property Name="Sequence" Type="Int32" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="debenturedetails" Relationship="AccountingModel.FK_debenturedetails_debentures" FromRole="debenture" ToRole="debenturedetail" />
+          <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="InvoiceDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Double" Nullable="false" />
+          <Property Name="UnitQuantity" Type="Int64" Nullable="false" />
+          <Property Name="cuid" Type="Int64" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="duid" Type="Int64" />
+          <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="State" Type="Int32" />
+          <NavigationProperty Name="ItemGroup" Relationship="AccountingModel.FK_dbo_InvoiceDetails_dbo_Categories_CategoryId" FromRole="InvoiceDetail" ToRole="ItemGroup" />
+          <NavigationProperty Name="Invoice" Relationship="AccountingModel.FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId" FromRole="InvoiceDetail" ToRole="Invoice" />
+          <NavigationProperty Name="Item" Relationship="AccountingModel.FK_dbo_InvoiceDetails_dbo_Products_ProductId" FromRole="InvoiceDetail" ToRole="Item" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceId" />
+          </Key>
+          <Property Name="InvoiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SupplierId" Type="Int32" Nullable="false" />
+          <Property Name="Total" Type="Double" />
+          <Property Name="WorkflowState" Type="Int64" Nullable="false" />
+          <Property Name="cuid" Type="Int64" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="duid" Type="Int64" />
+          <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="State" Type="Int32" />
+          <NavigationProperty Name="InvoiceDetails" Relationship="AccountingModel.FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId" FromRole="Invoice" ToRole="InvoiceDetail" />
+          <NavigationProperty Name="SupplierSet" Relationship="AccountingModel.FK_dbo_Invoices_dbo_Suppliers_SupplierId" FromRole="Invoice" ToRole="SupplierSet" />
+        </EntityType>
+        <EntityType Name="ItemGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+          <NavigationProperty Name="InvoiceDetails" Relationship="AccountingModel.FK_dbo_InvoiceDetails_dbo_Categories_CategoryId" FromRole="ItemGroup" ToRole="InvoiceDetail" />
+          <NavigationProperty Name="Items" Relationship="AccountingModel.FK_ItemGroupsItems" FromRole="ItemGroup" ToRole="Item" />
+        </EntityType>
+        <EntityType Name="ItemMeasurementUnit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="Barcode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NumOfPieces" Type="Int32" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SalePrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PurchasePrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PurchaseDefault" Type="Boolean" />
+          <Property Name="SaleDefault" Type="Boolean" />
+          <NavigationProperty Name="Item" Relationship="AccountingModel.FK_ItemMeasurementUnits_Items" FromRole="ItemMeasurementUnit" ToRole="Item" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="ExpireDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemGroupsId" Type="Int32" />
+          <Property Name="WharehouseId" Type="Int32" />
+          <Property Name="MinQouantity" Type="Int32" />
+          <Property Name="MonthlySale" Type="Int32" />
+          <Property Name="FreezDate" Type="Int32" />
+          <Property Name="ExpireAlarmDays" Type="Int32" />
+          <Property Name="SupplierId" Type="Int32" />
+          <Property Name="VendorId" Type="Int32" />
+          <Property Name="Discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HasExpireDate" Type="Boolean" />
+          <NavigationProperty Name="InvoiceDetails" Relationship="AccountingModel.FK_dbo_InvoiceDetails_dbo_Products_ProductId" FromRole="Item" ToRole="InvoiceDetail" />
+          <NavigationProperty Name="ItemGroup" Relationship="AccountingModel.FK_ItemGroupsItems" FromRole="Item" ToRole="ItemGroup" />
+          <NavigationProperty Name="ItemMeasurementUnits" Relationship="AccountingModel.FK_ItemMeasurementUnits_Items" FromRole="Item" ToRole="ItemMeasurementUnit" />
+          <NavigationProperty Name="Wharehous" Relationship="AccountingModel.FK_WharehouseItems" FromRole="Item" ToRole="Wharehous" />
+        </EntityType>
+        <EntityType Name="PaymentType">
+          <Key>
+            <PropertyRef Name="PaymentTypeID" />
+          </Key>
+          <Property Name="PaymentTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PaymentTypeName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PermissionControl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CGroupId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="CSells" Type="Boolean" Nullable="false" />
+          <Property Name="CBuys" Type="Boolean" Nullable="false" />
+          <Property Name="CWarehouse" Type="Boolean" Nullable="false" />
+          <Property Name="CAccount" Type="Boolean" Nullable="false" />
+          <Property Name="CVendorSupplier" Type="Boolean" Nullable="false" />
+          <Property Name="COther" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SaleInvoiceDetail">
+          <Key>
+            <PropertyRef Name="DetailsId" />
+          </Key>
+          <Property Name="DetailsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemID" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Double" Nullable="false" />
+          <Property Name="Unit" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="SalesInvoicesId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SalesInvoice" Relationship="AccountingModel.FK_SaleInvoiceDetails_SalesInvoices" FromRole="SaleInvoiceDetail" ToRole="SalesInvoice" />
+        </EntityType>
+        <EntityType Name="SalesInvoice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InoviceNo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+          <Property Name="Rate" Type="Double" Nullable="false" />
+          <Property Name="PaymentType" Type="Int32" Nullable="false" />
+          <Property Name="ChequeNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChequeDate" Type="DateTime" Precision="3" />
+          <Property Name="Paid" Type="Int32" Nullable="false" />
+          <Property Name="Tax" Type="Double" Nullable="false" />
+          <Property Name="Discount" Type="Double" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Canceled" Type="Int32" />
+          <NavigationProperty Name="SaleInvoiceDetails" Relationship="AccountingModel.FK_SaleInvoiceDetails_SalesInvoices" FromRole="SalesInvoice" ToRole="SaleInvoiceDetail" />
+        </EntityType>
+        <EntityType Name="SupplierSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplierId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierStartBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierStartBlnsDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierTypeOfBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SupplierBranch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierBranchCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierLedger" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierSupplementingAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierCompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierResponsible" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierArea" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierPhone1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierPhone2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierWebsite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierBankNoAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierBankName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierBankBranach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Invoices" Relationship="AccountingModel.FK_dbo_Invoices_dbo_Suppliers_SupplierId" FromRole="SupplierSet" ToRole="Invoice" />
+        </EntityType>
+        <EntityType Name="TreeAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="levels" Type="Int32" />
+          <Property Name="parentId" Type="Int32" />
+          <Property Name="isparent" Type="Boolean" />
+          <Property Name="related" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="operands" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="Int32" />
+          <Property Name="sign" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="debit" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="credit" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="balance" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="cmpnum" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="dt" Type="DateTime" Precision="7" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ismoney" Type="Boolean" />
+          <Property Name="tag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BranchID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="nameEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typeEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="parentEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="debenturedetails" Relationship="AccountingModel.FK_debenturedetails_debentures1" FromRole="TreeAccount" ToRole="debenturedetail" />
+        </EntityType>
+        <EntityType Name="Tree">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ParentID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Trees1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ParentID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UCode" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UPassword" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UBranch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VendorSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VendorId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorStartBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorStartBlnsDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorTypeOfBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VendorBranch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorBranchCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorLedger" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorSupplementingAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorCompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorResponsible" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorArea" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorPhone1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorPhone2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorWebsite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorBankNoAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorBankName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorBankBranach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Wharehous">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StoreName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BranchID" Type="Int32" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="Area" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Size" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Items" Relationship="AccountingModel.FK_WharehouseItems" FromRole="Wharehous" ToRole="Item" />
+        </EntityType>
+        <EntityType Name="accountmain1">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="dt" Type="DateTime" Precision="3" />
+          <Property Name="accountid" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="custid" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="debit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="credit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="balance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="detail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dealing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="renum" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="idunique" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="isdeleted" Type="Boolean" />
+          <Property Name="ship" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="en_dealing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="deal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Myuser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsUser" Type="Boolean" />
+          <Property Name="CloseRegnum" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cpu" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="currencyval" Type="Double" />
+          <Property Name="BranchID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CostID" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <Association Name="FK_debenturedetails_debentures">
+          <End Type="AccountingModel.debenture" Role="debenture" Multiplicity="1" />
+          <End Type="AccountingModel.debenturedetail" Role="debenturedetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="debenture">
+              <PropertyRef Name="DebentureID" />
+            </Principal>
+            <Dependent Role="debenturedetail">
+              <PropertyRef Name="DebentureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_debenturedetails_debentures1">
+          <End Type="AccountingModel.TreeAccount" Role="TreeAccount" Multiplicity="0..1" />
+          <End Type="AccountingModel.debenturedetail" Role="debenturedetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreeAccount">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="debenturedetail">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_InvoiceDetails_dbo_Categories_CategoryId">
+          <End Type="AccountingModel.ItemGroup" Role="ItemGroup" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AccountingModel.InvoiceDetail" Role="InvoiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ItemGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvoiceDetail">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId">
+          <End Type="AccountingModel.Invoice" Role="Invoice" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AccountingModel.InvoiceDetail" Role="InvoiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="InvoiceId" />
+            </Principal>
+            <Dependent Role="InvoiceDetail">
+              <PropertyRef Name="InvoiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_InvoiceDetails_dbo_Products_ProductId">
+          <End Type="AccountingModel.Item" Role="Item" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AccountingModel.InvoiceDetail" Role="InvoiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvoiceDetail">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Invoices_dbo_Suppliers_SupplierId">
+          <End Type="AccountingModel.SupplierSet" Role="SupplierSet" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AccountingModel.Invoice" Role="Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SupplierSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemGroupsItems">
+          <End Type="AccountingModel.ItemGroup" Role="ItemGroup" Multiplicity="0..1" />
+          <End Type="AccountingModel.Item" Role="Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ItemGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Item">
+              <PropertyRef Name="ItemGroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemMeasurementUnits_Items">
+          <End Type="AccountingModel.Item" Role="Item" Multiplicity="0..1" />
+          <End Type="AccountingModel.ItemMeasurementUnit" Role="ItemMeasurementUnit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ItemMeasurementUnit">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WharehouseItems">
+          <End Type="AccountingModel.Wharehous" Role="Wharehous" Multiplicity="0..1" />
+          <End Type="AccountingModel.Item" Role="Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Wharehous">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Item">
+              <PropertyRef Name="WharehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaleInvoiceDetails_SalesInvoices">
+          <End Type="AccountingModel.SalesInvoice" Role="SalesInvoice" Multiplicity="1" />
+          <End Type="AccountingModel.SaleInvoiceDetail" Role="SaleInvoiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SalesInvoice">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleInvoiceDetail">
+              <PropertyRef Name="SalesInvoicesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AccountingModelStoreContainer" CdmEntityContainer="AccountingSystem">
+          <EntitySetMapping Name="accountmains">
+            <EntityTypeMapping TypeName="AccountingModel.accountmain">
+              <MappingFragment StoreEntitySet="accountmains">
+                <ScalarProperty Name="CostID" ColumnName="CostID" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="currencyval" ColumnName="currencyval" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="Cpu" ColumnName="Cpu" />
+                <ScalarProperty Name="CloseRegnum" ColumnName="CloseRegnum" />
+                <ScalarProperty Name="IsUser" ColumnName="IsUser" />
+                <ScalarProperty Name="Myuser" ColumnName="Myuser" />
+                <ScalarProperty Name="deal" ColumnName="deal" />
+                <ScalarProperty Name="en_dealing" ColumnName="en_dealing" />
+                <ScalarProperty Name="ship" ColumnName="ship" />
+                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="idunique" ColumnName="idunique" />
+                <ScalarProperty Name="renum" ColumnName="renum" />
+                <ScalarProperty Name="dealing" ColumnName="dealing" />
+                <ScalarProperty Name="detail" ColumnName="detail" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="credit" ColumnName="credit" />
+                <ScalarProperty Name="debit" ColumnName="debit" />
+                <ScalarProperty Name="custid" ColumnName="custid" />
+                <ScalarProperty Name="accountid" ColumnName="accountid" />
+                <ScalarProperty Name="dt" ColumnName="dt" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accounts_Balance">
+            <EntityTypeMapping TypeName="AccountingModel.Accounts_Balance">
+              <MappingFragment StoreEntitySet="Accounts_Balance">
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="credit" ColumnName="credit" />
+                <ScalarProperty Name="debit" ColumnName="debit" />
+                <ScalarProperty Name="accountid" ColumnName="accountid" />
+                <ScalarProperty Name="branchid" ColumnName="branchid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AreasSets">
+            <EntityTypeMapping TypeName="AccountingModel.AreasSet">
+              <MappingFragment StoreEntitySet="AreasSets">
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BankBranches">
+            <EntityTypeMapping TypeName="AccountingModel.BankBranch">
+              <MappingFragment StoreEntitySet="BankBranches">
+                <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+                <ScalarProperty Name="IdBank" ColumnName="IdBank" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BankSets">
+            <EntityTypeMapping TypeName="AccountingModel.BankSet">
+              <MappingFragment StoreEntitySet="BankSets">
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Branches">
+            <EntityTypeMapping TypeName="AccountingModel.Branch">
+              <MappingFragment StoreEntitySet="Branches">
+                <ScalarProperty Name="BAddress" ColumnName="BAddress" />
+                <ScalarProperty Name="BPhone2" ColumnName="BPhone2" />
+                <ScalarProperty Name="BPhone1" ColumnName="BPhone1" />
+                <ScalarProperty Name="BStatus" ColumnName="BStatus" />
+                <ScalarProperty Name="BName" ColumnName="BName" />
+                <ScalarProperty Name="BId" ColumnName="BId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyInfoes">
+            <EntityTypeMapping TypeName="AccountingModel.CompanyInfo">
+              <MappingFragment StoreEntitySet="CompanyInfoes">
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="phone2" ColumnName="phone2" />
+                <ScalarProperty Name="phone1" ColumnName="phone1" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CurrencySets">
+            <EntityTypeMapping TypeName="AccountingModel.CurrencySet">
+              <MappingFragment StoreEntitySet="CurrencySets">
+                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="debenturedetails">
+            <EntityTypeMapping TypeName="AccountingModel.debenturedetail">
+              <MappingFragment StoreEntitySet="debenturedetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="GridNo" ColumnName="GridNo" />
+                <ScalarProperty Name="CenterID" ColumnName="CenterID" />
+                <ScalarProperty Name="Payed" ColumnName="Payed" />
+                <ScalarProperty Name="ValueDate" ColumnName="ValueDate" />
+                <ScalarProperty Name="Narration" ColumnName="Narration" />
+                <ScalarProperty Name="ChequeID" ColumnName="ChequeID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="DebentureID" ColumnName="DebentureID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="debentures">
+            <EntityTypeMapping TypeName="AccountingModel.debenture">
+              <MappingFragment StoreEntitySet="debentures">
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="DebentureDate" ColumnName="DebentureDate" />
+                <ScalarProperty Name="DebentureNo" ColumnName="DebentureNo" />
+                <ScalarProperty Name="DebentureID" ColumnName="DebentureID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="AccountingModel.Group">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvoiceDetails">
+            <EntityTypeMapping TypeName="AccountingModel.InvoiceDetail">
+              <MappingFragment StoreEntitySet="InvoiceDetails">
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="duid" ColumnName="duid" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="cuid" ColumnName="cuid" />
+                <ScalarProperty Name="UnitQuantity" ColumnName="UnitQuantity" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invoices">
+            <EntityTypeMapping TypeName="AccountingModel.Invoice">
+              <MappingFragment StoreEntitySet="Invoices">
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="duid" ColumnName="duid" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="cuid" ColumnName="cuid" />
+                <ScalarProperty Name="WorkflowState" ColumnName="WorkflowState" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemGroups">
+            <EntityTypeMapping TypeName="AccountingModel.ItemGroup">
+              <MappingFragment StoreEntitySet="ItemGroups">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemMeasurementUnits">
+            <EntityTypeMapping TypeName="AccountingModel.ItemMeasurementUnit">
+              <MappingFragment StoreEntitySet="ItemMeasurementUnits">
+                <ScalarProperty Name="SaleDefault" ColumnName="SaleDefault" />
+                <ScalarProperty Name="PurchaseDefault" ColumnName="PurchaseDefault" />
+                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="NumOfPieces" ColumnName="NumOfPieces" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="AccountingModel.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="HasExpireDate" ColumnName="HasExpireDate" />
+                <ScalarProperty Name="Discription" ColumnName="Discription" />
+                <ScalarProperty Name="VendorId" ColumnName="VendorId" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+                <ScalarProperty Name="ExpireAlarmDays" ColumnName="ExpireAlarmDays" />
+                <ScalarProperty Name="FreezDate" ColumnName="FreezDate" />
+                <ScalarProperty Name="MonthlySale" ColumnName="MonthlySale" />
+                <ScalarProperty Name="MinQouantity" ColumnName="MinQouantity" />
+                <ScalarProperty Name="WharehouseId" ColumnName="WharehouseId" />
+                <ScalarProperty Name="ItemGroupsId" ColumnName="ItemGroupsId" />
+                <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentTypes">
+            <EntityTypeMapping TypeName="AccountingModel.PaymentType">
+              <MappingFragment StoreEntitySet="PaymentTypes">
+                <ScalarProperty Name="PaymentTypeName" ColumnName="PaymentTypeName" />
+                <ScalarProperty Name="PaymentTypeID" ColumnName="PaymentTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PermissionControls">
+            <EntityTypeMapping TypeName="AccountingModel.PermissionControl">
+              <MappingFragment StoreEntitySet="PermissionControls">
+                <ScalarProperty Name="COther" ColumnName="COther" />
+                <ScalarProperty Name="CVendorSupplier" ColumnName="CVendorSupplier" />
+                <ScalarProperty Name="CAccount" ColumnName="CAccount" />
+                <ScalarProperty Name="CWarehouse" ColumnName="CWarehouse" />
+                <ScalarProperty Name="CBuys" ColumnName="CBuys" />
+                <ScalarProperty Name="CSells" ColumnName="CSells" />
+                <ScalarProperty Name="CAdmin" ColumnName="CAdmin" />
+                <ScalarProperty Name="CGroupId" ColumnName="CGroupId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaleInvoiceDetails">
+            <EntityTypeMapping TypeName="AccountingModel.SaleInvoiceDetail">
+              <MappingFragment StoreEntitySet="SaleInvoiceDetails">
+                <ScalarProperty Name="SalesInvoicesId" ColumnName="SalesInvoicesId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="DetailsId" ColumnName="DetailsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SalesInvoices">
+            <EntityTypeMapping TypeName="AccountingModel.SalesInvoice">
+              <MappingFragment StoreEntitySet="SalesInvoices">
+                <ScalarProperty Name="Canceled" ColumnName="Canceled" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="ChequeDate" ColumnName="ChequeDate" />
+                <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+                <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="InoviceNo" ColumnName="InoviceNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SupplierSets">
+            <EntityTypeMapping TypeName="AccountingModel.SupplierSet">
+              <MappingFragment StoreEntitySet="SupplierSets">
+                <ScalarProperty Name="SupplierBankBranach" ColumnName="SupplierBankBranach" />
+                <ScalarProperty Name="SupplierBankName" ColumnName="SupplierBankName" />
+                <ScalarProperty Name="SupplierBankNoAccount" ColumnName="SupplierBankNoAccount" />
+                <ScalarProperty Name="SupplierEmail" ColumnName="SupplierEmail" />
+                <ScalarProperty Name="SupplierWebsite" ColumnName="SupplierWebsite" />
+                <ScalarProperty Name="SupplierPhone2" ColumnName="SupplierPhone2" />
+                <ScalarProperty Name="SupplierPhone1" ColumnName="SupplierPhone1" />
+                <ScalarProperty Name="SupplierAddress" ColumnName="SupplierAddress" />
+                <ScalarProperty Name="SupplierArea" ColumnName="SupplierArea" />
+                <ScalarProperty Name="SupplierResponsible" ColumnName="SupplierResponsible" />
+                <ScalarProperty Name="SupplierCompanyName" ColumnName="SupplierCompanyName" />
+                <ScalarProperty Name="SupplierSupplementingAccount" ColumnName="SupplierSupplementingAccount" />
+                <ScalarProperty Name="SupplierLedger" ColumnName="SupplierLedger" />
+                <ScalarProperty Name="SupplierBranchCurrency" ColumnName="SupplierBranchCurrency" />
+                <ScalarProperty Name="SupplierBranch" ColumnName="SupplierBranch" />
+                <ScalarProperty Name="SupplierStatus" ColumnName="SupplierStatus" />
+                <ScalarProperty Name="SupplierTypeOfBalance" ColumnName="SupplierTypeOfBalance" />
+                <ScalarProperty Name="SupplierStartBlnsDate" ColumnName="SupplierStartBlnsDate" />
+                <ScalarProperty Name="SupplierStartBalance" ColumnName="SupplierStartBalance" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreeAccounts">
+            <EntityTypeMapping TypeName="AccountingModel.TreeAccount">
+              <MappingFragment StoreEntitySet="TreeAccounts">
+                <ScalarProperty Name="parentEn" ColumnName="parentEn" />
+                <ScalarProperty Name="typeEn" ColumnName="typeEn" />
+                <ScalarProperty Name="nameEn" ColumnName="nameEn" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="tag" ColumnName="tag" />
+                <ScalarProperty Name="ismoney" ColumnName="ismoney" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="dt" ColumnName="dt" />
+                <ScalarProperty Name="cmpnum" ColumnName="cmpnum" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="credit" ColumnName="credit" />
+                <ScalarProperty Name="debit" ColumnName="debit" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="sign" ColumnName="sign" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="operands" ColumnName="operands" />
+                <ScalarProperty Name="related" ColumnName="related" />
+                <ScalarProperty Name="isparent" ColumnName="isparent" />
+                <ScalarProperty Name="parentId" ColumnName="parentId" />
+                <ScalarProperty Name="levels" ColumnName="levels" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trees">
+            <EntityTypeMapping TypeName="AccountingModel.Tree">
+              <MappingFragment StoreEntitySet="Trees">
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trees1">
+            <EntityTypeMapping TypeName="AccountingModel.Trees1">
+              <MappingFragment StoreEntitySet="Trees1">
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AccountingModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UStatus" ColumnName="UStatus" />
+                <ScalarProperty Name="UBranch" ColumnName="UBranch" />
+                <ScalarProperty Name="UGroup" ColumnName="UGroup" />
+                <ScalarProperty Name="UPassword" ColumnName="UPassword" />
+                <ScalarProperty Name="UName" ColumnName="UName" />
+                <ScalarProperty Name="UCode" ColumnName="UCode" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VendorSets">
+            <EntityTypeMapping TypeName="AccountingModel.VendorSet">
+              <MappingFragment StoreEntitySet="VendorSets">
+                <ScalarProperty Name="VendorBankBranach" ColumnName="VendorBankBranach" />
+                <ScalarProperty Name="VendorBankName" ColumnName="VendorBankName" />
+                <ScalarProperty Name="VendorBankNoAccount" ColumnName="VendorBankNoAccount" />
+                <ScalarProperty Name="VendorEmail" ColumnName="VendorEmail" />
+                <ScalarProperty Name="VendorWebsite" ColumnName="VendorWebsite" />
+                <ScalarProperty Name="VendorPhone2" ColumnName="VendorPhone2" />
+                <ScalarProperty Name="VendorPhone1" ColumnName="VendorPhone1" />
+                <ScalarProperty Name="VendorAddress" ColumnName="VendorAddress" />
+                <ScalarProperty Name="VendorArea" ColumnName="VendorArea" />
+                <ScalarProperty Name="VendorResponsible" ColumnName="VendorResponsible" />
+                <ScalarProperty Name="VendorCompanyName" ColumnName="VendorCompanyName" />
+                <ScalarProperty Name="VendorSupplementingAccount" ColumnName="VendorSupplementingAccount" />
+                <ScalarProperty Name="VendorLedger" ColumnName="VendorLedger" />
+                <ScalarProperty Name="VendorBranchCurrency" ColumnName="VendorBranchCurrency" />
+                <ScalarProperty Name="VendorBranch" ColumnName="VendorBranch" />
+                <ScalarProperty Name="VendorStatus" ColumnName="VendorStatus" />
+                <ScalarProperty Name="VendorTypeOfBalance" ColumnName="VendorTypeOfBalance" />
+                <ScalarProperty Name="VendorStartBlnsDate" ColumnName="VendorStartBlnsDate" />
+                <ScalarProperty Name="VendorStartBalance" ColumnName="VendorStartBalance" />
+                <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+                <ScalarProperty Name="VendorId" ColumnName="VendorId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Wharehouses">
+            <EntityTypeMapping TypeName="AccountingModel.Wharehous">
+              <MappingFragment StoreEntitySet="Wharehouses">
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="accountmains1">
+            <EntityTypeMapping TypeName="AccountingModel.accountmain1">
+              <MappingFragment StoreEntitySet="accountmain">
+                <ScalarProperty Name="CostID" ColumnName="CostID" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="currencyval" ColumnName="currencyval" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="Cpu" ColumnName="Cpu" />
+                <ScalarProperty Name="CloseRegnum" ColumnName="CloseRegnum" />
+                <ScalarProperty Name="IsUser" ColumnName="IsUser" />
+                <ScalarProperty Name="Myuser" ColumnName="Myuser" />
+                <ScalarProperty Name="deal" ColumnName="deal" />
+                <ScalarProperty Name="en_dealing" ColumnName="en_dealing" />
+                <ScalarProperty Name="ship" ColumnName="ship" />
+                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="idunique" ColumnName="idunique" />
+                <ScalarProperty Name="renum" ColumnName="renum" />
+                <ScalarProperty Name="dealing" ColumnName="dealing" />
+                <ScalarProperty Name="detail" ColumnName="detail" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="credit" ColumnName="credit" />
+                <ScalarProperty Name="debit" ColumnName="debit" />
+                <ScalarProperty Name="custid" ColumnName="custid" />
+                <ScalarProperty Name="accountid" ColumnName="accountid" />
+                <ScalarProperty Name="dt" ColumnName="dt" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
