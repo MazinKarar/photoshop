@@ -38,9 +38,9 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="branchid" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="accountid" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="branchid" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="accountid" Type="numeric" Precision="18" Scale="0" />
           <Property Name="debit" Type="float" />
           <Property Name="credit" Type="float" />
           <Property Name="balance" Type="float" />
@@ -307,7 +307,7 @@
           <Property Name="credit" Type="decimal" Precision="19" Scale="2" />
           <Property Name="balance" Type="decimal" Precision="19" Scale="2" />
           <Property Name="cmpnum" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="dt" Type="datetime" />
+          <Property Name="dt" Type="datetime2" Precision="7" />
           <Property Name="note" Type="varchar(max)" />
           <Property Name="ismoney" Type="bit" />
           <Property Name="tag" Type="nvarchar" MaxLength="50" />
@@ -974,7 +974,7 @@
           <Property Name="credit" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="balance" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="cmpnum" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="dt" Type="DateTime" Precision="3" />
+          <Property Name="dt" Type="DateTime" Precision="7" />
           <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ismoney" Type="Boolean" />
           <Property Name="tag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />

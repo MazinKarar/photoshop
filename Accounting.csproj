@@ -304,6 +304,12 @@
     <Compile Include="ItemMeasurementUnit.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ItemReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemReport.Designer.cs">
+      <DependentUpon>ItemReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemsForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -357,6 +363,12 @@
     </Compile>
     <Compile Include="ReportsPage.Designer.cs">
       <DependentUpon>ReportsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Items.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Items.Designer.cs">
+      <DependentUpon>Report_Items.cs</DependentUpon>
     </Compile>
     <Compile Include="RtpVendor.cs">
       <SubType>Component</SubType>
@@ -530,6 +542,9 @@
     <EmbeddedResource Include="InvoiceSearching.resx">
       <DependentUpon>InvoiceSearching.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItemReport.resx">
+      <DependentUpon>ItemReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemsForm.resx">
       <DependentUpon>ItemsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -557,6 +572,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsPage.resx">
       <DependentUpon>ReportsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Items.resx">
+      <DependentUpon>Report_Items.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RtpVendor.resx">
       <DependentUpon>RtpVendor.cs</DependentUpon>

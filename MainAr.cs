@@ -19,13 +19,19 @@ namespace Purchase
     {
         frmSales SalesForm = new frmSales();
         InvoiceRequest invRequest = new InvoiceRequest(InvoiceWorkflowState.Request,null);
+        ShowItems show = new ShowItems();
+        AccountantTree tree = new AccountantTree();
       //  InvoiceRequest invCompleted = new InvoiceRequest(InvoiceWorkflowState.Completed, null);
         public MainAr()
         {
             InitializeComponent();
            
             // Handling the QueryControl event that will populate all automatically generated Documents
+            show.Dock = DockStyle.Fill;
+            tree.Dock = DockStyle.Fill;
             backstageViewClientControl2.Controls.Add(invRequest);
+            backstageViewClientControl5.Controls.Add(show);
+            backstageViewClientControl4.Controls.Add(tree);
            // backstageViewClientControl3.Controls.Add(invCompleted);
 
         }
@@ -345,6 +351,15 @@ namespace Purchase
                         break;
                 }      
             }
+
+        private void tileItem35_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            Control item = new ItemReport();
+            documentManager1.View.AddDocument(item).Caption = "تقرير الأصناف";
+            int index = tabbedView1.Documents.Count - 1;
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.Document doc = tabbedView1.Documents[index] as DevExpress.XtraBars.Docking2010.Views.Tabbed.Document;
+            tabbedView1.Controller.Select(doc);
+        }
 
      
 
