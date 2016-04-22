@@ -63,9 +63,7 @@ namespace Purchase
 
         private void save_Click(object sender, EventArgs e)
         {
-            news.Visible = true;
-            save.Visible = false;
-            update.Visible = true;
+            
             if(search.Text.Equals("") ||search.Text.Equals(" "))
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال اسم المستخدم");
             else if (Branch.Text.Equals("") || Branch.Text.Equals(" "))
@@ -74,6 +72,9 @@ namespace Purchase
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال كلمة المرور");
             else
             {
+                news.Visible = true;
+                save.Visible = false;
+                update.Visible = true;
                 splashScreenManager1.ShowWaitForm();
                 Thread.Sleep(1000);
                 using (var db = new AccountingSystem())
