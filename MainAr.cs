@@ -19,14 +19,14 @@ namespace Purchase
     {
         frmSales SalesForm = new frmSales();
         InvoiceRequest invRequest = new InvoiceRequest(InvoiceWorkflowState.Request,null);
-       // InvoiceRequest invCompleted = new InvoiceRequest(InvoiceWorkflowState.Completed, null);
+        InvoiceRequest invCompleted = new InvoiceRequest(InvoiceWorkflowState.Completed, null);
         public MainAr()
         {
             InitializeComponent();
            
             // Handling the QueryControl event that will populate all automatically generated Documents
             backstageViewClientControl2.Controls.Add(invRequest);
-            //backstageViewClientControl3.Controls.Add(invCompleted);
+            backstageViewClientControl3.Controls.Add(invCompleted);
 
         }
         public MainAr(string userName,string Permission)
@@ -345,6 +345,11 @@ namespace Purchase
                         break;
                 }      
             }
+
+        private void MainAr_Load(object sender, EventArgs e)
+        {
+
+        }
 
      
 
