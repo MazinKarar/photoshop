@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using System.Threading;
 
 namespace Purchase
 {
@@ -71,6 +72,8 @@ namespace Purchase
             }
             else
             {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
                 using (var db = new AccountingSystem())
                 {
                     var BankBranh1 = db.BankBranches.Create();
@@ -78,10 +81,8 @@ namespace Purchase
                     BankBranh1.IdBank = BankName.EditValue.ToString();
                     db.BankBranches.Add(BankBranh1);
                     db.SaveChanges();
-                    Vendor v = new Vendor();
-                    v.bankRefresh();
-                    Suppliers s = new Suppliers();
-                    s.bankRefresh();
+                    BankBranch.Text = "";
+                    splashScreenManager1.CloseWaitForm();
                 }
             }
         }

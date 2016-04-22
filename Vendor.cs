@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using System.Data.Entity;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraBars.Docking2010.Customization;
+using System.Threading;
 
 
 namespace Purchase
@@ -95,6 +96,8 @@ namespace Purchase
 
         private void save_Click(object sender, EventArgs e)
         {
+            
+
             if (VendName.Text.Equals("") || VendName.Text.Equals(" "))
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال اسم العميل");
             else if (VendBalance.Text.Equals("") || VendBalance.Text.Equals(" "))
@@ -105,6 +108,8 @@ namespace Purchase
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الحساب المكمل");
             else
             {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
                 news.Visible = true;
                 save.Visible = false;
                 update.Visible = true;
@@ -149,6 +154,7 @@ namespace Purchase
                     // MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 fillsearch();
+                splashScreenManager1.CloseWaitForm();
             }
         }
 
@@ -202,6 +208,8 @@ namespace Purchase
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الحساب المكمل");
             else
             {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
                 //Wait pleaseWait = new Wait();
                 //Application.DoEvents();
                 //pleaseWait.Show();
@@ -265,6 +273,7 @@ namespace Purchase
                     }
                 }
                 fillsearch();
+                splashScreenManager1.CloseWaitForm();
             }
         }
 
@@ -423,7 +432,7 @@ namespace Purchase
             using(var d = new AccountingSystem())
             {
                 var dc = from ff in d.BankBranches where (ff.IdBank.Equals(VendBankName.EditValue.ToString()))
-                         select new {ff.BranchName,ff.Id};
+                         select new {ff.BranchName,ff.IdBank,ff.Id};
                  bindingSource4.DataSource = dc.ToList();
                  VendBranch.Refresh();
             }

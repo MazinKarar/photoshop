@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using System.Data.Entity;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraBars.Docking2010.Customization;
+using System.Threading;
 
 namespace Purchase
 {
@@ -69,6 +70,8 @@ namespace Purchase
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الحساب المكمل");
             else
             {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
                 news.Visible = true;
                 save.Visible = false;
                 update.Visible = true;
@@ -113,6 +116,7 @@ namespace Purchase
                     // MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 fillsearch();
+                splashScreenManager1.CloseWaitForm();
             }
         }
 
@@ -250,6 +254,8 @@ namespace Purchase
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الحساب المكمل");
             else
             {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
                 //Wait pleaseWait = new Wait();
                 //Application.DoEvents();
                 //pleaseWait.Show();
@@ -314,6 +320,7 @@ namespace Purchase
                 }
 
                 fillsearch();
+                splashScreenManager1.CloseWaitForm();
             }
             //pleaseWait. ;
             //pleaseWait.Close(TimeSpan.FromSeconds(0));

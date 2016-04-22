@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddGroup));
             this.panel3 = new System.Windows.Forms.Panel();
             this.search = new System.Windows.Forms.TextBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.GroupId = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@
             this.news = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.WaitForm1), true, true);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GroupId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Other.Properties)).BeginInit();
@@ -87,6 +88,17 @@
             this.search.Size = new System.Drawing.Size(194, 20);
             this.search.TabIndex = 60;
             this.search.TextChanged += new System.EventHandler(this.search_TextChanged);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Transparent;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(102, 30);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(39, 35);
+            this.simpleButton1.TabIndex = 59;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // label1
             // 
@@ -275,16 +287,9 @@
             this.label2.TabIndex = 58;
             this.label2.Text = "إضافة مجموعة";
             // 
-            // simpleButton1
+            // splashScreenManager1
             // 
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Transparent;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(102, 30);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(39, 35);
-            this.simpleButton1.TabIndex = 59;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // AddGroup
             // 
@@ -343,5 +348,6 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.TextBox search;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

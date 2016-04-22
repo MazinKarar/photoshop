@@ -34,6 +34,7 @@
             this.BankName = new DevExpress.XtraEditors.TextEdit();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.WaitForm1), true, true);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BankName.Properties)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +71,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(191, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 29);
+            this.label1.Size = new System.Drawing.Size(67, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "اسم البنك";
             // 
@@ -106,6 +107,10 @@
             this.label3.Size = new System.Drawing.Size(97, 42);
             this.label3.TabIndex = 29;
             this.label3.Text = "اضافة بنك";
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // AddBanks
             // 
@@ -143,5 +148,6 @@
         private DevExpress.XtraEditors.TextEdit BankName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

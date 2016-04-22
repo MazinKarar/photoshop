@@ -39,6 +39,7 @@
             this.BankName = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.BankBranch.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BankName.Properties)).BeginInit();
@@ -170,6 +171,10 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // AddBank
             // 
             this.Appearance.BackColor = System.Drawing.Color.DimGray;
@@ -205,5 +210,6 @@
         private DevExpress.XtraEditors.LookUpEdit BankName;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button button3;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

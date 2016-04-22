@@ -68,6 +68,7 @@
             this.Status = new DevExpress.XtraEditors.CheckEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Branch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
@@ -510,6 +511,10 @@
             this.simpleButton3.TabIndex = 72;
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // AddUser
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -604,5 +609,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

@@ -52,6 +52,7 @@
             this.news = new System.Windows.Forms.Button();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.label10 = new System.Windows.Forms.Label();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.Status.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -302,6 +303,10 @@
             this.label10.TabIndex = 72;
             this.label10.Text = "إضافة فرع";
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // AddBranch
             // 
             this.Appearance.BackColor = System.Drawing.Color.Black;
@@ -372,5 +377,6 @@
         private System.Windows.Forms.Button news;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.Label label10;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

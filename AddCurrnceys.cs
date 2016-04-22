@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using System.Threading;
 
 namespace Purchase
 {
@@ -27,13 +28,17 @@ namespace Purchase
             }
             else
             {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
                 using (var db = new AccountingSystem())
                 {
                     var AreaSet = db.CurrencySets.Create();
                     AreaSet.CurrencyName = name.Text;
                     db.CurrencySets.Add(AreaSet);
                     db.SaveChanges();
+                    name.Text = "";
                 }
+                splashScreenManager1.CloseWaitForm();
             }
         }
 

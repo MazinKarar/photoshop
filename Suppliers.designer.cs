@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Suppliers));
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
@@ -77,6 +78,8 @@
             this.SubArea = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.SubBankBranch = new DevExpress.XtraEditors.LookUpEdit();
+            this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -86,8 +89,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.SubBankName = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.SubBankBranch = new DevExpress.XtraEditors.LookUpEdit();
-            this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.SubTypeBalance = new DevExpress.XtraEditors.RadioGroup();
             this.SubBalance = new DevExpress.XtraEditors.TextEdit();
             this.SubName = new DevExpress.XtraEditors.TextEdit();
@@ -140,13 +141,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.SubArea.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SubBankBranch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubBankNoAccount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SubBankName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SubBankBranch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubTypeBalance.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubBalance.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubName.Properties)).BeginInit();
@@ -156,6 +157,10 @@
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // xtraTabControl1
             // 
@@ -649,6 +654,7 @@
             // xtraTabPage3
             // 
             this.xtraTabPage3.AutoScroll = true;
+            this.xtraTabPage3.Controls.Add(this.SubBankBranch);
             this.xtraTabPage3.Controls.Add(this.simpleButton6);
             this.xtraTabPage3.Controls.Add(this.label27);
             this.xtraTabPage3.Controls.Add(this.label28);
@@ -656,10 +662,28 @@
             this.xtraTabPage3.Controls.Add(this.SubBankNoAccount);
             this.xtraTabPage3.Controls.Add(this.panelControl7);
             this.xtraTabPage3.Controls.Add(this.SubBankName);
-            this.xtraTabPage3.Controls.Add(this.SubBankBranch);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(513, 300);
             this.xtraTabPage3.Text = "بيانات التحصيل";
+            // 
+            // SubBankBranch
+            // 
+            this.SubBankBranch.Location = new System.Drawing.Point(211, 109);
+            this.SubBankBranch.Name = "SubBankBranch";
+            this.SubBankBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SubBankBranch.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BranchName", "اسم الفرع")});
+            this.SubBankBranch.Properties.DataSource = this.bindingSource4;
+            this.SubBankBranch.Properties.DisplayMember = "BranchName";
+            this.SubBankBranch.Properties.NullText = "";
+            this.SubBankBranch.Properties.ValueMember = "Id";
+            this.SubBankBranch.Size = new System.Drawing.Size(142, 20);
+            this.SubBankBranch.TabIndex = 54;
+            // 
+            // bindingSource4
+            // 
+            this.bindingSource4.DataSource = typeof(Purchase.BankBranch);
             // 
             // simpleButton6
             // 
@@ -749,27 +773,9 @@
             // 
             this.bindingSource3.DataSource = typeof(Purchase.BankSet);
             // 
-            // SubBankBranch
-            // 
-            this.SubBankBranch.Location = new System.Drawing.Point(189, 111);
-            this.SubBankBranch.Name = "SubBankBranch";
-            this.SubBankBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.SubBankBranch.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BranchName", "الفرع")});
-            this.SubBankBranch.Properties.DataSource = this.bindingSource4;
-            this.SubBankBranch.Properties.DisplayMember = "BranchName";
-            this.SubBankBranch.Properties.NullText = "";
-            this.SubBankBranch.Properties.ValueMember = "IdBank";
-            this.SubBankBranch.Size = new System.Drawing.Size(164, 20);
-            this.SubBankBranch.TabIndex = 47;
-            // 
-            // bindingSource4
-            // 
-            this.bindingSource4.DataSource = typeof(Purchase.BankBranch);
-            // 
             // SubTypeBalance
             // 
+            this.SubTypeBalance.EditValue = "دائن";
             this.SubTypeBalance.Location = new System.Drawing.Point(636, 170);
             this.SubTypeBalance.Name = "SubTypeBalance";
             this.SubTypeBalance.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -1054,14 +1060,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SubBankBranch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubBankNoAccount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SubBankName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SubBankBranch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubTypeBalance.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubBalance.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubName.Properties)).EndInit();
@@ -1149,7 +1155,6 @@
         private DevExpress.XtraEditors.LookUpEdit SubArea;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.LookUpEdit SubBankName;
-        private DevExpress.XtraEditors.LookUpEdit SubBankBranch;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.BindingSource bindingSource2;
         private System.Windows.Forms.BindingSource bindingSource3;
@@ -1158,5 +1163,7 @@
         private System.Windows.Forms.BindingSource bindingSource5;
         private DevExpress.XtraEditors.LookUpEdit SupSupplementingAccount;
         private System.Windows.Forms.BindingSource bindingSource6;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private DevExpress.XtraEditors.LookUpEdit SubBankBranch;
     }
 }
