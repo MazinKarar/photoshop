@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/15/2016 15:57:20
--- Generated from EDMX file: E:\Accounting\Accounting\AccountingModel.edmx
+-- Date Created: 04/22/2016 10:22:02
+-- Generated from EDMX file: C:\Users\mazin awad\Source\Repos\photoshop\AccountingModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,14 +17,23 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_accounts_accountsgroups]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[accounts] DROP CONSTRAINT [FK_accounts_accountsgroups];
+IF OBJECT_ID(N'[dbo].[FK_dbo_InvoiceDetails_dbo_Categories_CategoryId]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[InvoiceDetails] DROP CONSTRAINT [FK_dbo_InvoiceDetails_dbo_Categories_CategoryId];
+GO
+IF OBJECT_ID(N'[dbo].[FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[InvoiceDetails] DROP CONSTRAINT [FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId];
+GO
+IF OBJECT_ID(N'[dbo].[FK_dbo_InvoiceDetails_dbo_Products_ProductId]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[InvoiceDetails] DROP CONSTRAINT [FK_dbo_InvoiceDetails_dbo_Products_ProductId];
+GO
+IF OBJECT_ID(N'[dbo].[FK_dbo_Invoices_dbo_Suppliers_SupplierId]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Invoices] DROP CONSTRAINT [FK_dbo_Invoices_dbo_Suppliers_SupplierId];
+GO
+IF OBJECT_ID(N'[dbo].[FK_debenturedetails_debentures]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[debenturedetails] DROP CONSTRAINT [FK_debenturedetails_debentures];
 GO
 IF OBJECT_ID(N'[dbo].[FK_debenturedetails_debentures1]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[debenturedetails] DROP CONSTRAINT [FK_debenturedetails_debentures1];
-GO
-IF OBJECT_ID(N'[dbo].[FK_debenturedetails_debentures11]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[debenturedetails] DROP CONSTRAINT [FK_debenturedetails_debentures11];
 GO
 IF OBJECT_ID(N'[dbo].[FK_ItemGroupsItems]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Items] DROP CONSTRAINT [FK_ItemGroupsItems];
@@ -43,11 +52,11 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[accounts]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[accounts];
+IF OBJECT_ID(N'[dbo].[accountmains]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[accountmains];
 GO
-IF OBJECT_ID(N'[dbo].[accountsgroups]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[accountsgroups];
+IF OBJECT_ID(N'[dbo].[Accounts_Balance]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Accounts_Balance];
 GO
 IF OBJECT_ID(N'[dbo].[AreasSets]', 'U') IS NOT NULL
     DROP TABLE [dbo].[AreasSets];
@@ -61,6 +70,9 @@ GO
 IF OBJECT_ID(N'[dbo].[Branches]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Branches];
 GO
+IF OBJECT_ID(N'[dbo].[CompanyInfoes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CompanyInfoes];
+GO
 IF OBJECT_ID(N'[dbo].[CurrencySets]', 'U') IS NOT NULL
     DROP TABLE [dbo].[CurrencySets];
 GO
@@ -72,6 +84,12 @@ IF OBJECT_ID(N'[dbo].[debentures]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Groups]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Groups];
+GO
+IF OBJECT_ID(N'[dbo].[InvoiceDetails]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[InvoiceDetails];
+GO
+IF OBJECT_ID(N'[dbo].[Invoices]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Invoices];
 GO
 IF OBJECT_ID(N'[dbo].[ItemGroups]', 'U') IS NOT NULL
     DROP TABLE [dbo].[ItemGroups];
@@ -97,9 +115,6 @@ GO
 IF OBJECT_ID(N'[dbo].[SupplierSets]', 'U') IS NOT NULL
     DROP TABLE [dbo].[SupplierSets];
 GO
-IF OBJECT_ID(N'[dbo].[sysdiagrams]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[sysdiagrams];
-GO
 IF OBJECT_ID(N'[dbo].[TreeAccounts]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TreeAccounts];
 GO
@@ -121,39 +136,48 @@ GO
 IF OBJECT_ID(N'[AccountingModelStoreContainer].[accountmain]', 'U') IS NOT NULL
     DROP TABLE [AccountingModelStoreContainer].[accountmain];
 GO
-IF OBJECT_ID(N'[AccountingModelStoreContainer].[Accounts_Balance]', 'U') IS NOT NULL
-    DROP TABLE [AccountingModelStoreContainer].[Accounts_Balance];
-GO
 
 -- --------------------------------------------------
 -- Creating all tables
 -- --------------------------------------------------
 
--- Creating table 'accounts'
-CREATE TABLE [dbo].[accounts] (
-    [AccountID] int  NOT NULL,
-    [AccountNo] varchar(50)  NOT NULL,
-    [GroupID] int  NOT NULL,
-    [AccountName] varchar(50)  NOT NULL,
-    [StartingBalance] float  NOT NULL,
-    [Notes] varchar(100)  NOT NULL,
-    [Suspended] int  NOT NULL,
-    [Type] int  NOT NULL,
-    [Nature] int  NOT NULL,
-    [Persons] int  NOT NULL
+-- Creating table 'accountmains'
+CREATE TABLE [dbo].[accountmains] (
+    [id] decimal(18,0)  NOT NULL,
+    [dt] datetime  NULL,
+    [accountid] decimal(18,0)  NULL,
+    [custid] decimal(18,0)  NULL,
+    [debit] decimal(19,4)  NULL,
+    [credit] decimal(19,4)  NULL,
+    [balance] decimal(19,4)  NULL,
+    [detail] nvarchar(50)  NULL,
+    [dealing] nvarchar(50)  NULL,
+    [renum] decimal(18,0)  NULL,
+    [idunique] decimal(18,0)  NULL,
+    [active] bit  NULL,
+    [isdeleted] bit  NULL,
+    [ship] nvarchar(350)  NULL,
+    [en_dealing] nvarchar(50)  NULL,
+    [deal] nvarchar(50)  NULL,
+    [Myuser] nvarchar(50)  NULL,
+    [IsUser] bit  NULL,
+    [CloseRegnum] decimal(18,0)  NULL,
+    [Cpu] decimal(18,0)  NULL,
+    [currency] nvarchar(50)  NULL,
+    [currencyval] float  NULL,
+    [BranchID] decimal(18,0)  NULL,
+    [CostID] decimal(18,0)  NULL
 );
 GO
 
--- Creating table 'accountsgroups'
-CREATE TABLE [dbo].[accountsgroups] (
-    [GroupID] int  NOT NULL,
-    [GroupName] varchar(50)  NOT NULL,
-    [Under] int  NOT NULL,
-    [Master] int  NOT NULL,
-    [Suspended] int  NOT NULL,
-    [GroupNo] varchar(1)  NOT NULL,
-    [HaveGroups] int  NOT NULL,
-    [Balance] float  NOT NULL
+-- Creating table 'Accounts_Balance'
+CREATE TABLE [dbo].[Accounts_Balance] (
+    [id] decimal(18,0)  NOT NULL,
+    [branchid] decimal(18,0)  NULL,
+    [accountid] decimal(18,0)  NULL,
+    [debit] float  NULL,
+    [credit] float  NULL,
+    [balance] float  NULL
 );
 GO
 
@@ -191,6 +215,18 @@ CREATE TABLE [dbo].[Branches] (
 );
 GO
 
+-- Creating table 'CompanyInfoes'
+CREATE TABLE [dbo].[CompanyInfoes] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(max)  NOT NULL,
+    [Address] nvarchar(max)  NOT NULL,
+    [phone1] nvarchar(max)  NOT NULL,
+    [phone2] nvarchar(max)  NOT NULL,
+    [Email] nvarchar(max)  NOT NULL,
+    [WebSite] nvarchar(max)  NOT NULL
+);
+GO
+
 -- Creating table 'CurrencySets'
 CREATE TABLE [dbo].[CurrencySets] (
     [Id] int IDENTITY(1,1) NOT NULL,
@@ -201,29 +237,31 @@ GO
 -- Creating table 'debenturedetails'
 CREATE TABLE [dbo].[debenturedetails] (
     [DebentureID] int  NOT NULL,
-    [AccountID] int  NOT NULL,
-    [Amount] float  NOT NULL,
-    [Notes] varchar(1)  NOT NULL,
-    [ChequeID] int  NOT NULL,
-    [Narration] int  NOT NULL,
-    [ValueDate] datetime  NOT NULL,
-    [Payed] int  NOT NULL,
-    [CenterID] int  NOT NULL,
-    [GridNo] int  NOT NULL,
-    [BranchID] int  NOT NULL
+    [AccountID] int  NULL,
+    [Amount] float  NULL,
+    [Notes] varchar(max)  NULL,
+    [ChequeID] int  NULL,
+    [Narration] int  NULL,
+    [ValueDate] datetime  NULL,
+    [Payed] int  NULL,
+    [CenterID] int  NULL,
+    [GridNo] int  NULL,
+    [BranchID] int  NULL,
+    [Id] int IDENTITY(1,1) NOT NULL
 );
 GO
 
 -- Creating table 'debentures'
 CREATE TABLE [dbo].[debentures] (
-    [DebentureID] int  NOT NULL,
-    [DebentureNo] varchar(1)  NOT NULL,
-    [DebentureDate] datetime  NOT NULL,
-    [Notes] varchar(1)  NOT NULL,
-    [UserID] int  NOT NULL,
-    [MDate] datetime  NOT NULL,
-    [Sequence] int  NOT NULL,
-    [Amount] float  NOT NULL
+    [DebentureID] int IDENTITY(1,1) NOT NULL,
+    [DebentureNo] varchar(100)  NULL,
+    [DebentureDate] datetime  NULL,
+    [UserID] int  NULL,
+    [MDate] datetime  NULL,
+    [Sequence] int  NULL,
+    [Amount] float  NULL,
+    [Notes] nvarchar(max)  NULL,
+    [remarks] nvarchar(max)  NULL
 );
 GO
 
@@ -231,6 +269,37 @@ GO
 CREATE TABLE [dbo].[Groups] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'InvoiceDetails'
+CREATE TABLE [dbo].[InvoiceDetails] (
+    [Id] bigint IDENTITY(1,1) NOT NULL,
+    [InvoiceId] int  NOT NULL,
+    [ProductId] int  NOT NULL,
+    [CategoryId] int  NOT NULL,
+    [UnitPrice] float  NOT NULL,
+    [UnitQuantity] bigint  NOT NULL,
+    [cuid] bigint  NULL,
+    [CreateTime] datetime  NULL,
+    [duid] bigint  NULL,
+    [DeleteTime] datetime  NULL,
+    [State] int  NULL
+);
+GO
+
+-- Creating table 'Invoices'
+CREATE TABLE [dbo].[Invoices] (
+    [InvoiceId] int IDENTITY(1,1) NOT NULL,
+    [InvoiceDate] datetime  NOT NULL,
+    [SupplierId] int  NOT NULL,
+    [Total] float  NULL,
+    [WorkflowState] bigint  NOT NULL,
+    [cuid] bigint  NULL,
+    [CreateTime] datetime  NULL,
+    [duid] bigint  NULL,
+    [DeleteTime] datetime  NULL,
+    [State] int  NULL
 );
 GO
 
@@ -277,6 +346,13 @@ CREATE TABLE [dbo].[Items] (
 );
 GO
 
+-- Creating table 'PaymentTypes'
+CREATE TABLE [dbo].[PaymentTypes] (
+    [PaymentTypeID] int IDENTITY(1,1) NOT NULL,
+    [PaymentTypeName] nvarchar(max)  NOT NULL
+);
+GO
+
 -- Creating table 'PermissionControls'
 CREATE TABLE [dbo].[PermissionControls] (
     [Id] int IDENTITY(1,1) NOT NULL,
@@ -288,111 +364,6 @@ CREATE TABLE [dbo].[PermissionControls] (
     [CAccount] bit  NOT NULL,
     [CVendorSupplier] bit  NOT NULL,
     [COther] bit  NOT NULL
-);
-GO
-
--- Creating table 'SupplierSets'
-CREATE TABLE [dbo].[SupplierSets] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [SupplierId] nvarchar(max)  NOT NULL,
-    [SupplierName] nvarchar(max)  NULL,
-    [SupplierStartBalance] nvarchar(max)  NULL,
-    [SupplierStartBlnsDate] nvarchar(max)  NULL,
-    [SupplierTypeOfBalance] nvarchar(max)  NULL,
-    [SupplierStatus] nvarchar(max)  NULL,
-    [SupplierBranch] nvarchar(max)  NULL,
-    [SupplierBranchCurrency] nvarchar(max)  NULL,
-    [SupplierLedger] nvarchar(max)  NULL,
-    [SupplierSupplementingAccount] nvarchar(max)  NULL,
-    [SupplierCompanyName] nvarchar(max)  NULL,
-    [SupplierResponsible] nvarchar(max)  NULL,
-    [SupplierArea] nvarchar(max)  NULL,
-    [SupplierAddress] nvarchar(max)  NULL,
-    [SupplierPhone1] nvarchar(max)  NULL,
-    [SupplierPhone2] nvarchar(max)  NULL,
-    [SupplierWebsite] nvarchar(max)  NULL,
-    [SupplierEmail] nvarchar(max)  NULL,
-    [SupplierBankNoAccount] nvarchar(max)  NULL,
-    [SupplierBankName] nvarchar(max)  NULL,
-    [SupplierBankBranach] nvarchar(max)  NULL
-);
-GO
-
--- Creating table 'sysdiagrams'
-CREATE TABLE [dbo].[sysdiagrams] (
-    [name] nvarchar(128)  NOT NULL,
-    [principal_id] int  NOT NULL,
-    [diagram_id] int IDENTITY(1,1) NOT NULL,
-    [version] int  NULL,
-    [definition] varbinary(max)  NULL
-);
-GO
-
--- Creating table 'Trees'
-CREATE TABLE [dbo].[Trees] (
-    [Id] int  NOT NULL,
-    [Name] nchar(10)  NULL,
-    [ParentID] int  NULL
-);
-GO
-
--- Creating table 'Users'
-CREATE TABLE [dbo].[Users] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [UCode] nvarchar(max)  NOT NULL,
-    [UName] nvarchar(max)  NOT NULL,
-    [UPassword] nvarchar(max)  NOT NULL,
-    [UGroup] nvarchar(max)  NULL,
-    [UBranch] nvarchar(max)  NULL,
-    [UStatus] nvarchar(50)  NULL
-);
-GO
-
--- Creating table 'VendorSets'
-CREATE TABLE [dbo].[VendorSets] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [VendorId] nvarchar(max)  NULL,
-    [VendorName] nvarchar(max)  NULL,
-    [VendorStartBalance] nvarchar(max)  NULL,
-    [VendorStartBlnsDate] nvarchar(max)  NULL,
-    [VendorTypeOfBalance] nvarchar(max)  NULL,
-    [VendorStatus] nvarchar(max)  NULL,
-    [VendorBranch] nvarchar(max)  NULL,
-    [VendorBranchCurrency] nvarchar(max)  NULL,
-    [VendorLedger] nvarchar(max)  NULL,
-    [VendorSupplementingAccount] nvarchar(max)  NULL,
-    [VendorCompanyName] nvarchar(max)  NULL,
-    [VendorResponsible] nvarchar(max)  NULL,
-    [VendorArea] nvarchar(max)  NULL,
-    [VendorAddress] nvarchar(max)  NULL,
-    [VendorPhone1] nvarchar(max)  NULL,
-    [VendorPhone2] nvarchar(max)  NULL,
-    [VendorWebsite] nvarchar(max)  NULL,
-    [VendorEmail] nvarchar(max)  NULL,
-    [VendorBankNoAccount] nvarchar(max)  NULL,
-    [VendorBankName] nvarchar(max)  NULL,
-    [VendorBankBranach] nvarchar(max)  NULL
-);
-GO
-
--- Creating table 'Wharehouses'
-CREATE TABLE [dbo].[Wharehouses] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [StoreName] nvarchar(max)  NOT NULL,
-    [BranchID] int  NULL,
-    [Status] bit  NULL,
-    [Area] decimal(18,0)  NULL,
-    [Address] nvarchar(max)  NULL,
-    [Mobile] nvarchar(max)  NULL,
-    [Size] decimal(18,0)  NULL
-);
-GO
-
--- Creating table 'Trees1'
-CREATE TABLE [dbo].[Trees1] (
-    [Id] int  NOT NULL,
-    [Name] nchar(10)  NULL,
-    [ParentID] int  NULL
 );
 GO
 
@@ -427,50 +398,30 @@ CREATE TABLE [dbo].[SalesInvoices] (
 );
 GO
 
--- Creating table 'PaymentTypes'
-CREATE TABLE [dbo].[PaymentTypes] (
-    [PaymentTypeID] int IDENTITY(1,1) NOT NULL,
-    [PaymentTypeName] nvarchar(max)  NOT NULL
-);
-GO
-
--- Creating table 'accountmains'
-CREATE TABLE [dbo].[accountmains] (
-    [id] decimal(18,0)  NOT NULL,
-    [dt] datetime  NULL,
-    [accountid] decimal(18,0)  NULL,
-    [custid] decimal(18,0)  NULL,
-    [debit] decimal(19,4)  NULL,
-    [credit] decimal(19,4)  NULL,
-    [balance] decimal(19,4)  NULL,
-    [detail] nvarchar(50)  NULL,
-    [dealing] nvarchar(50)  NULL,
-    [renum] decimal(18,0)  NULL,
-    [idunique] decimal(18,0)  NULL,
-    [active] bit  NULL,
-    [isdeleted] bit  NULL,
-    [ship] nvarchar(350)  NULL,
-    [en_dealing] nvarchar(50)  NULL,
-    [deal] nvarchar(50)  NULL,
-    [Myuser] nvarchar(50)  NULL,
-    [IsUser] bit  NULL,
-    [CloseRegnum] decimal(18,0)  NULL,
-    [Cpu] decimal(18,0)  NULL,
-    [currency] nvarchar(50)  NULL,
-    [currencyval] float  NULL,
-    [BranchID] decimal(18,0)  NULL,
-    [CostID] decimal(18,0)  NULL
-);
-GO
-
--- Creating table 'Accounts_Balance'
-CREATE TABLE [dbo].[Accounts_Balance] (
-    [id] decimal(18,0)  NOT NULL,
-    [branchid] decimal(18,0)  NULL,
-    [accountid] decimal(18,0)  NULL,
-    [debit] float  NULL,
-    [credit] float  NULL,
-    [balance] float  NULL
+-- Creating table 'SupplierSets'
+CREATE TABLE [dbo].[SupplierSets] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [SupplierId] nvarchar(max)  NOT NULL,
+    [SupplierName] nvarchar(max)  NULL,
+    [SupplierStartBalance] nvarchar(max)  NULL,
+    [SupplierStartBlnsDate] nvarchar(max)  NULL,
+    [SupplierTypeOfBalance] nvarchar(max)  NULL,
+    [SupplierStatus] varchar(50)  NULL,
+    [SupplierBranch] nvarchar(max)  NULL,
+    [SupplierBranchCurrency] nvarchar(max)  NULL,
+    [SupplierLedger] nvarchar(max)  NULL,
+    [SupplierSupplementingAccount] nvarchar(max)  NULL,
+    [SupplierCompanyName] nvarchar(max)  NULL,
+    [SupplierResponsible] nvarchar(max)  NULL,
+    [SupplierArea] nvarchar(max)  NULL,
+    [SupplierAddress] nvarchar(max)  NULL,
+    [SupplierPhone1] nvarchar(max)  NULL,
+    [SupplierPhone2] nvarchar(max)  NULL,
+    [SupplierWebsite] nvarchar(max)  NULL,
+    [SupplierEmail] nvarchar(max)  NULL,
+    [SupplierBankNoAccount] nvarchar(max)  NULL,
+    [SupplierBankName] nvarchar(max)  NULL,
+    [SupplierBankBranach] nvarchar(max)  NULL
 );
 GO
 
@@ -486,9 +437,9 @@ CREATE TABLE [dbo].[TreeAccounts] (
     [type] int  NULL,
     [sign] nvarchar(50)  NULL,
     [active] bit  NULL,
-    [debit] decimal(19,4)  NULL,
-    [credit] decimal(19,4)  NULL,
-    [balance] decimal(19,4)  NULL,
+    [debit] decimal(19,2)  NULL,
+    [credit] decimal(19,2)  NULL,
+    [balance] decimal(19,2)  NULL,
     [cmpnum] decimal(18,0)  NULL,
     [dt] datetime  NULL,
     [note] varchar(max)  NULL,
@@ -501,20 +452,76 @@ CREATE TABLE [dbo].[TreeAccounts] (
 );
 GO
 
--- Creating table 'CompanyInfoes'
-CREATE TABLE [dbo].[CompanyInfoes] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [Name] nvarchar(max)  NOT NULL,
-    [Address] nvarchar(max)  NOT NULL,
-    [phone1] nvarchar(max)  NOT NULL,
-    [phone2] nvarchar(max)  NOT NULL,
-    [Email] nvarchar(max)  NOT NULL,
-    [WebSite] nvarchar(max)  NOT NULL
+-- Creating table 'Trees'
+CREATE TABLE [dbo].[Trees] (
+    [Id] int  NOT NULL,
+    [Name] nchar(10)  NULL,
+    [ParentID] int  NULL
 );
 GO
 
--- Creating table 'accountmain1'
-CREATE TABLE [dbo].[accountmain1] (
+-- Creating table 'Trees1'
+CREATE TABLE [dbo].[Trees1] (
+    [Id] int  NOT NULL,
+    [Name] nchar(10)  NULL,
+    [ParentID] int  NULL
+);
+GO
+
+-- Creating table 'Users'
+CREATE TABLE [dbo].[Users] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [UCode] nvarchar(max)  NOT NULL,
+    [UName] nvarchar(max)  NOT NULL,
+    [UPassword] nvarchar(max)  NOT NULL,
+    [UGroup] nvarchar(max)  NULL,
+    [UBranch] nvarchar(max)  NULL,
+    [UStatus] nvarchar(50)  NULL
+);
+GO
+
+-- Creating table 'VendorSets'
+CREATE TABLE [dbo].[VendorSets] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [VendorId] nvarchar(max)  NULL,
+    [VendorName] nvarchar(max)  NULL,
+    [VendorStartBalance] nvarchar(max)  NULL,
+    [VendorStartBlnsDate] nvarchar(max)  NULL,
+    [VendorTypeOfBalance] nvarchar(max)  NULL,
+    [VendorStatus] varchar(50)  NULL,
+    [VendorBranch] nvarchar(max)  NULL,
+    [VendorBranchCurrency] nvarchar(max)  NULL,
+    [VendorLedger] nvarchar(max)  NULL,
+    [VendorSupplementingAccount] nvarchar(max)  NULL,
+    [VendorCompanyName] nvarchar(max)  NULL,
+    [VendorResponsible] nvarchar(max)  NULL,
+    [VendorArea] nvarchar(max)  NULL,
+    [VendorAddress] nvarchar(max)  NULL,
+    [VendorPhone1] nvarchar(max)  NULL,
+    [VendorPhone2] nvarchar(max)  NULL,
+    [VendorWebsite] nvarchar(max)  NULL,
+    [VendorEmail] nvarchar(max)  NULL,
+    [VendorBankNoAccount] nvarchar(max)  NULL,
+    [VendorBankName] nvarchar(max)  NULL,
+    [VendorBankBranach] nvarchar(max)  NULL
+);
+GO
+
+-- Creating table 'Wharehouses'
+CREATE TABLE [dbo].[Wharehouses] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [StoreName] nvarchar(max)  NOT NULL,
+    [BranchID] int  NULL,
+    [Status] bit  NULL,
+    [Area] decimal(18,0)  NULL,
+    [Address] nvarchar(max)  NULL,
+    [Mobile] nvarchar(max)  NULL,
+    [Size] decimal(18,0)  NULL
+);
+GO
+
+-- Creating table 'accountmains1'
+CREATE TABLE [dbo].[accountmains1] (
     [id] decimal(18,0)  NOT NULL,
     [dt] datetime  NULL,
     [accountid] decimal(18,0)  NULL,
@@ -546,16 +553,16 @@ GO
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
 
--- Creating primary key on [AccountID] in table 'accounts'
-ALTER TABLE [dbo].[accounts]
-ADD CONSTRAINT [PK_accounts]
-    PRIMARY KEY CLUSTERED ([AccountID] ASC);
+-- Creating primary key on [id] in table 'accountmains'
+ALTER TABLE [dbo].[accountmains]
+ADD CONSTRAINT [PK_accountmains]
+    PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [GroupID] in table 'accountsgroups'
-ALTER TABLE [dbo].[accountsgroups]
-ADD CONSTRAINT [PK_accountsgroups]
-    PRIMARY KEY CLUSTERED ([GroupID] ASC);
+-- Creating primary key on [id] in table 'Accounts_Balance'
+ALTER TABLE [dbo].[Accounts_Balance]
+ADD CONSTRAINT [PK_Accounts_Balance]
+    PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
 -- Creating primary key on [Id] in table 'AreasSets'
@@ -582,16 +589,22 @@ ADD CONSTRAINT [PK_Branches]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
+-- Creating primary key on [Id] in table 'CompanyInfoes'
+ALTER TABLE [dbo].[CompanyInfoes]
+ADD CONSTRAINT [PK_CompanyInfoes]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
 -- Creating primary key on [Id] in table 'CurrencySets'
 ALTER TABLE [dbo].[CurrencySets]
 ADD CONSTRAINT [PK_CurrencySets]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [DebentureID], [AccountID], [Amount], [Notes], [ChequeID], [Narration], [ValueDate], [Payed], [CenterID], [GridNo], [BranchID] in table 'debenturedetails'
+-- Creating primary key on [Id] in table 'debenturedetails'
 ALTER TABLE [dbo].[debenturedetails]
 ADD CONSTRAINT [PK_debenturedetails]
-    PRIMARY KEY CLUSTERED ([DebentureID], [AccountID], [Amount], [Notes], [ChequeID], [Narration], [ValueDate], [Payed], [CenterID], [GridNo], [BranchID] ASC);
+    PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
 -- Creating primary key on [DebentureID] in table 'debentures'
@@ -604,6 +617,18 @@ GO
 ALTER TABLE [dbo].[Groups]
 ADD CONSTRAINT [PK_Groups]
     PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'InvoiceDetails'
+ALTER TABLE [dbo].[InvoiceDetails]
+ADD CONSTRAINT [PK_InvoiceDetails]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [InvoiceId] in table 'Invoices'
+ALTER TABLE [dbo].[Invoices]
+ADD CONSTRAINT [PK_Invoices]
+    PRIMARY KEY CLUSTERED ([InvoiceId] ASC);
 GO
 
 -- Creating primary key on [Id] in table 'ItemGroups'
@@ -624,9 +649,27 @@ ADD CONSTRAINT [PK_Items]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
+-- Creating primary key on [PaymentTypeID] in table 'PaymentTypes'
+ALTER TABLE [dbo].[PaymentTypes]
+ADD CONSTRAINT [PK_PaymentTypes]
+    PRIMARY KEY CLUSTERED ([PaymentTypeID] ASC);
+GO
+
 -- Creating primary key on [Id] in table 'PermissionControls'
 ALTER TABLE [dbo].[PermissionControls]
 ADD CONSTRAINT [PK_PermissionControls]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [DetailsId] in table 'SaleInvoiceDetails'
+ALTER TABLE [dbo].[SaleInvoiceDetails]
+ADD CONSTRAINT [PK_SaleInvoiceDetails]
+    PRIMARY KEY CLUSTERED ([DetailsId] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'SalesInvoices'
+ALTER TABLE [dbo].[SalesInvoices]
+ADD CONSTRAINT [PK_SalesInvoices]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -636,15 +679,21 @@ ADD CONSTRAINT [PK_SupplierSets]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [diagram_id] in table 'sysdiagrams'
-ALTER TABLE [dbo].[sysdiagrams]
-ADD CONSTRAINT [PK_sysdiagrams]
-    PRIMARY KEY CLUSTERED ([diagram_id] ASC);
+-- Creating primary key on [Id] in table 'TreeAccounts'
+ALTER TABLE [dbo].[TreeAccounts]
+ADD CONSTRAINT [PK_TreeAccounts]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
 -- Creating primary key on [Id] in table 'Trees'
 ALTER TABLE [dbo].[Trees]
 ADD CONSTRAINT [PK_Trees]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'Trees1'
+ALTER TABLE [dbo].[Trees1]
+ADD CONSTRAINT [PK_Trees1]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -666,57 +715,9 @@ ADD CONSTRAINT [PK_Wharehouses]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'Trees1'
-ALTER TABLE [dbo].[Trees1]
-ADD CONSTRAINT [PK_Trees1]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [DetailsId] in table 'SaleInvoiceDetails'
-ALTER TABLE [dbo].[SaleInvoiceDetails]
-ADD CONSTRAINT [PK_SaleInvoiceDetails]
-    PRIMARY KEY CLUSTERED ([DetailsId] ASC);
-GO
-
--- Creating primary key on [Id] in table 'SalesInvoices'
-ALTER TABLE [dbo].[SalesInvoices]
-ADD CONSTRAINT [PK_SalesInvoices]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [PaymentTypeID] in table 'PaymentTypes'
-ALTER TABLE [dbo].[PaymentTypes]
-ADD CONSTRAINT [PK_PaymentTypes]
-    PRIMARY KEY CLUSTERED ([PaymentTypeID] ASC);
-GO
-
--- Creating primary key on [id] in table 'accountmains'
-ALTER TABLE [dbo].[accountmains]
-ADD CONSTRAINT [PK_accountmains]
-    PRIMARY KEY CLUSTERED ([id] ASC);
-GO
-
--- Creating primary key on [id] in table 'Accounts_Balance'
-ALTER TABLE [dbo].[Accounts_Balance]
-ADD CONSTRAINT [PK_Accounts_Balance]
-    PRIMARY KEY CLUSTERED ([id] ASC);
-GO
-
--- Creating primary key on [Id] in table 'TreeAccounts'
-ALTER TABLE [dbo].[TreeAccounts]
-ADD CONSTRAINT [PK_TreeAccounts]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [Id] in table 'CompanyInfoes'
-ALTER TABLE [dbo].[CompanyInfoes]
-ADD CONSTRAINT [PK_CompanyInfoes]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [id] in table 'accountmain1'
-ALTER TABLE [dbo].[accountmain1]
-ADD CONSTRAINT [PK_accountmain1]
+-- Creating primary key on [id] in table 'accountmains1'
+ALTER TABLE [dbo].[accountmains1]
+ADD CONSTRAINT [PK_accountmains1]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
@@ -724,41 +725,88 @@ GO
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
 
--- Creating foreign key on [GroupID] in table 'accounts'
-ALTER TABLE [dbo].[accounts]
-ADD CONSTRAINT [FK_accounts_accountsgroups]
-    FOREIGN KEY ([GroupID])
-    REFERENCES [dbo].[accountsgroups]
-        ([GroupID])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_accounts_accountsgroups'
-CREATE INDEX [IX_FK_accounts_accountsgroups]
-ON [dbo].[accounts]
-    ([GroupID]);
-GO
-
--- Creating foreign key on [AccountID] in table 'debenturedetails'
-ALTER TABLE [dbo].[debenturedetails]
-ADD CONSTRAINT [FK_debenturedetails_debentures11]
-    FOREIGN KEY ([AccountID])
-    REFERENCES [dbo].[accounts]
-        ([AccountID])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_debenturedetails_debentures11'
-CREATE INDEX [IX_FK_debenturedetails_debentures11]
-ON [dbo].[debenturedetails]
-    ([AccountID]);
-GO
-
 -- Creating foreign key on [DebentureID] in table 'debenturedetails'
 ALTER TABLE [dbo].[debenturedetails]
-ADD CONSTRAINT [FK_debenturedetails_debentures1]
+ADD CONSTRAINT [FK_debenturedetails_debentures]
     FOREIGN KEY ([DebentureID])
     REFERENCES [dbo].[debentures]
         ([DebentureID])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_debenturedetails_debentures'
+CREATE INDEX [IX_FK_debenturedetails_debentures]
+ON [dbo].[debenturedetails]
+    ([DebentureID]);
+GO
+
+-- Creating foreign key on [AccountID] in table 'debenturedetails'
+ALTER TABLE [dbo].[debenturedetails]
+ADD CONSTRAINT [FK_debenturedetails_debentures1]
+    FOREIGN KEY ([AccountID])
+    REFERENCES [dbo].[TreeAccounts]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_debenturedetails_debentures1'
+CREATE INDEX [IX_FK_debenturedetails_debentures1]
+ON [dbo].[debenturedetails]
+    ([AccountID]);
+GO
+
+-- Creating foreign key on [CategoryId] in table 'InvoiceDetails'
+ALTER TABLE [dbo].[InvoiceDetails]
+ADD CONSTRAINT [FK_dbo_InvoiceDetails_dbo_Categories_CategoryId]
+    FOREIGN KEY ([CategoryId])
+    REFERENCES [dbo].[ItemGroups]
+        ([Id])
+    ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_dbo_InvoiceDetails_dbo_Categories_CategoryId'
+CREATE INDEX [IX_FK_dbo_InvoiceDetails_dbo_Categories_CategoryId]
+ON [dbo].[InvoiceDetails]
+    ([CategoryId]);
+GO
+
+-- Creating foreign key on [InvoiceId] in table 'InvoiceDetails'
+ALTER TABLE [dbo].[InvoiceDetails]
+ADD CONSTRAINT [FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId]
+    FOREIGN KEY ([InvoiceId])
+    REFERENCES [dbo].[Invoices]
+        ([InvoiceId])
+    ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId'
+CREATE INDEX [IX_FK_dbo_InvoiceDetails_dbo_Invoices_InvoiceId]
+ON [dbo].[InvoiceDetails]
+    ([InvoiceId]);
+GO
+
+-- Creating foreign key on [ProductId] in table 'InvoiceDetails'
+ALTER TABLE [dbo].[InvoiceDetails]
+ADD CONSTRAINT [FK_dbo_InvoiceDetails_dbo_Products_ProductId]
+    FOREIGN KEY ([ProductId])
+    REFERENCES [dbo].[Items]
+        ([Id])
+    ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_dbo_InvoiceDetails_dbo_Products_ProductId'
+CREATE INDEX [IX_FK_dbo_InvoiceDetails_dbo_Products_ProductId]
+ON [dbo].[InvoiceDetails]
+    ([ProductId]);
+GO
+
+-- Creating foreign key on [SupplierId] in table 'Invoices'
+ALTER TABLE [dbo].[Invoices]
+ADD CONSTRAINT [FK_dbo_Invoices_dbo_Suppliers_SupplierId]
+    FOREIGN KEY ([SupplierId])
+    REFERENCES [dbo].[SupplierSets]
+        ([Id])
+    ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_dbo_Invoices_dbo_Suppliers_SupplierId'
+CREATE INDEX [IX_FK_dbo_Invoices_dbo_Suppliers_SupplierId]
+ON [dbo].[Invoices]
+    ([SupplierId]);
 GO
 
 -- Creating foreign key on [ItemGroupsId] in table 'Items'

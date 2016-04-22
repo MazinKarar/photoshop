@@ -29,8 +29,17 @@ namespace Purchase
             bindingSource5.DataSource = dbContext.debenturedetails.Where(c => c.AccountID == 0).ToList();
             using (var db = new AccountingSystem())
             {
-                var dc = db.debentures.ToList().Max(e => Convert.ToInt32(e.DebentureNo));
-                DebentureNo.Text = (int.Parse(dc.ToString()) + 1) + "";
+                var dc = 0;
+                try 
+                {
+                     dc = db.debentures.ToList().Max(e => Convert.ToInt32(e.DebentureNo));
+                    DebentureNo.Text = (int.Parse(dc.ToString()) + 1) + "";
+                }
+                catch(Exception r)
+                {
+                    DebentureNo.Text = 1 + "";
+                }
+             
             }
         }
 
@@ -159,14 +168,16 @@ namespace Purchase
                         Debenture.debenturedetails.Add(DetailsEntity);//add details in master object 
                     }
                 }
-                string ErrorMessage = "";
+                string Message = "";
                 if (DebentureNo.Text.Equals(""))
                 {
-                    ErrorMessage = "الرجاء ادخال الرقم القيد";
+                    MessageBox.Show("الرجاء ادخال الرقم القيد", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
                 else if (note.Text.Equals(""))
                 {
-                    ErrorMessage = "الرجاء ادخال البيان";
+                    MessageBox.Show("الرجاء ادخال البيان", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
                 else
                     if (double.Parse(textcrd.Text) == 0 || double.Parse(textdebt.Text) == 0 || double.Parse(textcrd.Text) != double.Parse(textdebt.Text))
@@ -226,22 +237,31 @@ namespace Purchase
                         {
 
                             db.SaveChanges();
-                            if (!isEditForm)
-                            ErrorMessage = "تم الحفظ بنجاح";
-                            else
-                             ErrorMessage = "تم التعديل بنجاح";
+                            if (isEditForm)
+                            Message = "تم التعديل بنجاح";
                             if (!isEditForm)
                             {
+                                Message = "تم الحفظ بنجاح";
                                 note.Text = "";
                                 date.DateTime = DateTime.Now;
+                                textcrd.Text = 0+"";
+                                textcrd.Text = 0 + "";
+                                textdebt.Text = 0 + "";
+                                sumcrd.Text = 0 + "";
+                                sumdebt.Text = 0 + "";
+                                nodes.Text = "";
                                 using (var dbs = new AccountingSystem())
                                 {
                                     var dc = dbs.debentures.ToList().Max(i => Convert.ToInt32(i.DebentureNo));
                                     DebentureNo.Text = (int.Parse(dc.ToString()) + 1) + "";
                                 }
-                                //gridView1.SelectAll();
-                                //gridView1.DeleteSelectedRows();
-                                //return;
+                                for (int b = 0; b < gridView1.RowCount; b++)
+                                {
+                                    gridView1.SelectAll();
+                                    gridView1.DeleteSelectedRows();
+                                    // return;
+                                }
+                                
                             }
                         }
                         catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
@@ -263,11 +283,13 @@ namespace Purchase
                         {
                             Exception raise = dbEx;
                             var val = dbEx.InnerException;
-                            MessageBox.Show(val.ToString());
+                            //MessageBox.Show(val.ToString());
+                            MessageBox.Show("هذا الحساب غير موجود", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             //throw raise;
                         }
                     }
-                MessageBox.Show(ErrorMessage);
+                if(Message !="")
+                MessageBox.Show(Message);
             }
         }
 

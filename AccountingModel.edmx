@@ -5,37 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="AccountingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="accountmain">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="dt" Type="datetime" />
-          <Property Name="accountid" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="custid" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="debit" Type="money" />
-          <Property Name="credit" Type="money" />
-          <Property Name="balance" Type="money" />
-          <Property Name="detail" Type="nvarchar" MaxLength="50" />
-          <Property Name="dealing" Type="nvarchar" MaxLength="50" />
-          <Property Name="renum" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="idunique" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="active" Type="bit" />
-          <Property Name="isdeleted" Type="bit" />
-          <Property Name="ship" Type="nvarchar" MaxLength="350" />
-          <Property Name="en_dealing" Type="nvarchar" MaxLength="50" />
-          <Property Name="deal" Type="nvarchar" MaxLength="50" />
-          <Property Name="Myuser" Type="nvarchar" MaxLength="50" />
-          <Property Name="IsUser" Type="bit" />
-          <Property Name="CloseRegnum" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Cpu" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="currency" Type="nvarchar" MaxLength="50" />
-          <Property Name="currencyval" Type="float" />
-          <Property Name="BranchID" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="CostID" Type="numeric" Precision="18" Scale="0" />
-        </EntityType>
         <EntityType Name="accountmains">
           <Key>
             <PropertyRef Name="id" />
@@ -69,9 +38,9 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="branchid" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="accountid" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="id" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="branchid" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="accountid" Type="decimal" Precision="18" Scale="0" />
           <Property Name="debit" Type="float" />
           <Property Name="credit" Type="float" />
           <Property Name="balance" Type="float" />
@@ -338,7 +307,7 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <Property Name="credit" Type="decimal" Precision="19" Scale="2" />
           <Property Name="balance" Type="decimal" Precision="19" Scale="2" />
           <Property Name="cmpnum" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="dt" Type="datetime2" Precision="7" />
+          <Property Name="dt" Type="datetime" />
           <Property Name="note" Type="varchar(max)" />
           <Property Name="ismoney" Type="bit" />
           <Property Name="tag" Type="nvarchar" MaxLength="50" />
@@ -571,34 +540,6 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VendorSets" EntityType="Self.VendorSets" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Wharehouses" EntityType="Self.Wharehouses" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="accountmain" EntityType="Self.accountmain" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [accountmain].[id] AS [id], 
-    [accountmain].[dt] AS [dt], 
-    [accountmain].[accountid] AS [accountid], 
-    [accountmain].[custid] AS [custid], 
-    [accountmain].[debit] AS [debit], 
-    [accountmain].[credit] AS [credit], 
-    [accountmain].[balance] AS [balance], 
-    [accountmain].[detail] AS [detail], 
-    [accountmain].[dealing] AS [dealing], 
-    [accountmain].[renum] AS [renum], 
-    [accountmain].[idunique] AS [idunique], 
-    [accountmain].[active] AS [active], 
-    [accountmain].[isdeleted] AS [isdeleted], 
-    [accountmain].[ship] AS [ship], 
-    [accountmain].[en_dealing] AS [en_dealing], 
-    [accountmain].[deal] AS [deal], 
-    [accountmain].[Myuser] AS [Myuser], 
-    [accountmain].[IsUser] AS [IsUser], 
-    [accountmain].[CloseRegnum] AS [CloseRegnum], 
-    [accountmain].[Cpu] AS [Cpu], 
-    [accountmain].[currency] AS [currency], 
-    [accountmain].[currencyval] AS [currencyval], 
-    [accountmain].[BranchID] AS [BranchID], 
-    [accountmain].[CostID] AS [CostID]
-    FROM [dbo].[accountmain] AS [accountmain]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_dbo_InvoiceDetails_dbo_Categories_CategoryId" Association="Self.FK_dbo_InvoiceDetails_dbo_Categories_CategoryId">
             <End Role="ItemGroups" EntitySet="ItemGroups" />
             <End Role="InvoiceDetails" EntitySet="InvoiceDetails" />
@@ -672,7 +613,6 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <EntitySet Name="Users" EntityType="AccountingModel.User" />
           <EntitySet Name="VendorSets" EntityType="AccountingModel.VendorSet" />
           <EntitySet Name="Wharehouses" EntityType="AccountingModel.Wharehous" />
-          <EntitySet Name="accountmains1" EntityType="AccountingModel.accountmain1" />
           <AssociationSet Name="FK_debenturedetails_debentures" Association="AccountingModel.FK_debenturedetails_debentures">
             <End Role="debenture" EntitySet="debentures" />
             <End Role="debenturedetail" EntitySet="debenturedetails" />
@@ -838,8 +778,8 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <Property Name="Sequence" Type="Int32" />
           <Property Name="Amount" Type="Double" />
           <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="debenturedetails" Relationship="AccountingModel.FK_debenturedetails_debentures" FromRole="debenture" ToRole="debenturedetail" />
           <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="debenturedetails" Relationship="AccountingModel.FK_debenturedetails_debentures" FromRole="debenture" ToRole="debenturedetail" />
         </EntityType>
         <EntityType Name="Group">
           <Key>
@@ -998,7 +938,7 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <Property Name="SupplierStartBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SupplierStartBlnsDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SupplierTypeOfBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="SupplierStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SupplierStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SupplierBranch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SupplierBranchCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SupplierLedger" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -1034,7 +974,7 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <Property Name="credit" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="balance" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="cmpnum" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="dt" Type="DateTime" Precision="7" />
+          <Property Name="dt" Type="DateTime" Precision="3" />
           <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ismoney" Type="Boolean" />
           <Property Name="tag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1082,7 +1022,7 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <Property Name="VendorStartBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="VendorStartBlnsDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="VendorTypeOfBalance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="VendorStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VendorStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="VendorBranch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="VendorBranchCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="VendorLedger" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -1112,35 +1052,6 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
           <Property Name="Mobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Size" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="Items" Relationship="AccountingModel.FK_WharehouseItems" FromRole="Wharehous" ToRole="Item" />
-        </EntityType>
-        <EntityType Name="accountmain1">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="dt" Type="DateTime" Precision="3" />
-          <Property Name="accountid" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="custid" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="debit" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="credit" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="balance" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="detail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="dealing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="renum" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="idunique" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="active" Type="Boolean" />
-          <Property Name="isdeleted" Type="Boolean" />
-          <Property Name="ship" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
-          <Property Name="en_dealing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="deal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Myuser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IsUser" Type="Boolean" />
-          <Property Name="CloseRegnum" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Cpu" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="currencyval" Type="Double" />
-          <Property Name="BranchID" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CostID" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
         <Association Name="FK_debenturedetails_debentures">
           <End Type="AccountingModel.debenture" Role="debenture" Multiplicity="1" />
@@ -1679,36 +1590,6 @@ warning 6002: The table/view 'AccountingSystem.dbo.accountmain' does not have a 
                 <ScalarProperty Name="BranchID" ColumnName="BranchID" />
                 <ScalarProperty Name="StoreName" ColumnName="StoreName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="accountmains1">
-            <EntityTypeMapping TypeName="AccountingModel.accountmain1">
-              <MappingFragment StoreEntitySet="accountmain">
-                <ScalarProperty Name="CostID" ColumnName="CostID" />
-                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
-                <ScalarProperty Name="currencyval" ColumnName="currencyval" />
-                <ScalarProperty Name="currency" ColumnName="currency" />
-                <ScalarProperty Name="Cpu" ColumnName="Cpu" />
-                <ScalarProperty Name="CloseRegnum" ColumnName="CloseRegnum" />
-                <ScalarProperty Name="IsUser" ColumnName="IsUser" />
-                <ScalarProperty Name="Myuser" ColumnName="Myuser" />
-                <ScalarProperty Name="deal" ColumnName="deal" />
-                <ScalarProperty Name="en_dealing" ColumnName="en_dealing" />
-                <ScalarProperty Name="ship" ColumnName="ship" />
-                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
-                <ScalarProperty Name="active" ColumnName="active" />
-                <ScalarProperty Name="idunique" ColumnName="idunique" />
-                <ScalarProperty Name="renum" ColumnName="renum" />
-                <ScalarProperty Name="dealing" ColumnName="dealing" />
-                <ScalarProperty Name="detail" ColumnName="detail" />
-                <ScalarProperty Name="balance" ColumnName="balance" />
-                <ScalarProperty Name="credit" ColumnName="credit" />
-                <ScalarProperty Name="debit" ColumnName="debit" />
-                <ScalarProperty Name="custid" ColumnName="custid" />
-                <ScalarProperty Name="accountid" ColumnName="accountid" />
-                <ScalarProperty Name="dt" ColumnName="dt" />
-                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
