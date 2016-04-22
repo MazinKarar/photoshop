@@ -134,6 +134,12 @@
     <Compile Include="AccountantTree.Designer.cs">
       <DependentUpon>AccountantTree.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccountDay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountDay.Designer.cs">
+      <DependentUpon>AccountDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="AccountingModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -481,6 +487,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountantTree.resx">
       <DependentUpon>AccountantTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountDay.resx">
+      <DependentUpon>AccountDay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddArea.resx">
       <DependentUpon>AddArea.cs</DependentUpon>
