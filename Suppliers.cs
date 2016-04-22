@@ -59,54 +59,67 @@ namespace Purchase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            news.Enabled = true;
-            save.Enabled = false;
-            update.Enabled = true;
-            using (var db = new AccountingSystem())
+            if (SubName.Text.Equals("") || SubName.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال اسم العميل");
+            else if (SubBalance.Text.Equals("") || SubBalance.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء الرصيد الابتدائي");
+            else if (SupLedger.Text.Equals("") || SupLedger.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار حساب الاستاذ");
+            else if (SupSupplementingAccount.Text.Equals("") || SupSupplementingAccount.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الحساب المكمل");
+            else
             {
-                SupplierSet dd = new SupplierSet();
-                //var SupplierSet = db.SupplierSets.Create();
-                dd.SupplierId = SubCode.Text;
-                dd.SupplierName = SubName.Text;
-                dd.SupplierStartBalance = SubBalance.Text;
-                dd.SupplierStartBlnsDate = SubDateBalance.Value.ToString();
-                dd.SupplierTypeOfBalance = SubTypeBalance.Text;
-                dd.SupplierStatus = SubStatus.Checked.ToString();
-                dd.SupplierBranch = SupBranch.Text;
-                dd.SupplierBranchCurrency = SupCurrency.Text;
-                dd.SupplierSupplementingAccount = SupSupplementingAccount.EditValue.ToString();
-                dd.SupplierLedger = SupLedger.EditValue.ToString();
-                dd.SupplierCompanyName = SubNameCompany.Text;
-                dd.SupplierResponsible = SubResponsbile.Text;
-                dd.SupplierArea = SubArea.Text;
-                dd.SupplierAddress = SubAddress.Text;
-                dd.SupplierPhone1 = SubPhone1.Text;
-                dd.SupplierPhone2 = SubPhone2.Text;
-                dd.SupplierWebsite = SubWebsite.Text;
-                dd.SupplierEmail = SubEmail.Text;
-                dd.SupplierBankNoAccount = SubBankNoAccount.Text;
-                dd.SupplierBankName = SubBankName.Text;
-                dd.SupplierBankBranach = SubBankBranch.Text;
-                db.SupplierSets.Add(dd);
-                try
+                news.Visible = true;
+                save.Visible = false;
+                update.Visible = true;
+                using (var db = new AccountingSystem())
                 {
-                    db.SaveChanges();
+                    SupplierSet dd = new SupplierSet();
+                    //var SupplierSet = db.SupplierSets.Create();
+                    dd.SupplierId = SubCode.Text;
+                    dd.SupplierName = SubName.Text;
+                    dd.SupplierStartBalance = SubBalance.Text;
+                    dd.SupplierStartBlnsDate = SubDateBalance.Value.ToString();
+                    dd.SupplierTypeOfBalance = SubTypeBalance.Text;
+                    dd.SupplierStatus = SubStatus.Checked.ToString();
+                    dd.SupplierBranch = SupBranch.Text;
+                    dd.SupplierBranchCurrency = SupCurrency.Text;
+                    dd.SupplierSupplementingAccount = SupSupplementingAccount.EditValue.ToString();
+                    dd.SupplierLedger = SupLedger.EditValue.ToString();
+                    dd.SupplierCompanyName = SubNameCompany.Text;
+                    dd.SupplierResponsible = SubResponsbile.Text;
+                    dd.SupplierArea = SubArea.Text;
+                    dd.SupplierAddress = SubAddress.Text;
+                    dd.SupplierPhone1 = SubPhone1.Text;
+                    dd.SupplierPhone2 = SubPhone2.Text;
+                    dd.SupplierWebsite = SubWebsite.Text;
+                    dd.SupplierEmail = SubEmail.Text;
+                    dd.SupplierBankNoAccount = SubBankNoAccount.Text;
+                    dd.SupplierBankName = SubBankName.Text;
+                    dd.SupplierBankBranach = SubBankBranch.Text;
+                    db.SupplierSets.Add(dd);
+                    try
+                    {
+
+
+                        db.SaveChanges();
+                    }
+                    catch (Exception dbEx)
+                    {
+                        Exception raise = dbEx;
+                        var val = dbEx.InnerException;
+                        MessageBox.Show(val.ToString());
+                    }
+                    // MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception dbEx)
-                {
-                    Exception raise = dbEx;
-                    var val = dbEx.InnerException;
-                    MessageBox.Show(val.ToString());
-                }
-               // MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fillsearch();
             }
-            fillsearch();
         }
 
         private void Suppliers_Load(object sender, EventArgs e)
         {
-            update.Enabled = false;
-            news.Enabled = true;    
+            update.Visible = false;
+            news.Visible = true;    
 
             using (var db = new AccountingSystem())
             {
@@ -158,9 +171,9 @@ namespace Purchase
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            save.Enabled = false;
-            news.Enabled = true;
-            update.Enabled = true;
+            save.Visible = false;
+            news.Visible = true;
+            update.Visible = true;
             using (var db = new AccountingSystem())
             {
                 var dc = from c in db.SupplierSets
@@ -204,8 +217,8 @@ namespace Purchase
                         SubStatus.Checked = false;
                     SupBranch.Text = list[0].SupplierBranch;
                     SupCurrency.Text =list[0].SupplierBranchCurrency ;
-                    SupLedger.EditValue = list[0].SupplierLedger;
-                    SupSupplementingAccount.EditValue =list[0].SupplierSupplementingAccount ;
+                    SupLedger.EditValue = int.Parse(list[0].SupplierLedger);
+                    SupSupplementingAccount.EditValue =int.Parse(list[0].SupplierSupplementingAccount) ;
                     SubNameCompany.Text = list[0].SupplierCompanyName;
                     SubResponsbile.Text = list[0].SupplierResponsible;
                     SubArea.Text = list[0].SupplierArea;
@@ -227,69 +240,81 @@ namespace Purchase
 
         private void update_Click(object sender, EventArgs e)
         {
-            //Wait pleaseWait = new Wait();
-            //Application.DoEvents();
-            //pleaseWait.Show();
-            save.Enabled = false;
-            news.Enabled = true;
-            update.Enabled = true;
-            SupplierSet Sup = new SupplierSet();
-            //InitializeComponent();
-            using (var db = new AccountingSystem())
+            if (SubName.Text.Equals("") || SubName.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال اسم العميل");
+            else if (SubBalance.Text.Equals("") || SubBalance.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء الرصيد الابتدائي");
+            else if (SupLedger.Text.Equals("") || SupLedger.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار حساب الاستاذ");
+            else if (SupSupplementingAccount.Text.Equals("") || SupSupplementingAccount.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الحساب المكمل");
+            else
             {
-                try
+                //Wait pleaseWait = new Wait();
+                //Application.DoEvents();
+                //pleaseWait.Show();
+                save.Visible = false;
+                news.Visible = true;
+                update.Visible = true;
+                SupplierSet Sup = new SupplierSet();
+                //InitializeComponent();
+                using (var db = new AccountingSystem())
                 {
-
-                var SupplierSet = db.SupplierSets.First(x => x.SupplierId.Equals(SubCode.Text));
-                SupplierSet.SupplierId = SubCode.Text;
-                SupplierSet.SupplierName = SubName.Text;
-                SupplierSet.SupplierStartBalance = SubBalance.Text;
-                SupplierSet.SupplierStartBlnsDate = SubDateBalance.Value.ToString();
-                SupplierSet.SupplierTypeOfBalance = SubTypeBalance.Text;
-                SupplierSet.SupplierStatus = SubStatus.Checked.ToString();
-                SupplierSet.SupplierBranch = SupBranch.Text;
-                SupplierSet.SupplierBranchCurrency = SupCurrency.Text;
-                SupplierSet.SupplierSupplementingAccount = SupSupplementingAccount.EditValue.ToString();
-                SupplierSet.SupplierLedger = SupLedger.EditValue.ToString();
-                SupplierSet.SupplierCompanyName = SubNameCompany.Text;
-                SupplierSet.SupplierResponsible = SubResponsbile.Text;
-                SupplierSet.SupplierArea = SubArea.Text;
-                SupplierSet.SupplierAddress = SubAddress.Text;
-                SupplierSet.SupplierPhone1 = SubPhone1.Text;
-                SupplierSet.SupplierPhone2 = SubPhone2.Text;
-                SupplierSet.SupplierWebsite = SubWebsite.Text;
-                SupplierSet.SupplierEmail = SubEmail.Text;
-                SupplierSet.SupplierBankNoAccount = SubBankNoAccount.Text;
-                SupplierSet.SupplierBankName = SubBankName.Text;
-                SupplierSet.SupplierBankBranach = SubBankBranch.Text;
-                db.Entry(SupplierSet).State = System.Data.Entity.EntityState.Modified;
-                
-                    db.SaveChanges();
-                }
-                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
-                {
-                    Exception raise = dbEx;
-                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    try
                     {
-                        foreach (var validationError in validationErrors.ValidationErrors)
-                        {
-                            string message = string.Format("{0}:{1}",
-                                validationErrors.Entry.Entity.ToString(),
-                                validationError.ErrorMessage);
-                            raise = new InvalidOperationException(message, raise);
-                        }
+
+                        var SupplierSet = db.SupplierSets.First(x => x.SupplierId.Equals(SubCode.Text));
+                        SupplierSet.SupplierId = SubCode.Text;
+                        SupplierSet.SupplierName = SubName.Text;
+                        SupplierSet.SupplierStartBalance = SubBalance.Text;
+                        SupplierSet.SupplierStartBlnsDate = SubDateBalance.Value.ToString();
+                        SupplierSet.SupplierTypeOfBalance = SubTypeBalance.Text;
+                        SupplierSet.SupplierStatus = SubStatus.Checked.ToString();
+                        SupplierSet.SupplierBranch = SupBranch.Text;
+                        SupplierSet.SupplierBranchCurrency = SupCurrency.Text;
+                        SupplierSet.SupplierSupplementingAccount = SupSupplementingAccount.EditValue.ToString();
+                        SupplierSet.SupplierLedger = SupLedger.EditValue.ToString();
+                        SupplierSet.SupplierCompanyName = SubNameCompany.Text;
+                        SupplierSet.SupplierResponsible = SubResponsbile.Text;
+                        SupplierSet.SupplierArea = SubArea.Text;
+                        SupplierSet.SupplierAddress = SubAddress.Text;
+                        SupplierSet.SupplierPhone1 = SubPhone1.Text;
+                        SupplierSet.SupplierPhone2 = SubPhone2.Text;
+                        SupplierSet.SupplierWebsite = SubWebsite.Text;
+                        SupplierSet.SupplierEmail = SubEmail.Text;
+                        SupplierSet.SupplierBankNoAccount = SubBankNoAccount.Text;
+                        SupplierSet.SupplierBankName = SubBankName.Text;
+                        SupplierSet.SupplierBankBranach = SubBankBranch.Text;
+                        db.Entry(SupplierSet).State = System.Data.Entity.EntityState.Modified;
+
+                        db.SaveChanges();
                     }
-                    throw raise;
+                    catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                    {
+                        Exception raise = dbEx;
+                        foreach (var validationErrors in dbEx.EntityValidationErrors)
+                        {
+                            foreach (var validationError in validationErrors.ValidationErrors)
+                            {
+                                string message = string.Format("{0}:{1}",
+                                    validationErrors.Entry.Entity.ToString(),
+                                    validationError.ErrorMessage);
+                                raise = new InvalidOperationException(message, raise);
+                            }
+                        }
+                        throw raise;
+                    }
+                    catch (Exception dbEx)
+                    {
+                        Exception raise = dbEx;
+                        var val = dbEx.InnerException;
+                        MessageBox.Show(val.ToString());
+                        //throw raise;
+                    }
                 }
-                catch (Exception dbEx)
-                {
-                    Exception raise = dbEx;
-                    var val = dbEx.InnerException;
-                    MessageBox.Show(val.ToString());
-                    //throw raise;
-                }
+
+                fillsearch();
             }
-            fillsearch();
             //pleaseWait. ;
             //pleaseWait.Close(TimeSpan.FromSeconds(0));
             //MessageBox.Show("تم التحديث بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -297,8 +322,8 @@ namespace Purchase
 
         private void news_Click(object sender, EventArgs e)
         {
-            save.Enabled = true;
-            update.Enabled = false;
+            save.Visible = true;
+            update.Visible = false;
 
             using (var db = new AccountingSystem())
             {
@@ -345,14 +370,20 @@ namespace Purchase
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            FlyoutAction action = new FlyoutAction();
-            action.Caption = "المناطق";
-            MainAr c= new MainAr();
-            MyFlyoutDialog dialog = new MyFlyoutDialog(this.ParentForm ,action , new AddArea());
-            dialog.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            dialog.StartPosition = FormStartPosition.CenterScreen;
-            dialog.Width = 200;
-            dialog.ShowDialog();
+            Form storeForm = new Form();
+            storeForm.Controls.Add(new AddArea());
+            storeForm.BackColor = System.Drawing.Color.White;
+            storeForm.StartPosition = FormStartPosition.CenterScreen;
+            storeForm.Width = 320;
+            //storeForm.WindowState = FormWindowState.Maximized;
+            DialogResult x = storeForm.ShowDialog();
+
+            if (x == DialogResult.Cancel)
+            {
+                dbContext = new Purchase.AccountingSystem();
+                bindingSource2.DataSource = dbContext.AreasSets.ToList();
+                SubArea.Refresh();
+            }
         }
         public class MyFlyoutDialog : FlyoutDialog
         {
@@ -365,26 +396,38 @@ namespace Purchase
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            FlyoutAction action = new FlyoutAction();
-            action.Caption = "العملات";
-            MainAr c = new MainAr();
-            MyFlyoutDialog dialog = new MyFlyoutDialog(this.ParentForm, action, new AddCurrnceys());
-            dialog.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            dialog.StartPosition = FormStartPosition.CenterScreen;
-            dialog.Width = 200;
-            dialog.ShowDialog();
+            Form storeForm = new Form();
+            storeForm.Controls.Add(new AddCurrnceys());
+            storeForm.BackColor = System.Drawing.Color.White;
+            storeForm.StartPosition = FormStartPosition.CenterScreen;
+            storeForm.Width = 320;
+            //storeForm.WindowState = FormWindowState.Maximized;
+            DialogResult x = storeForm.ShowDialog();
+
+            if (x == DialogResult.Cancel)
+            {
+                dbContext = new Purchase.AccountingSystem();
+                bindingSource1.DataSource = dbContext.CurrencySets.ToList();
+                SupCurrency.Refresh();
+            }
         }
 
         private void simpleButton6_Click(object sender, EventArgs e)
         {
-            FlyoutAction action = new FlyoutAction();
-            action.Caption = "البنوك";
-            MainAr c = new MainAr();
-            MyFlyoutDialog dialog = new MyFlyoutDialog(this.ParentForm, action, new AddBank());
-            dialog.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            dialog.StartPosition = FormStartPosition.CenterScreen;
-            dialog.Width = 200;
-            dialog.ShowDialog();
+            Form storeForm = new Form();
+            storeForm.Controls.Add(new AddBank());
+            storeForm.BackColor = System.Drawing.Color.White;
+            storeForm.StartPosition = FormStartPosition.CenterScreen;
+            storeForm.Width = 320;
+            //storeForm.WindowState = FormWindowState.Maximized;
+            DialogResult x = storeForm.ShowDialog();
+
+            if (x == DialogResult.Cancel)
+            {
+                dbContext = new Purchase.AccountingSystem();
+                bindingSource3.DataSource = dbContext.BankSets.ToList();
+                SubBankName.Refresh();
+            }
         }
 
         private void SubBankName_EditValueChanged(object sender, EventArgs e)
