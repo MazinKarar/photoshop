@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserView));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colUCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUGroup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUBranch = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -116,13 +114,14 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colUCode,
             this.colUName,
-            this.colUGroup,
             this.colUBranch,
             this.colUStatus});
             this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupCount = 1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colUStatus, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colUCode, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colUCode
@@ -132,7 +131,7 @@
             this.colUCode.Name = "colUCode";
             this.colUCode.Visible = true;
             this.colUCode.VisibleIndex = 0;
-            this.colUCode.Width = 97;
+            this.colUCode.Width = 105;
             // 
             // colUName
             // 
@@ -141,16 +140,7 @@
             this.colUName.Name = "colUName";
             this.colUName.Visible = true;
             this.colUName.VisibleIndex = 1;
-            this.colUName.Width = 252;
-            // 
-            // colUGroup
-            // 
-            this.colUGroup.Caption = "المجموعة";
-            this.colUGroup.FieldName = "UGroup";
-            this.colUGroup.Name = "colUGroup";
-            this.colUGroup.Visible = true;
-            this.colUGroup.VisibleIndex = 2;
-            this.colUGroup.Width = 252;
+            this.colUName.Width = 332;
             // 
             // colUBranch
             // 
@@ -158,8 +148,8 @@
             this.colUBranch.FieldName = "UBranch";
             this.colUBranch.Name = "colUBranch";
             this.colUBranch.Visible = true;
-            this.colUBranch.VisibleIndex = 3;
-            this.colUBranch.Width = 252;
+            this.colUBranch.VisibleIndex = 2;
+            this.colUBranch.Width = 688;
             // 
             // colUStatus
             // 
@@ -198,7 +188,6 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private DevExpress.XtraGrid.Columns.GridColumn colUCode;
         private DevExpress.XtraGrid.Columns.GridColumn colUName;
-        private DevExpress.XtraGrid.Columns.GridColumn colUGroup;
         private DevExpress.XtraGrid.Columns.GridColumn colUBranch;
         private DevExpress.XtraGrid.Columns.GridColumn colUStatus;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;

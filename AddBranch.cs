@@ -21,6 +21,7 @@ namespace Purchase
 
         private void AddBranch_Load(object sender, EventArgs e)
         {
+            update.Visible = false;
             using (var db = new AccountingSystem())
             {
                 var dc = from c in db.Branches
