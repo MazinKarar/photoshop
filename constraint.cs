@@ -393,5 +393,17 @@ namespace Purchase
         {
 
         }
+
+        private void DebentureNo_EditValueChanged(object sender, EventArgs e)
+        {
+            using (var db = new AccountingSystem())
+            {
+                if (db.debentures.Any(o => o.DebentureNo == DebentureNo.Text))
+                    if (!DebentureNo.Text.Equals(DebentureNo) && isEditForm)
+                        dxErrorProvider1.SetError(DebentureNo, "هذا الرقم موجود", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
+                    else
+                        dxErrorProvider1.ClearErrors();
+            }
+        }
     }
 }

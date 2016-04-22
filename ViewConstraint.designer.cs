@@ -38,11 +38,13 @@
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.remarks = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.debentureGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.debentureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DebGrid)).BeginInit();
@@ -74,7 +76,8 @@
             this.DebGrid.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colDebentureNo,
             this.colDebentureDate,
-            this.colNotes});
+            this.colNotes,
+            this.remarks});
             this.DebGrid.GridControl = this.debentureGridControl;
             this.DebGrid.Name = "DebGrid";
             this.DebGrid.OptionsView.ShowFooter = true;
@@ -107,7 +110,8 @@
             // 
             this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -115,6 +119,7 @@
             // 
             this.barButtonItem1.Caption = "تعديل";
             this.barButtonItem1.Id = 0;
+            this.barButtonItem1.ImageUri.Uri = "Edit";
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
@@ -122,8 +127,17 @@
             // 
             this.barButtonItem2.Caption = "حذف";
             this.barButtonItem2.Id = 1;
+            this.barButtonItem2.ImageUri.Uri = "Delete";
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "تحديث";
+            this.barButtonItem3.Id = 2;
+            this.barButtonItem3.ImageUri.Uri = "Refresh";
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barManager1
             // 
@@ -134,8 +148,9 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1,
-            this.barButtonItem2});
-            this.barManager1.MaxItemId = 2;
+            this.barButtonItem2,
+            this.barButtonItem3});
+            this.barManager1.MaxItemId = 3;
             // 
             // barDockControlTop
             // 
@@ -164,6 +179,14 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(882, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 400);
+            // 
+            // remarks
+            // 
+            this.remarks.Caption = "الملاحظات";
+            this.remarks.FieldName = "remarks";
+            this.remarks.Name = "remarks";
+            this.remarks.Visible = true;
+            this.remarks.VisibleIndex = 3;
             // 
             // ViewConstraint
             // 
@@ -202,6 +225,8 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private System.Windows.Forms.BindingSource debentureBindingSource;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraGrid.Columns.GridColumn remarks;
 
     }
 }

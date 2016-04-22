@@ -79,6 +79,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.accountingDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.date = new DevExpress.XtraEditors.DateEdit();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.note.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.debentureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DebentureNo.Properties)).BeginInit();
@@ -110,6 +111,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.accountingDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -166,6 +168,7 @@
             this.DebentureNo.Properties.Appearance.Options.UseFont = true;
             this.DebentureNo.Size = new System.Drawing.Size(192, 30);
             this.DebentureNo.TabIndex = 12;
+            this.DebentureNo.EditValueChanged += new System.EventHandler(this.DebentureNo_EditValueChanged);
             // 
             // lable
             // 
@@ -544,6 +547,10 @@
             this.date.Size = new System.Drawing.Size(174, 20);
             this.date.TabIndex = 33;
             // 
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
+            // 
             // constraint
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -606,6 +613,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.accountingDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -662,5 +670,6 @@
         private System.Windows.Forms.BindingSource debentureBindingSource;
         private System.Windows.Forms.BindingSource treeAccountBindingSource;
         private DevExpress.XtraEditors.DateEdit date;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

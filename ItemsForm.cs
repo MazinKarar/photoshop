@@ -274,6 +274,11 @@ namespace Purchase
                 comboBoxStore.Refresh();
             }
         }
+
+        private void ItemsForm_Load(object sender, EventArgs e)
+        {
+
+        }
       
         
         

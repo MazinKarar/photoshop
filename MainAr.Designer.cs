@@ -1149,7 +1149,7 @@
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "الرئيسية";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MainAr_Load);
+          //  this.Load += new System.EventHandler(this.MainAr_Load);
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();

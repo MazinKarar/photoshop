@@ -83,7 +83,23 @@ namespace Purchase
                 }
                 db.SaveChanges();
                    MessageBox.Show("تم الحذف بنجاح");
+                   Refresh();
             }
         }
+
+            private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+            {
+                Refresh();
+            }
+           
+
+        private void Refresh()
+        {
+            dbContext = new Purchase.AccountingSystem();
+            dbContext.debentures.Load();
+            debentureBindingSource.DataSource = dbContext.debentures.Local.ToBindingList();
+            DebGrid.RefreshData();
+         }
+
     }
 }
