@@ -358,6 +358,12 @@
     <Compile Include="ReportsPage.Designer.cs">
       <DependentUpon>ReportsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="RptSupplier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptSupplier.Designer.cs">
+      <DependentUpon>RptSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="RtpVendor.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -557,6 +563,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsPage.resx">
       <DependentUpon>ReportsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptSupplier.resx">
+      <DependentUpon>RptSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RtpVendor.resx">
       <DependentUpon>RtpVendor.cs</DependentUpon>
