@@ -92,7 +92,7 @@ namespace Purchase
                 try
                 {
                     db.SaveChanges();
-                    splashScreenManager1.CloseWaitForm();
+                    
                 }
                 catch (Exception dbEx)
                 {
@@ -100,9 +100,10 @@ namespace Purchase
                     var val = dbEx.InnerException;
                     MessageBox.Show(val.ToString());
                 }
-                MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             fillsearch();
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
