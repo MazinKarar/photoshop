@@ -98,8 +98,20 @@ namespace Purchase
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AddBanks AB = new AddBanks();
-            AB.Visible = true;
+            Form storeForm = new AddBanks();
+            //storeForm.Controls.Add(new AddBanks());
+            storeForm.BackColor = System.Drawing.Color.White;
+            storeForm.StartPosition = FormStartPosition.CenterScreen;
+            storeForm.Width = 320;
+            //storeForm.WindowState = FormWindowState.Maximized;
+            DialogResult x = storeForm.ShowDialog();
+
+            if (x == DialogResult.Cancel)
+            {
+                dbContext = new Purchase.AccountingSystem();
+                bindingSource1.DataSource = dbContext.BankSets.ToList();
+                BankName.Refresh();
+            }
         }
 
         private void AddBank_Load(object sender, EventArgs e)
