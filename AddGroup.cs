@@ -134,6 +134,7 @@ namespace Purchase
 
         private void AddGroup_Load(object sender, EventArgs e)
         {
+            update.Visible = false;
             using (var db = new AccountingSystem())
             {
                 var dc = from c in db.Groups

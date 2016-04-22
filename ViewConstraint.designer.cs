@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, null, true, true, typeof(System.Windows.Forms.UserControl));
             this.debentureGridControl = new DevExpress.XtraGrid.GridControl();
-            this.debentureBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.debentureBindingSource = new System.Windows.Forms.BindingSource();
             this.DebGrid = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDebentureNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDebentureDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNotes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.remarks = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.remarks = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.debentureGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.debentureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DebGrid)).BeginInit();
@@ -105,6 +105,14 @@
             this.colNotes.Name = "colNotes";
             this.colNotes.Visible = true;
             this.colNotes.VisibleIndex = 2;
+            // 
+            // remarks
+            // 
+            this.remarks.Caption = "الملاحظات";
+            this.remarks.FieldName = "remarks";
+            this.remarks.Name = "remarks";
+            this.remarks.Visible = true;
+            this.remarks.VisibleIndex = 3;
             // 
             // popupMenu1
             // 
@@ -180,13 +188,9 @@
             this.barDockControlRight.Location = new System.Drawing.Point(882, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 400);
             // 
-            // remarks
+            // splashScreenManager1
             // 
-            this.remarks.Caption = "الملاحظات";
-            this.remarks.FieldName = "remarks";
-            this.remarks.Name = "remarks";
-            this.remarks.Visible = true;
-            this.remarks.VisibleIndex = 3;
+            splashScreenManager1.ClosingDelay = 500;
             // 
             // ViewConstraint
             // 

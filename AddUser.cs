@@ -46,6 +46,7 @@ namespace Purchase
 
         private void AddUser_Load(object sender, EventArgs e)
         {
+            update.Visible = false;
             using (var db = new AccountingSystem())
             {
                 var dc = from c in db.Users
@@ -63,17 +64,20 @@ namespace Purchase
 
         private void save_Click(object sender, EventArgs e)
         {
-            news.Visible = true;
-            save.Visible = false;
-            update.Visible = true;
+            
             if(search.Text.Equals("") ||search.Text.Equals(" "))
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال اسم المستخدم");
             else if (Branch.Text.Equals("") || Branch.Text.Equals(" "))
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الفرع");
             else if (Password.Text.Equals("") || Password.Text.Equals(" "))
                 DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال كلمة المرور");
+            else if (Group.Text.Equals("") || Group.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار المجموعة");
             else
             {
+                news.Visible = true;
+                save.Visible = false;
+                update.Visible = true;
                 splashScreenManager1.ShowWaitForm();
                 Thread.Sleep(1000);
                 using (var db = new AccountingSystem())
@@ -127,54 +131,63 @@ namespace Purchase
 
         private void update_Click(object sender, EventArgs e)
         {
-            save.Visible = false;
-            news.Visible = true;
-            update.Visible = true;
-            VendorSet Sup = new VendorSet();
-            //InitializeComponent();
-            splashScreenManager1.ShowWaitForm();
-            Thread.Sleep(1000);
-            using (var db = new AccountingSystem())
+            if(search.Text.Equals("") ||search.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال اسم المستخدم");
+            else if (Branch.Text.Equals("") || Branch.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الفرع");
+            else if (Password.Text.Equals("") || Password.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال كلمة المرور");
+            else
             {
-                try
+                save.Visible = false;
+                news.Visible = true;
+                update.Visible = true;
+                VendorSet Sup = new VendorSet();
+                //InitializeComponent();
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
+                using (var db = new AccountingSystem())
                 {
-
-                    var User = db.Users.First(x => x.UCode.Equals(Code.Text));
-                    User.UCode = Code.Text;
-                    User.UName = search.Text;
-                    User.UStatus = Status.Checked.ToString();
-                    User.UBranch = Branch.EditValue.ToString();
-                    User.UPassword = Password.Text;
-                    User.UGroup = Group.Text;
-                    
-                    db.Entry(User).State = System.Data.Entity.EntityState.Modified;
-                    db.SaveChanges();
-                }
-                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
-                {
-                    Exception raise = dbEx;
-                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    try
                     {
-                        foreach (var validationError in validationErrors.ValidationErrors)
-                        {
-                            string message = string.Format("{0}:{1}",
-                                validationErrors.Entry.Entity.ToString(),
-                                validationError.ErrorMessage);
-                            raise = new InvalidOperationException(message, raise);
-                        }
+
+                        var User = db.Users.First(x => x.UCode.Equals(Code.Text));
+                        User.UCode = Code.Text;
+                        User.UName = search.Text;
+                        User.UStatus = Status.Checked.ToString();
+                        User.UBranch = Branch.EditValue.ToString();
+                        User.UPassword = Password.Text;
+                        User.UGroup = Group.Text;
+
+                        db.Entry(User).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
                     }
-                    throw raise;
+                    catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                    {
+                        Exception raise = dbEx;
+                        foreach (var validationErrors in dbEx.EntityValidationErrors)
+                        {
+                            foreach (var validationError in validationErrors.ValidationErrors)
+                            {
+                                string message = string.Format("{0}:{1}",
+                                    validationErrors.Entry.Entity.ToString(),
+                                    validationError.ErrorMessage);
+                                raise = new InvalidOperationException(message, raise);
+                            }
+                        }
+                        throw raise;
+                    }
+                    catch (Exception dbEx)
+                    {
+                        Exception raise = dbEx;
+                        var val = dbEx.InnerException;
+                        MessageBox.Show(val.ToString());
+                        //throw raise;
+                    }
                 }
-                catch (Exception dbEx)
-                {
-                    Exception raise = dbEx;
-                    var val = dbEx.InnerException;
-                    MessageBox.Show(val.ToString());
-                    //throw raise;
-                }
+                fillsearch();
+                splashScreenManager1.CloseWaitForm();
             }
-            fillsearch();
-            splashScreenManager1.CloseWaitForm();
         }
 
         private void cancel_Click(object sender, EventArgs e)

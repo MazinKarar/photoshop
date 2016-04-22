@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +37,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.search = new System.Windows.Forms.TextBox();
             this.Branch = new DevExpress.XtraEditors.LookUpEdit();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource();
             this.Password = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,7 +47,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.Group = new DevExpress.XtraEditors.LookUpEdit();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.label9 = new System.Windows.Forms.Label();
             this.Other = new DevExpress.XtraEditors.CheckEdit();
             this.VendorSupplier = new DevExpress.XtraEditors.CheckEdit();
@@ -286,6 +285,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "اسم المجموعة")});
             this.Group.Properties.DataSource = this.bindingSource1;
             this.Group.Properties.DisplayMember = "Name";
+            this.Group.Properties.NullText = "";
             this.Group.Properties.ValueMember = "Id";
             this.Group.Size = new System.Drawing.Size(194, 20);
             this.Group.TabIndex = 56;
