@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(constraint));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.note = new DevExpress.XtraEditors.TextEdit();
-            this.debentureBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.debentureBindingSource = new System.Windows.Forms.BindingSource();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.DebentureNo = new DevExpress.XtraEditors.TextEdit();
@@ -42,13 +41,13 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.save = new DevExpress.XtraEditors.SimpleButton();
             this.DetGridView = new DevExpress.XtraGrid.GridControl();
-            this.bindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource5 = new System.Windows.Forms.BindingSource();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.num = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.Account = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.treeAccountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.treeAccountBindingSource = new System.Windows.Forms.BindingSource();
             this.creditor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Debit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemSpinEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
@@ -73,13 +72,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.accountingDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource();
+            this.bindingSource4 = new System.Windows.Forms.BindingSource();
+            this.bindingSource3 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.accountingDataSet1BindingSource = new System.Windows.Forms.BindingSource();
             this.date = new DevExpress.XtraEditors.DateEdit();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.note.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.debentureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DebentureNo.Properties)).BeginInit();
@@ -414,6 +413,7 @@
             // 
             // textdebt
             // 
+            this.textdebt.Enabled = false;
             this.textdebt.Location = new System.Drawing.Point(507, 314);
             this.textdebt.Name = "textdebt";
             this.textdebt.Size = new System.Drawing.Size(137, 20);
@@ -421,6 +421,7 @@
             // 
             // textcrd
             // 
+            this.textcrd.Enabled = false;
             this.textcrd.Location = new System.Drawing.Point(650, 314);
             this.textcrd.Name = "textcrd";
             this.textcrd.Size = new System.Drawing.Size(137, 20);
