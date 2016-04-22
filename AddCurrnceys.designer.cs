@@ -34,6 +34,7 @@
             this.name = new DevExpress.XtraEditors.TextEdit();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.name.Properties)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +108,10 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "إضافة عملة";
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // AddCurrnceys
             // 
             this.Appearance.BackColor = System.Drawing.Color.DimGray;
@@ -135,5 +140,6 @@
         private DevExpress.XtraEditors.TextEdit name;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

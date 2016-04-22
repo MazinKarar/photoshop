@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using System.Threading;
 
 namespace Purchase
 {
@@ -64,6 +65,8 @@ namespace Purchase
             news.Visible = true;
             save.Visible = false;
             update.Visible = true;
+            splashScreenManager1.ShowWaitForm();
+            Thread.Sleep(1000);
             using (var db = new AccountingSystem())
             {
                 var User = db.Users.Create();
@@ -88,6 +91,7 @@ namespace Purchase
                  MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             fillsearch();
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void news_Click(object sender, EventArgs e)
@@ -119,6 +123,8 @@ namespace Purchase
             update.Visible = true;
             VendorSet Sup = new VendorSet();
             //InitializeComponent();
+            splashScreenManager1.ShowWaitForm();
+            Thread.Sleep(1000);
             using (var db = new AccountingSystem())
             {
                 try
@@ -159,6 +165,7 @@ namespace Purchase
                 }
             }
             fillsearch();
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void cancel_Click(object sender, EventArgs e)

@@ -109,6 +109,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Purchase.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -873,6 +874,7 @@
             // 
             // VendTypeBalance
             // 
+            this.VendTypeBalance.EditValue = "دائن";
             this.VendTypeBalance.Location = new System.Drawing.Point(636, 170);
             this.VendTypeBalance.Name = "VendTypeBalance";
             this.VendTypeBalance.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -989,6 +991,10 @@
             this.label5.Size = new System.Drawing.Size(63, 32);
             this.label5.TabIndex = 6;
             this.label5.Text = "البيانات ";
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // Vendor
             // 
@@ -1160,5 +1166,6 @@
         private System.Windows.Forms.BindingSource bindingSource5;
         private DevExpress.XtraEditors.LookUpEdit VendSupplementingAccount;
         private System.Windows.Forms.BindingSource bindingSource6;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

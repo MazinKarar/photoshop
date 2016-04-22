@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Threading;
 
 namespace Purchase
 {
@@ -26,18 +27,16 @@ namespace Purchase
             }
             else
             {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
                 using (var db = new AccountingSystem())
                 {
                     var Bank = db.BankSets.Create();
                     Bank.BankName = BankName.Text;
                     db.BankSets.Add(Bank);
                     db.SaveChanges();
-                    Vendor v = new Vendor();
-                    v.bankRefresh();
-                    Suppliers s = new Suppliers();
-                    s.bankRefresh();
-                    AddBank b = new AddBank();
-                    b.bankRefresh();
+                    BankName.Text = "";
+                    splashScreenManager1.CloseWaitForm();
                 }
             }
         }
