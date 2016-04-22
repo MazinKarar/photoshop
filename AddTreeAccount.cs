@@ -69,10 +69,12 @@ namespace Purchase
 
         private void AccountSubLevel_EditValueChanged(object sender, EventArgs e)
         {
+            int current=0;
+            string max = "";
             if (AccountSubLevel.EditValue != null)
             {
-                int current = (int)AccountSubLevel.EditValue;
-                string max = "";
+                 current = (int)AccountSubLevel.EditValue;
+                 max = "";
 
                 try
                 {
@@ -83,12 +85,16 @@ namespace Purchase
                 {
                     max = current + (0 + "");
                 }
+          
+                
+            }
+            else
+            {
                 int leng = (current + "").Length;
                 string toReplace = max.Remove(0, leng);
                 int maxId = int.Parse(toReplace) + 1;
                 string nextId = (int)AccountSubLevel.EditValue + (maxId + "");
                 AccountNumber.Text = nextId;
-                
             }
         }
 

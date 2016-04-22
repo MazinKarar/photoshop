@@ -51,6 +51,8 @@ namespace Purchase
              i = int.Parse(Id);
               Ini();
             // debentureBindingSource.DataSource = dbContext.debenturedetails.Where(c => c.DebentureID == i).ToList();
+
+
             using (var db = new AccountingSystem())
             {
 
