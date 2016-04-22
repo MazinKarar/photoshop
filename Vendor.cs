@@ -95,55 +95,67 @@ namespace Purchase
 
         private void save_Click(object sender, EventArgs e)
         {
-            news.Enabled = true;
-            save.Enabled = false;
-            update.Enabled = true;
-            using (var db = new AccountingSystem())
+            if (VendName.Text.Equals("") || VendName.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال اسم العميل");
+            else if (VendBalance.Text.Equals("") || VendBalance.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء الرصيد الابتدائي");
+            else if (VendLedger.Text.Equals("") || VendLedger.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار حساب الاستاذ");
+            else if (VendSupplementingAccount.Text.Equals("") || VendSupplementingAccount.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الحساب المكمل");
+            else
             {
-                var VendorSet = db.VendorSets.Create();
-                VendorSet.VendorId = VendCode.Text;
-                VendorSet.VendorName = VendName.Text;
-                VendorSet.VendorStartBalance = VendBalance.Text;
-                VendorSet.VendorStartBlnsDate = VendDateBalance.Value.ToString();
-                VendorSet.VendorTypeOfBalance = VendTypeBalance.Text;
-                VendorSet.VendorStatus = VendStatus.Checked.ToString();
-                VendorSet.VendorBranch = VendResponsbile.Text;
-                VendorSet.VendorBranchCurrency = VendCurrency.Text;
-               // VendorSet.VendorSupplementingAccount = VendSupplementingAccount.EditValue.ToString();
-                //VendorSet.VendorLedger=VendLedger.EditValue.ToString();
+                news.Visible = true;
+                save.Visible = false;
+                update.Visible = true;
+                using (var db = new AccountingSystem())
+                {
+                    var VendorSet = db.VendorSets.Create();
+                    VendorSet.VendorId = VendCode.Text;
+                    VendorSet.VendorName = VendName.Text;
+                    VendorSet.VendorStartBalance = VendBalance.Text;
+                    VendorSet.VendorStartBlnsDate = VendDateBalance.Value.ToString();
+                    VendorSet.VendorTypeOfBalance = VendTypeBalance.Text;
+                    VendorSet.VendorStatus = VendStatus.Checked.ToString();
+                    VendorSet.VendorBranch = VendResponsbile.Text;
+                    VendorSet.VendorBranchCurrency = VendCurrency.Text;
+                    // VendorSet.VendorSupplementingAccount = VendSupplementingAccount.EditValue.ToString();
+                    VendorSet.VendorLedger=VendLedger.EditValue.ToString();
 
-                //VendorSet.VendorSupplementingAccount = VendSupplementingAccount.EditValue.ToString();
-                VendorSet.VendorCompanyName = VendNameCompany.Text;
-                VendorSet.VendorResponsible = VendBranch.Text;
-                VendorSet.VendorArea = VendArea.Text;
-                VendorSet.VendorAddress = VendAddress.Text;
-                VendorSet.VendorPhone1 = VendPhone1.Text;
-                VendorSet.VendorPhone2 = VendPhone2.Text;
-                VendorSet.VendorWebsite = VendWebsite.Text;
-                VendorSet.VendorEmail = VendEmail.Text;
-                VendorSet.VendorBankNoAccount = VendBankNoAccount.Text;
-                VendorSet.VendorBankName = VendBankName.Text;
-                VendorSet.VendorBankBranach = VendBankBranch.Text;
-                db.VendorSets.Add(VendorSet);
-                try
-                {
-                    db.SaveChanges();
+                    VendorSet.VendorSupplementingAccount = VendSupplementingAccount.EditValue.ToString();
+                    VendorSet.VendorCompanyName = VendNameCompany.Text;
+                    VendorSet.VendorResponsible = VendBranch.Text;
+                    VendorSet.VendorArea = VendArea.Text;
+                    VendorSet.VendorAddress = VendAddress.Text;
+                    VendorSet.VendorPhone1 = VendPhone1.Text;
+                    VendorSet.VendorPhone2 = VendPhone2.Text;
+                    VendorSet.VendorWebsite = VendWebsite.Text;
+                    VendorSet.VendorEmail = VendEmail.Text;
+                    VendorSet.VendorBankNoAccount = VendBankNoAccount.Text;
+                    VendorSet.VendorBankName = VendBankName.Text;
+                    VendorSet.VendorBankBranach = VendBankBranch.Text;
+                    db.VendorSets.Add(VendorSet);
+                    try
+                    {
+
+                        db.SaveChanges();
+                    }
+                    catch (Exception dbEx)
+                    {
+                        Exception raise = dbEx;
+                        var val = dbEx.InnerException;
+                        MessageBox.Show(val.ToString());
+                    }
+                    // MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception dbEx)
-                {
-                    Exception raise = dbEx;
-                    var val = dbEx.InnerException;
-                    MessageBox.Show(val.ToString());
-                }
-                // MessageBox.Show("تم الحفظ بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fillsearch();
             }
-            fillsearch();
         }
 
         private void news_Click(object sender, EventArgs e)
         {
-            save.Enabled = true;
-            update.Enabled = false;
+            save.Visible = true;
+            update.Visible = false;
 
             using (var db = new AccountingSystem())
             {
@@ -180,76 +192,87 @@ namespace Purchase
 
         private void update_Click(object sender, EventArgs e)
         {
-            //Wait pleaseWait = new Wait();
-            //Application.DoEvents();
-            //pleaseWait.Show();
-            save.Enabled = false;
-            news.Enabled = true;
-            update.Enabled = true;
-            VendorSet Sup = new VendorSet();
-            //InitializeComponent();
-            using (var db = new AccountingSystem())
+            if (VendName.Text.Equals("") || VendName.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء ادخال اسم العميل");
+            else if (VendBalance.Text.Equals("") || VendBalance.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء الرصيد الابتدائي");
+            else if (VendLedger.Text.Equals("") || VendLedger.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار حساب الاستاذ");
+            else if (VendSupplementingAccount.Text.Equals("") || VendSupplementingAccount.Text.Equals(" "))
+                DevExpress.XtraEditors.XtraMessageBox.Show("الرجاء اختيار الحساب المكمل");
+            else
             {
-                try
+                //Wait pleaseWait = new Wait();
+                //Application.DoEvents();
+                //pleaseWait.Show();
+                save.Visible = false;
+                news.Visible = true;
+                update.Visible = true;
+                VendorSet Sup = new VendorSet();
+                //InitializeComponent();
+                using (var db = new AccountingSystem())
                 {
-
-                var VendorSet = db.VendorSets.First(x => x.VendorId.Equals(VendCode.Text));
-                VendorSet.VendorId = VendCode.Text;
-                VendorSet.VendorName = VendName.Text;
-                VendorSet.VendorStartBalance = VendBalance.Text;
-                VendorSet.VendorStartBlnsDate = VendDateBalance.Value.ToString();
-                VendorSet.VendorTypeOfBalance = VendTypeBalance.Text;
-                VendorSet.VendorStatus = VendStatus.Checked.ToString();
-                VendorSet.VendorBranch = VendResponsbile.Text;
-                VendorSet.VendorBranchCurrency = VendCurrency.Text;
-                VendorSet.VendorSupplementingAccount = VendSupplementingAccount.EditValue.ToString();
-                VendorSet.VendorLedger = VendLedger.EditValue.ToString();
-                VendorSet.VendorCompanyName = VendNameCompany.Text;
-                VendorSet.VendorResponsible = VendBranch.Text;
-                VendorSet.VendorArea = VendArea.Text;
-                VendorSet.VendorAddress = VendAddress.Text;
-                VendorSet.VendorPhone1 = VendPhone1.Text;
-                VendorSet.VendorPhone2 = VendPhone2.Text;
-                VendorSet.VendorWebsite = VendWebsite.Text;
-                VendorSet.VendorEmail = VendEmail.Text;
-                VendorSet.VendorBankNoAccount = VendBankNoAccount.Text;
-                VendorSet.VendorBankName = VendBankName.Text;
-                VendorSet.VendorBankBranach = VendBankBranch.Text;
-                db.Entry(VendorSet).State = System.Data.Entity.EntityState.Modified;
-                
-                    db.SaveChanges();
-                }
-                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
-                {
-                    Exception raise = dbEx;
-                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    try
                     {
-                        foreach (var validationError in validationErrors.ValidationErrors)
-                        {
-                            string message = string.Format("{0}:{1}",
-                                validationErrors.Entry.Entity.ToString(),
-                                validationError.ErrorMessage);
-                            raise = new InvalidOperationException(message, raise);
-                        }
+
+                        var VendorSet = db.VendorSets.First(x => x.VendorId.Equals(VendCode.Text));
+                        VendorSet.VendorId = VendCode.Text;
+                        VendorSet.VendorName = VendName.Text;
+                        VendorSet.VendorStartBalance = VendBalance.Text;
+                        VendorSet.VendorStartBlnsDate = VendDateBalance.Value.ToString();
+                        VendorSet.VendorTypeOfBalance = VendTypeBalance.Text;
+                        VendorSet.VendorStatus = VendStatus.Checked.ToString();
+                        VendorSet.VendorBranch = VendResponsbile.Text;
+                        VendorSet.VendorBranchCurrency = VendCurrency.Text;
+                        VendorSet.VendorSupplementingAccount = VendSupplementingAccount.EditValue.ToString();
+                        VendorSet.VendorLedger = VendLedger.EditValue.ToString();
+                        VendorSet.VendorCompanyName = VendNameCompany.Text;
+                        VendorSet.VendorResponsible = VendBranch.Text;
+                        VendorSet.VendorArea = VendArea.Text;
+                        VendorSet.VendorAddress = VendAddress.Text;
+                        VendorSet.VendorPhone1 = VendPhone1.Text;
+                        VendorSet.VendorPhone2 = VendPhone2.Text;
+                        VendorSet.VendorWebsite = VendWebsite.Text;
+                        VendorSet.VendorEmail = VendEmail.Text;
+                        VendorSet.VendorBankNoAccount = VendBankNoAccount.Text;
+                        VendorSet.VendorBankName = VendBankName.Text;
+                        VendorSet.VendorBankBranach = VendBankBranch.Text;
+                        db.Entry(VendorSet).State = System.Data.Entity.EntityState.Modified;
+
+                        db.SaveChanges();
                     }
-                    throw raise;
+                    catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                    {
+                        Exception raise = dbEx;
+                        foreach (var validationErrors in dbEx.EntityValidationErrors)
+                        {
+                            foreach (var validationError in validationErrors.ValidationErrors)
+                            {
+                                string message = string.Format("{0}:{1}",
+                                    validationErrors.Entry.Entity.ToString(),
+                                    validationError.ErrorMessage);
+                                raise = new InvalidOperationException(message, raise);
+                            }
+                        }
+                        throw raise;
+                    }
+                    catch (Exception dbEx)
+                    {
+                        Exception raise = dbEx;
+                        var val = dbEx.InnerException;
+                        MessageBox.Show(val.ToString());
+                        //throw raise;
+                    }
                 }
-                catch (Exception dbEx)
-                {
-                    Exception raise = dbEx;
-                    var val = dbEx.InnerException;
-                    MessageBox.Show(val.ToString());
-                    //throw raise;
-                }
+                fillsearch();
             }
-            fillsearch();
         }
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            save.Enabled = false;
-            news.Enabled = true;
-            update.Enabled = true;
+            save.Visible = false;
+            news.Visible = true;
+            update.Visible = true;
             using (var db = new AccountingSystem())
             {
                 var dc = from c in db.VendorSets
@@ -294,7 +317,14 @@ namespace Purchase
                     VendResponsbile.Text = list[0].VendorBranch;
                     VendCurrency.Text = list[0].VendorBranchCurrency;
                     VendSupplementingAccount.Text = list[0].VendorSupplementingAccount;
-                    VendLedger.EditValue =int.Parse(list[0].VendorLedger);
+                    try
+                    {
+                        VendLedger.EditValue = int.Parse(list[0].VendorLedger);
+                    }
+                    catch (Exception es)
+                    {
+                        VendLedger.EditValue = -1;
+                    }
                     VendNameCompany.Text = list[0].VendorCompanyName;
                     VendBranch.Text = list[0].VendorResponsible;
                     VendArea.Text = list[0].VendorArea;
@@ -321,8 +351,8 @@ namespace Purchase
 
         private void Vendor_Load(object sender, EventArgs e)
         {
-            update.Enabled = false;
-            news.Enabled = true;
+            update.Visible = false;
+            news.Visible = true;
 
             using (var db = new AccountingSystem())
             {
@@ -341,14 +371,20 @@ namespace Purchase
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            FlyoutAction action = new FlyoutAction();
-            action.Caption = "المناطق";
-            MainAr c= new MainAr();
-            MyFlyoutDialog dialog = new MyFlyoutDialog(this.ParentForm ,action , new AddArea());
-            dialog.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            dialog.StartPosition = FormStartPosition.CenterScreen;
-            dialog.Width = 200;
-            dialog.ShowDialog();
+            Form storeForm = new Form();
+            storeForm.Controls.Add(new AddArea());
+            storeForm.BackColor = System.Drawing.Color.White;
+            storeForm.StartPosition = FormStartPosition.CenterScreen;
+            storeForm.Width = 320;
+            //storeForm.WindowState = FormWindowState.Maximized;
+            DialogResult x = storeForm.ShowDialog();
+
+            if (x == DialogResult.Cancel)
+            {
+                dbContext = new Purchase.AccountingSystem();
+                bindingSource2.DataSource = dbContext.AreasSets.ToList();
+                VendArea.Refresh();
+            }
         }
         public class MyFlyoutDialog : FlyoutDialog
         {
@@ -366,14 +402,20 @@ namespace Purchase
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            FlyoutAction action = new FlyoutAction();
-            action.Caption = "العملات";
-            MainAr c = new MainAr();
-            MyFlyoutDialog dialog = new MyFlyoutDialog(this.ParentForm, action, new AddCurrnceys());
-            dialog.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            dialog.StartPosition = FormStartPosition.CenterScreen;
-            dialog.Width = 200;
-            dialog.ShowDialog();
+            Form storeForm = new Form();
+            storeForm.Controls.Add(new AddCurrnceys());
+            storeForm.BackColor = System.Drawing.Color.White;
+            storeForm.StartPosition = FormStartPosition.CenterScreen;
+            storeForm.Width = 320;
+            //storeForm.WindowState = FormWindowState.Maximized;
+            DialogResult x = storeForm.ShowDialog();
+
+            if (x == DialogResult.Cancel)
+            {
+                dbContext = new Purchase.AccountingSystem();
+                bindingSource1.DataSource = dbContext.CurrencySets.ToList();
+                VendCurrency.Refresh();
+            }
         }
 
         private void VendBankName_EditValueChanged(object sender, EventArgs e)
@@ -390,14 +432,20 @@ namespace Purchase
 
         private void simpleButton6_Click(object sender, EventArgs e)
         {
-            FlyoutAction action = new FlyoutAction();
-            action.Caption = "البنوك";
-            MainAr c = new MainAr();
-            MyFlyoutDialog dialog = new MyFlyoutDialog(this.ParentForm, action, new AddBank());
-            dialog.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            dialog.StartPosition = FormStartPosition.CenterScreen;
-            dialog.Width = 200;
-            dialog.ShowDialog();
+            Form storeForm = new Form();
+            storeForm.Controls.Add(new AddBank());
+            storeForm.BackColor = System.Drawing.Color.White;
+            storeForm.StartPosition = FormStartPosition.CenterScreen;
+            storeForm.Width = 320;
+            //storeForm.WindowState = FormWindowState.Maximized;
+            DialogResult x = storeForm.ShowDialog();
+
+            if (x == DialogResult.Cancel)
+            {
+                dbContext = new Purchase.AccountingSystem();
+                bindingSource3.DataSource = dbContext.BankSets.ToList();
+                VendBankName.Refresh();
+            }
         }
 
        public void bankRefresh()

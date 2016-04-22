@@ -20,8 +20,8 @@ namespace Purchase
 
         private void news_Click(object sender, EventArgs e)
         {
-            update.Enabled = false;
-            save.Enabled = true;
+            update.Visible = false;
+            save.Visible = true;
             using (var db = new AccountingSystem())
             {
                 var dc = from c in db.Groups
@@ -46,9 +46,9 @@ namespace Purchase
 
         private void save_Click(object sender, EventArgs e)
         {
-            news.Enabled = true;
-            save.Enabled = false;
-            update.Enabled = true;
+            news.Visible = true;
+            save.Visible = false;
+            update.Visible = true;
             using (var db = new AccountingSystem())
             {
                 var group = db.Groups.Create();
@@ -154,9 +154,9 @@ namespace Purchase
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            save.Enabled = false;
-            news.Enabled = true;
-            update.Enabled = true;
+            save.Visible = false;
+            news.Visible = true;
+            update.Visible = true;
             using (var db = new AccountingSystem())
             {
                 var na = from b in db.Groups where b.Name.Equals(search.Text) select new { b.Id };
