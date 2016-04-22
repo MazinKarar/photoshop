@@ -14,7 +14,7 @@
         <EntityTypeShape EntityType="AccountingModel.CompanyInfo" Width="1.5" PointX="5.75" PointY="14" />
         <EntityTypeShape EntityType="AccountingModel.CurrencySet" Width="1.5" PointX="13.75" PointY="11" />
         <EntityTypeShape EntityType="AccountingModel.debenturedetail" Width="1.5" PointX="11" PointY="10.25" />
-        <EntityTypeShape EntityType="AccountingModel.debenture" Width="1.5" PointX="8.75" PointY="10.75" />
+        <EntityTypeShape EntityType="AccountingModel.debenture" Width="1.5" PointX="8.75" PointY="10.625" />
         <EntityTypeShape EntityType="AccountingModel.Group" Width="1.5" PointX="10.75" PointY="15" />
         <EntityTypeShape EntityType="AccountingModel.InvoiceDetail" Width="1.5" PointX="3" PointY="5.25" />
         <EntityTypeShape EntityType="AccountingModel.Invoice" Width="1.5" PointX="0.75" PointY="0.75" />
@@ -32,7 +32,6 @@
         <EntityTypeShape EntityType="AccountingModel.User" Width="1.5" PointX="15.75" PointY="11" />
         <EntityTypeShape EntityType="AccountingModel.VendorSet" Width="1.5" PointX="12.75" PointY="17" />
         <EntityTypeShape EntityType="AccountingModel.Wharehous" Width="1.5" PointX="3.75" PointY="1.75" />
-        <EntityTypeShape EntityType="AccountingModel.accountmain1" Width="1.5" PointX="15.75" PointY="15" />
         <AssociationConnector Association="AccountingModel.FK_debenturedetails_debentures" />
         <AssociationConnector Association="AccountingModel.FK_debenturedetails_debentures1" />
         <AssociationConnector Association="AccountingModel.FK_dbo_InvoiceDetails_dbo_Categories_CategoryId" />

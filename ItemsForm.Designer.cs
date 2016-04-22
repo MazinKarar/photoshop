@@ -1231,6 +1231,7 @@
             this.Name = "ItemsForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Size = new System.Drawing.Size(1148, 803);
+            this.Load += new System.EventHandler(this.ItemsForm_Load);
             tabPane1.ResumeLayout(false);
             this.tabNavGeneral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DetailGrid)).EndInit();
