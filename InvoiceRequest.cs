@@ -131,6 +131,9 @@ namespace Purchase
                     x.DataSource = InvoiceUtils.getAllCategoryProducts(catId);
                     //colProductID.DataSource = InvoiceUtils.getAllCategoryProducts(catId);
                 }
+                //getPrice
+               
+                    
                     //InvoiceTotalLabel
                 if (e.ColumnIndex == 3||e.ColumnIndex==2)
                 {
@@ -157,10 +160,7 @@ namespace Purchase
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+    
 
         private void labelControl1_Click(object sender, EventArgs e)
         {
@@ -251,5 +251,6 @@ namespace Purchase
             }
             this.Hide();
         }
+
     }
 }

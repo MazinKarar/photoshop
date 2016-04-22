@@ -817,6 +817,12 @@ ON [dbo].[SaleInvoiceDetails]
     ([SalesInvoicesId]);
 GO
 
+
+
+insert into TreeAccounts (Name,parentId,type,active) values('«·√’Ê·',0,1,True);
+insert into TreeAccounts (Name,parentId,type,active) values('«·Œ’Ê„',0,2,True);
+insert into TreeAccounts (Name,parentId,type,active) values('«·≈Ì—«œ« ',0,3,True);
+insert into TreeAccounts (Name,parentId,type,active) values('«·„’›—Ê›« ',0,4,True);
 -- --------------------------------------------------
 -- Script has ended
 -- --------------------------------------------------
