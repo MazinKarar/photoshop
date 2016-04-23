@@ -653,7 +653,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Sharp Plus";
             // 
             // backstageViewItemSeparator4
             // 
@@ -669,10 +669,10 @@
             // 
             // backstageViewClientControl5
             // 
-            this.backstageViewClientControl5.Location = new System.Drawing.Point(17, 0);
+            this.backstageViewClientControl5.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl5.Name = "backstageViewClientControl5";
-            this.backstageViewClientControl5.Size = new System.Drawing.Size(856, 419);
+            this.backstageViewClientControl5.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl5.TabIndex = 5;
             // 
             // backstageViewItemSeparator3
@@ -689,10 +689,10 @@
             // 
             // backstageViewClientControl4
             // 
-            this.backstageViewClientControl4.Location = new System.Drawing.Point(17, 0);
+            this.backstageViewClientControl4.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(856, 419);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl4.TabIndex = 4;
             // 
             // backstageViewItemSeparator1
@@ -709,10 +709,10 @@
             // 
             // backstageViewClientControl3
             // 
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(17, 0);
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(860, 419);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl3.TabIndex = 3;
             // 
             // backstageViewTabItem2
@@ -725,10 +725,10 @@
             // 
             // backstageViewClientControl2
             // 
-            this.backstageViewClientControl2.Location = new System.Drawing.Point(17, 0);
+            this.backstageViewClientControl2.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(860, 419);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // backstageViewItemSeparator2
@@ -740,10 +740,10 @@
             this.backstageViewClientControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.backstageViewClientControl1.Appearance.Options.UseBackColor = true;
             this.backstageViewClientControl1.AutoScroll = true;
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(17, 0);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(860, 419);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewControl1
@@ -766,13 +766,13 @@
             this.backstageViewControl1.Items.Add(this.backstageViewItemSeparator3);
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem5);
             this.backstageViewControl1.Items.Add(this.backstageViewItemSeparator4);
-            this.backstageViewControl1.Location = new System.Drawing.Point(0, 144);
+            this.backstageViewControl1.Location = new System.Drawing.Point(0, 146);
             this.backstageViewControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.backstageViewControl1.SelectedTab = this.backstageViewTabItem7;
             this.backstageViewControl1.SelectedTabIndex = 0;
-            this.backstageViewControl1.Size = new System.Drawing.Size(1056, 419);
+            this.backstageViewControl1.Size = new System.Drawing.Size(1062, 417);
             this.backstageViewControl1.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2010;
             this.backstageViewControl1.TabIndex = 3;
             // 
@@ -782,7 +782,7 @@
             this.backstageViewClientControl7.Controls.Add(this.backstageViewControl2);
             this.backstageViewClientControl7.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl7.Name = "backstageViewClientControl7";
-            this.backstageViewClientControl7.Size = new System.Drawing.Size(873, 419);
+            this.backstageViewClientControl7.Size = new System.Drawing.Size(891, 417);
             this.backstageViewClientControl7.TabIndex = 7;
             // 
             // xtraTabControl1
@@ -791,7 +791,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage2;
-            this.xtraTabControl1.Size = new System.Drawing.Size(873, 419);
+            this.xtraTabControl1.Size = new System.Drawing.Size(891, 417);
             this.xtraTabControl1.TabIndex = 3;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage2});
@@ -799,7 +799,7 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(867, 391);
+            this.xtraTabPage2.Size = new System.Drawing.Size(887, 392);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // backstageViewControl2
@@ -809,7 +809,7 @@
             this.backstageViewControl2.Location = new System.Drawing.Point(0, 0);
             this.backstageViewControl2.Name = "backstageViewControl2";
             this.backstageViewControl2.SelectedTab = null;
-            this.backstageViewControl2.Size = new System.Drawing.Size(873, 419);
+            this.backstageViewControl2.Size = new System.Drawing.Size(891, 417);
             this.backstageViewControl2.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
             this.backstageViewControl2.TabIndex = 1;
             // 
@@ -889,7 +889,7 @@
             this.PageSales});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ribbonControl1.Size = new System.Drawing.Size(1056, 144);
+            this.ribbonControl1.Size = new System.Drawing.Size(1062, 146);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // applicationMenu1
@@ -1119,10 +1119,10 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.Username);
             this.ribbonStatusBar1.ItemLinks.Add(this.TypeLabel);
             this.ribbonStatusBar1.ItemLinks.Add(this.Type);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 531);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 535);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1056, 32);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1062, 28);
             // 
             // ribbonPage1
             // 
@@ -1181,7 +1181,7 @@
             this.dockPanel1_Container.Controls.Add(this.tileControl2);
             this.dockPanel1_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(867, 387);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(885, 386);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // tileControl2
@@ -1196,8 +1196,7 @@
             this.tileControl2.Location = new System.Drawing.Point(0, 0);
             this.tileControl2.MaxId = 16;
             this.tileControl2.Name = "tileControl2";
-            this.tileControl2.Position = 585;
-            this.tileControl2.Size = new System.Drawing.Size(867, 387);
+            this.tileControl2.Size = new System.Drawing.Size(885, 386);
             this.tileControl2.TabIndex = 1;
             this.tileControl2.Text = "tileControl2";
             // 
@@ -1595,7 +1594,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 563);
+            this.ClientSize = new System.Drawing.Size(1062, 563);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.ribbonControl1);
