@@ -29,45 +29,45 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainAr));
-            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement22 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement23 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement24 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement25 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement26 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement27 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement28 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement29 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement30 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement31 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement32 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement33 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement34 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement35 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement36 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.XtraEditors.TileItemElement tileItemElement37 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement38 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement39 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement40 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement41 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement42 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement43 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement44 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement45 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement46 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement47 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement48 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement49 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement50 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement51 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement52 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement53 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement54 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement55 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement56 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement57 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement58 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement59 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement60 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement61 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement62 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement63 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement64 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement65 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement66 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement67 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement68 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement69 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement70 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement71 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement72 = new DevExpress.XtraEditors.TileItemElement();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -274,10 +274,10 @@
             this.documentGroup1});
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.document2});
-            dockingContainer1.Element = this.documentGroup1;
-            dockingContainer1.Parent = this.tabbedView1.RootContainer;
+            dockingContainer2.Element = this.documentGroup1;
+            dockingContainer2.Parent = this.tabbedView1.RootContainer;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer1});
+            dockingContainer2});
             // 
             // barButtonItem13
             // 
@@ -653,7 +653,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Sharp Plus";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Blue";
             // 
             // backstageViewItemSeparator4
             // 
@@ -672,7 +672,7 @@
             this.backstageViewClientControl5.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl5.Name = "backstageViewClientControl5";
-            this.backstageViewClientControl5.Size = new System.Drawing.Size(873, 419);
+            this.backstageViewClientControl5.Size = new System.Drawing.Size(891, 417);
             this.backstageViewClientControl5.TabIndex = 5;
             // 
             // backstageViewItemSeparator3
@@ -692,7 +692,7 @@
             this.backstageViewClientControl4.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(873, 419);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(891, 417);
             this.backstageViewClientControl4.TabIndex = 4;
             // 
             // backstageViewItemSeparator1
@@ -712,7 +712,7 @@
             this.backstageViewClientControl3.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(873, 419);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(891, 417);
             this.backstageViewClientControl3.TabIndex = 3;
             // 
             // backstageViewTabItem2
@@ -728,7 +728,7 @@
             this.backstageViewClientControl2.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(873, 419);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(891, 417);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // backstageViewItemSeparator2
@@ -743,7 +743,7 @@
             this.backstageViewClientControl1.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(873, 419);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(891, 417);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewControl1
@@ -766,13 +766,13 @@
             this.backstageViewControl1.Items.Add(this.backstageViewItemSeparator3);
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem5);
             this.backstageViewControl1.Items.Add(this.backstageViewItemSeparator4);
-            this.backstageViewControl1.Location = new System.Drawing.Point(0, 146);
+            this.backstageViewControl1.Location = new System.Drawing.Point(0, 144);
             this.backstageViewControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.backstageViewControl1.SelectedTab = this.backstageViewTabItem7;
             this.backstageViewControl1.SelectedTabIndex = 0;
-            this.backstageViewControl1.Size = new System.Drawing.Size(1062, 417);
+            this.backstageViewControl1.Size = new System.Drawing.Size(1056, 419);
             this.backstageViewControl1.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2010;
             this.backstageViewControl1.TabIndex = 3;
             // 
@@ -782,7 +782,7 @@
             this.backstageViewClientControl7.Controls.Add(this.backstageViewControl2);
             this.backstageViewClientControl7.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl7.Name = "backstageViewClientControl7";
-            this.backstageViewClientControl7.Size = new System.Drawing.Size(891, 417);
+            this.backstageViewClientControl7.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl7.TabIndex = 7;
             // 
             // xtraTabControl1
@@ -791,7 +791,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage2;
-            this.xtraTabControl1.Size = new System.Drawing.Size(891, 417);
+            this.xtraTabControl1.Size = new System.Drawing.Size(873, 419);
             this.xtraTabControl1.TabIndex = 3;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage2});
@@ -799,7 +799,7 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(887, 392);
+            this.xtraTabPage2.Size = new System.Drawing.Size(867, 391);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // backstageViewControl2
@@ -809,7 +809,7 @@
             this.backstageViewControl2.Location = new System.Drawing.Point(0, 0);
             this.backstageViewControl2.Name = "backstageViewControl2";
             this.backstageViewControl2.SelectedTab = null;
-            this.backstageViewControl2.Size = new System.Drawing.Size(891, 417);
+            this.backstageViewControl2.Size = new System.Drawing.Size(873, 419);
             this.backstageViewControl2.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
             this.backstageViewControl2.TabIndex = 1;
             // 
@@ -889,7 +889,7 @@
             this.PageSales});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ribbonControl1.Size = new System.Drawing.Size(1062, 146);
+            this.ribbonControl1.Size = new System.Drawing.Size(1056, 144);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // applicationMenu1
@@ -906,7 +906,7 @@
             // 
             // workspaceManager1
             // 
-            this.workspaceManager1.TransitionType = pushTransition1;
+            this.workspaceManager1.TransitionType = pushTransition2;
             // 
             // barButtonItem1
             // 
@@ -1119,10 +1119,10 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.Username);
             this.ribbonStatusBar1.ItemLinks.Add(this.TypeLabel);
             this.ribbonStatusBar1.ItemLinks.Add(this.Type);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 535);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 531);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1062, 28);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1056, 32);
             // 
             // ribbonPage1
             // 
@@ -1181,7 +1181,7 @@
             this.dockPanel1_Container.Controls.Add(this.tileControl2);
             this.dockPanel1_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(885, 386);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(867, 387);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // tileControl2
@@ -1196,7 +1196,7 @@
             this.tileControl2.Location = new System.Drawing.Point(0, 0);
             this.tileControl2.MaxId = 16;
             this.tileControl2.Name = "tileControl2";
-            this.tileControl2.Size = new System.Drawing.Size(885, 386);
+            this.tileControl2.Size = new System.Drawing.Size(867, 387);
             this.tileControl2.TabIndex = 1;
             this.tileControl2.Text = "tileControl2";
             // 
@@ -1210,24 +1210,24 @@
             // 
             // tileItem25
             // 
-            tileItemElement1.Text = "الموردين";
-            this.tileItem25.Elements.Add(tileItemElement1);
+            tileItemElement37.Text = "الموردين";
+            this.tileItem25.Elements.Add(tileItemElement37);
             this.tileItem25.Id = 1;
             this.tileItem25.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem25.Name = "tileItem25";
             // 
             // tileItem26
             // 
-            tileItemElement2.Text = "العملاء";
-            this.tileItem26.Elements.Add(tileItemElement2);
+            tileItemElement38.Text = "العملاء";
+            this.tileItem26.Elements.Add(tileItemElement38);
             this.tileItem26.Id = 3;
             this.tileItem26.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem26.Name = "tileItem26";
             // 
             // tileItem27
             // 
-            tileItemElement3.Text = "االعملاء المزدوجين";
-            this.tileItem27.Elements.Add(tileItemElement3);
+            tileItemElement39.Text = "االعملاء المزدوجين";
+            this.tileItem27.Elements.Add(tileItemElement39);
             this.tileItem27.Id = 2;
             this.tileItem27.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem27.Name = "tileItem27";
@@ -1244,40 +1244,40 @@
             // 
             // tileItem28
             // 
-            tileItemElement4.Text = "تقرير كل الحسابات بالارصدة";
-            this.tileItem28.Elements.Add(tileItemElement4);
+            tileItemElement40.Text = "تقرير كل الحسابات بالارصدة";
+            this.tileItem28.Elements.Add(tileItemElement40);
             this.tileItem28.Id = 12;
             this.tileItem28.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem28.Name = "tileItem28";
             // 
             // tileItem29
             // 
-            tileItemElement5.Text = "دفتر الاستاذ بالمجاميع";
-            this.tileItem29.Elements.Add(tileItemElement5);
+            tileItemElement41.Text = "دفتر الاستاذ بالمجاميع";
+            this.tileItem29.Elements.Add(tileItemElement41);
             this.tileItem29.Id = 6;
             this.tileItem29.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem29.Name = "tileItem29";
             // 
             // tileItem30
             // 
-            tileItemElement6.Text = "دفتر الاستاذ بالارصدة";
-            this.tileItem30.Elements.Add(tileItemElement6);
+            tileItemElement42.Text = "دفتر الاستاذ بالارصدة";
+            this.tileItem30.Elements.Add(tileItemElement42);
             this.tileItem30.Id = 7;
             this.tileItem30.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem30.Name = "tileItem30";
             // 
             // tileItem31
             // 
-            tileItemElement7.Text = "ميزان المراجع بالمجاميع";
-            this.tileItem31.Elements.Add(tileItemElement7);
+            tileItemElement43.Text = "ميزان المراجع بالمجاميع";
+            this.tileItem31.Elements.Add(tileItemElement43);
             this.tileItem31.Id = 8;
             this.tileItem31.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem31.Name = "tileItem31";
             // 
             // tileItem32
             // 
-            tileItemElement8.Text = "ميزان المراجع بالارصدة";
-            this.tileItem32.Elements.Add(tileItemElement8);
+            tileItemElement44.Text = "ميزان المراجع بالارصدة";
+            this.tileItem32.Elements.Add(tileItemElement44);
             this.tileItem32.Id = 13;
             this.tileItem32.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem32.Name = "tileItem32";
@@ -1291,16 +1291,16 @@
             // 
             // tileItem33
             // 
-            tileItemElement9.Text = "تقرير بالمبيعات في فترة زمنية ";
-            this.tileItem33.Elements.Add(tileItemElement9);
+            tileItemElement45.Text = "تقرير بالمبيعات في فترة زمنية ";
+            this.tileItem33.Elements.Add(tileItemElement45);
             this.tileItem33.Id = 9;
             this.tileItem33.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem33.Name = "tileItem33";
             // 
             // tileItem34
             // 
-            tileItemElement10.Text = "تقرير بالمشتريات في فترة زمنية";
-            this.tileItem34.Elements.Add(tileItemElement10);
+            tileItemElement46.Text = "تقرير بالمشتريات في فترة زمنية";
+            this.tileItem34.Elements.Add(tileItemElement46);
             this.tileItem34.Id = 10;
             this.tileItem34.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem34.Name = "tileItem34";
@@ -1313,8 +1313,8 @@
             // 
             // tileItem35
             // 
-            tileItemElement11.Text = "بيانات بالاصناف في المخزن";
-            this.tileItem35.Elements.Add(tileItemElement11);
+            tileItemElement47.Text = "بيانات بالاصناف في المخزن";
+            this.tileItem35.Elements.Add(tileItemElement47);
             this.tileItem35.Id = 11;
             this.tileItem35.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem35.Name = "tileItem35";
@@ -1322,16 +1322,16 @@
             // 
             // tileItem36
             // 
-            tileItemElement12.Text = "تقرير ب مستخدمي النظام";
-            this.tileItem36.Elements.Add(tileItemElement12);
+            tileItemElement48.Text = "تقرير ب مستخدمي النظام";
+            this.tileItem36.Elements.Add(tileItemElement48);
             this.tileItem36.Id = 14;
             this.tileItem36.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem36.Name = "tileItem36";
             // 
             // tileItem12
             // 
-            tileItemElement13.Text = "تقرير ب مستخدمي النظام";
-            this.tileItem12.Elements.Add(tileItemElement13);
+            tileItemElement49.Text = "تقرير ب مستخدمي النظام";
+            this.tileItem12.Elements.Add(tileItemElement49);
             this.tileItem12.Id = 14;
             this.tileItem12.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem12.Name = "tileItem12";
@@ -1344,24 +1344,24 @@
             // 
             // tileItem9
             // 
-            tileItemElement14.Text = "بيانات بالاصناف في المخزن";
-            this.tileItem9.Elements.Add(tileItemElement14);
+            tileItemElement50.Text = "بيانات بالاصناف في المخزن";
+            this.tileItem9.Elements.Add(tileItemElement50);
             this.tileItem9.Id = 11;
             this.tileItem9.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem9.Name = "tileItem9";
             // 
             // tileItem8
             // 
-            tileItemElement15.Text = "تقرير بالمشتريات في فترة زمنية";
-            this.tileItem8.Elements.Add(tileItemElement15);
+            tileItemElement51.Text = "تقرير بالمشتريات في فترة زمنية";
+            this.tileItem8.Elements.Add(tileItemElement51);
             this.tileItem8.Id = 10;
             this.tileItem8.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem8.Name = "tileItem8";
             // 
             // tileItem7
             // 
-            tileItemElement16.Text = "تقرير بالمبيعات في فترة زمنية ";
-            this.tileItem7.Elements.Add(tileItemElement16);
+            tileItemElement52.Text = "تقرير بالمبيعات في فترة زمنية ";
+            this.tileItem7.Elements.Add(tileItemElement52);
             this.tileItem7.Id = 9;
             this.tileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem7.Name = "tileItem7";
@@ -1375,32 +1375,32 @@
             // 
             // tileItem11
             // 
-            tileItemElement17.Text = "ميزان المراجع بالارصدة";
-            this.tileItem11.Elements.Add(tileItemElement17);
+            tileItemElement53.Text = "ميزان المراجع بالارصدة";
+            this.tileItem11.Elements.Add(tileItemElement53);
             this.tileItem11.Id = 13;
             this.tileItem11.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem11.Name = "tileItem11";
             // 
             // tileItem6
             // 
-            tileItemElement18.Text = "ميزان المراجع بالمجاميع";
-            this.tileItem6.Elements.Add(tileItemElement18);
+            tileItemElement54.Text = "ميزان المراجع بالمجاميع";
+            this.tileItem6.Elements.Add(tileItemElement54);
             this.tileItem6.Id = 8;
             this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem6.Name = "tileItem6";
             // 
             // tileItem5
             // 
-            tileItemElement19.Text = "دفتر الاستاذ بالارصدة";
-            this.tileItem5.Elements.Add(tileItemElement19);
+            tileItemElement55.Text = "دفتر الاستاذ بالارصدة";
+            this.tileItem5.Elements.Add(tileItemElement55);
             this.tileItem5.Id = 7;
             this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem5.Name = "tileItem5";
             // 
             // tileItem10
             // 
-            tileItemElement20.Text = "تقرير كل الحسابات بالارصدة";
-            this.tileItem10.Elements.Add(tileItemElement20);
+            tileItemElement56.Text = "تقرير كل الحسابات بالارصدة";
+            this.tileItem10.Elements.Add(tileItemElement56);
             this.tileItem10.Id = 12;
             this.tileItem10.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem10.Name = "tileItem10";
@@ -1417,32 +1417,32 @@
             // 
             // tileItem4
             // 
-            tileItemElement21.Text = "دفتر الاستاذ بالمجاميع";
-            this.tileItem4.Elements.Add(tileItemElement21);
+            tileItemElement57.Text = "دفتر الاستاذ بالمجاميع";
+            this.tileItem4.Elements.Add(tileItemElement57);
             this.tileItem4.Id = 6;
             this.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem4.Name = "tileItem4";
             // 
             // tileItem2
             // 
-            tileItemElement22.Text = "االعملاء المزدوجين";
-            this.tileItem2.Elements.Add(tileItemElement22);
+            tileItemElement58.Text = "االعملاء المزدوجين";
+            this.tileItem2.Elements.Add(tileItemElement58);
             this.tileItem2.Id = 2;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
             // 
             // tileItem3
             // 
-            tileItemElement23.Text = "العملاء";
-            this.tileItem3.Elements.Add(tileItemElement23);
+            tileItemElement59.Text = "العملاء";
+            this.tileItem3.Elements.Add(tileItemElement59);
             this.tileItem3.Id = 3;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem3.Name = "tileItem3";
             // 
             // tileItem1
             // 
-            tileItemElement24.Text = "الموردين";
-            this.tileItem1.Elements.Add(tileItemElement24);
+            tileItemElement60.Text = "الموردين";
+            this.tileItem1.Elements.Add(tileItemElement60);
             this.tileItem1.Id = 1;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem1.Name = "tileItem1";
@@ -1473,8 +1473,8 @@
             // 
             // tileItem13
             // 
-            tileItemElement25.Text = "تقرير ب مستخدمي النظام";
-            this.tileItem13.Elements.Add(tileItemElement25);
+            tileItemElement61.Text = "تقرير ب مستخدمي النظام";
+            this.tileItem13.Elements.Add(tileItemElement61);
             this.tileItem13.Id = 14;
             this.tileItem13.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem13.Name = "tileItem13";
@@ -1487,24 +1487,24 @@
             // 
             // tileItem14
             // 
-            tileItemElement26.Text = "بيانات بالاصناف في المخزن";
-            this.tileItem14.Elements.Add(tileItemElement26);
+            tileItemElement62.Text = "بيانات بالاصناف في المخزن";
+            this.tileItem14.Elements.Add(tileItemElement62);
             this.tileItem14.Id = 11;
             this.tileItem14.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem14.Name = "tileItem14";
             // 
             // tileItem15
             // 
-            tileItemElement27.Text = "تقرير بالمشتريات في فترة زمنية";
-            this.tileItem15.Elements.Add(tileItemElement27);
+            tileItemElement63.Text = "تقرير بالمشتريات في فترة زمنية";
+            this.tileItem15.Elements.Add(tileItemElement63);
             this.tileItem15.Id = 10;
             this.tileItem15.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem15.Name = "tileItem15";
             // 
             // tileItem16
             // 
-            tileItemElement28.Text = "تقرير بالمبيعات في فترة زمنية ";
-            this.tileItem16.Elements.Add(tileItemElement28);
+            tileItemElement64.Text = "تقرير بالمبيعات في فترة زمنية ";
+            this.tileItem16.Elements.Add(tileItemElement64);
             this.tileItem16.Id = 9;
             this.tileItem16.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem16.Name = "tileItem16";
@@ -1518,32 +1518,32 @@
             // 
             // tileItem17
             // 
-            tileItemElement29.Text = "ميزان المراجع بالارصدة";
-            this.tileItem17.Elements.Add(tileItemElement29);
+            tileItemElement65.Text = "ميزان المراجع بالارصدة";
+            this.tileItem17.Elements.Add(tileItemElement65);
             this.tileItem17.Id = 13;
             this.tileItem17.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem17.Name = "tileItem17";
             // 
             // tileItem18
             // 
-            tileItemElement30.Text = "ميزان المراجع بالمجاميع";
-            this.tileItem18.Elements.Add(tileItemElement30);
+            tileItemElement66.Text = "ميزان المراجع بالمجاميع";
+            this.tileItem18.Elements.Add(tileItemElement66);
             this.tileItem18.Id = 8;
             this.tileItem18.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem18.Name = "tileItem18";
             // 
             // tileItem19
             // 
-            tileItemElement31.Text = "دفتر الاستاذ بالارصدة";
-            this.tileItem19.Elements.Add(tileItemElement31);
+            tileItemElement67.Text = "دفتر الاستاذ بالارصدة";
+            this.tileItem19.Elements.Add(tileItemElement67);
             this.tileItem19.Id = 7;
             this.tileItem19.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem19.Name = "tileItem19";
             // 
             // tileItem20
             // 
-            tileItemElement32.Text = "تقرير كل الحسابات بالارصدة";
-            this.tileItem20.Elements.Add(tileItemElement32);
+            tileItemElement68.Text = "تقرير كل الحسابات بالارصدة";
+            this.tileItem20.Elements.Add(tileItemElement68);
             this.tileItem20.Id = 12;
             this.tileItem20.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem20.Name = "tileItem20";
@@ -1560,32 +1560,32 @@
             // 
             // tileItem21
             // 
-            tileItemElement33.Text = "دفتر الاستاذ بالمجاميع";
-            this.tileItem21.Elements.Add(tileItemElement33);
+            tileItemElement69.Text = "دفتر الاستاذ بالمجاميع";
+            this.tileItem21.Elements.Add(tileItemElement69);
             this.tileItem21.Id = 6;
             this.tileItem21.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem21.Name = "tileItem21";
             // 
             // tileItem22
             // 
-            tileItemElement34.Text = "االعملاء المزدوجين";
-            this.tileItem22.Elements.Add(tileItemElement34);
+            tileItemElement70.Text = "االعملاء المزدوجين";
+            this.tileItem22.Elements.Add(tileItemElement70);
             this.tileItem22.Id = 2;
             this.tileItem22.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem22.Name = "tileItem22";
             // 
             // tileItem23
             // 
-            tileItemElement35.Text = "العملاء";
-            this.tileItem23.Elements.Add(tileItemElement35);
+            tileItemElement71.Text = "العملاء";
+            this.tileItem23.Elements.Add(tileItemElement71);
             this.tileItem23.Id = 3;
             this.tileItem23.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem23.Name = "tileItem23";
             // 
             // tileItem24
             // 
-            tileItemElement36.Text = "الموردين";
-            this.tileItem24.Elements.Add(tileItemElement36);
+            tileItemElement72.Text = "الموردين";
+            this.tileItem24.Elements.Add(tileItemElement72);
             this.tileItem24.Id = 1;
             this.tileItem24.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem24.Name = "tileItem24";
@@ -1594,7 +1594,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 563);
+            this.ClientSize = new System.Drawing.Size(1056, 563);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.ribbonControl1);

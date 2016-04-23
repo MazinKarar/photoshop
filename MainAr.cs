@@ -354,11 +354,11 @@ namespace Purchase
 
         private void tileItem35_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            Control item = new ItemReport();
+           /* Control item = new ItemReport();
             documentManager1.View.AddDocument(item).Caption = "تقرير الأصناف";
             int index = tabbedView1.Documents.Count - 1;
             DevExpress.XtraBars.Docking2010.Views.Tabbed.Document doc = tabbedView1.Documents[index] as DevExpress.XtraBars.Docking2010.Views.Tabbed.Document;
-            tabbedView1.Controller.Select(doc);
+            tabbedView1.Controller.Select(doc);*/
         }
 
      
