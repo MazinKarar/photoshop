@@ -29,45 +29,45 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer4 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.Utils.Animation.PushTransition pushTransition4 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.XtraEditors.TileItemElement tileItemElement109 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement110 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement111 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement112 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement113 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement114 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement115 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement116 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement117 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement118 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement119 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement120 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement121 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement122 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement123 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement124 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement125 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement126 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement127 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement128 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement129 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement130 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement131 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement132 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement133 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement134 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement135 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement136 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement137 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement138 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement139 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement140 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement141 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement142 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement143 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement144 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainAr));
-            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
-            DevExpress.XtraEditors.TileItemElement tileItemElement37 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement38 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement39 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement40 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement41 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement42 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement43 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement44 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement45 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement46 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement47 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement48 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement49 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement50 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement51 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement52 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement53 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement54 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement55 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement56 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement57 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement58 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement59 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement60 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement61 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement62 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement63 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement64 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement65 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement66 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement67 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement68 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement69 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement70 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement71 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement72 = new DevExpress.XtraEditors.TileItemElement();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -78,11 +78,9 @@
             this.PageSales = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup20 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup21 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup22 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup23 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButton = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
@@ -225,6 +223,10 @@
             this.tileItem22 = new DevExpress.XtraEditors.TileItem();
             this.tileItem23 = new DevExpress.XtraEditors.TileItem();
             this.tileItem24 = new DevExpress.XtraEditors.TileItem();
+            this.ribbonPageGroup21 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem37 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -274,10 +276,10 @@
             this.documentGroup1});
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.document2});
-            dockingContainer2.Element = this.documentGroup1;
-            dockingContainer2.Parent = this.tabbedView1.RootContainer;
+            dockingContainer4.Element = this.documentGroup1;
+            dockingContainer4.Parent = this.tabbedView1.RootContainer;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer2});
+            dockingContainer4});
             // 
             // barButtonItem13
             // 
@@ -316,9 +318,8 @@
             this.PageSales.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup19,
             this.ribbonPageGroup20,
-            this.ribbonPageGroup21,
             this.ribbonPageGroup22,
-            this.ribbonPageGroup23});
+            this.ribbonPageGroup7});
             this.PageSales.Name = "PageSales";
             this.PageSales.Text = "المبيعات";
             // 
@@ -335,13 +336,23 @@
             this.barButtonItem25.Id = 26;
             this.barButtonItem25.LargeGlyph = global::Purchase.Properties.Resources.uturnright_32x32;
             this.barButtonItem25.Name = "barButtonItem25";
+            this.barButtonItem25.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem25_ItemClick);
             // 
-            // ribbonPageGroup21
+            // ribbonPageGroup22
             // 
-            this.ribbonPageGroup21.AllowTextClipping = false;
-            this.ribbonPageGroup21.ItemLinks.Add(this.barButtonItem26);
-            this.ribbonPageGroup21.Name = "ribbonPageGroup21";
-            this.ribbonPageGroup21.ShowCaptionButton = false;
+            this.ribbonPageGroup22.AllowTextClipping = false;
+            this.ribbonPageGroup22.ItemLinks.Add(this.barButton);
+            this.ribbonPageGroup22.Name = "ribbonPageGroup22";
+            this.ribbonPageGroup22.ShowCaptionButton = false;
+            // 
+            // barButton
+            // 
+            this.barButton.Caption = "الأسعار";
+            this.barButton.Glyph = global::Purchase.Properties.Resources.bosale_16x16;
+            this.barButton.Id = 28;
+            this.barButton.LargeGlyph = global::Purchase.Properties.Resources.bosale_32x32;
+            this.barButton.Name = "barButton";
+            this.barButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick_1);
             // 
             // barButtonItem26
             // 
@@ -350,28 +361,6 @@
             this.barButtonItem26.Id = 27;
             this.barButtonItem26.LargeGlyph = global::Purchase.Properties.Resources.boorderitem_32x32;
             this.barButtonItem26.Name = "barButtonItem26";
-            // 
-            // ribbonPageGroup22
-            // 
-            this.ribbonPageGroup22.AllowTextClipping = false;
-            this.ribbonPageGroup22.ItemLinks.Add(this.barButtonItem27);
-            this.ribbonPageGroup22.Name = "ribbonPageGroup22";
-            this.ribbonPageGroup22.ShowCaptionButton = false;
-            // 
-            // barButtonItem27
-            // 
-            this.barButtonItem27.Caption = "الأسعار";
-            this.barButtonItem27.Glyph = global::Purchase.Properties.Resources.bosale_16x16;
-            this.barButtonItem27.Id = 28;
-            this.barButtonItem27.LargeGlyph = global::Purchase.Properties.Resources.bosale_32x32;
-            this.barButtonItem27.Name = "barButtonItem27";
-            // 
-            // ribbonPageGroup23
-            // 
-            this.ribbonPageGroup23.AllowTextClipping = false;
-            this.ribbonPageGroup23.Name = "ribbonPageGroup23";
-            this.ribbonPageGroup23.ShowCaptionButton = false;
-            this.ribbonPageGroup23.Text = "التقارير";
             // 
             // ribbonPageGroup18
             // 
@@ -672,7 +661,7 @@
             this.backstageViewClientControl5.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl5.Name = "backstageViewClientControl5";
-            this.backstageViewClientControl5.Size = new System.Drawing.Size(891, 417);
+            this.backstageViewClientControl5.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl5.TabIndex = 5;
             // 
             // backstageViewItemSeparator3
@@ -692,7 +681,7 @@
             this.backstageViewClientControl4.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(891, 417);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl4.TabIndex = 4;
             // 
             // backstageViewItemSeparator1
@@ -712,7 +701,7 @@
             this.backstageViewClientControl3.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(891, 417);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl3.TabIndex = 3;
             // 
             // backstageViewTabItem2
@@ -728,7 +717,7 @@
             this.backstageViewClientControl2.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(891, 417);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // backstageViewItemSeparator2
@@ -743,7 +732,7 @@
             this.backstageViewClientControl1.Location = new System.Drawing.Point(0, 0);
             this.backstageViewClientControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(891, 417);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(873, 419);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewControl1
@@ -862,7 +851,7 @@
             this.barButtonItem24,
             this.barButtonItem25,
             this.barButtonItem26,
-            this.barButtonItem27,
+            this.barButton,
             this.barButtonItem28,
             this.barButtonItem29,
             this.barButtonItem30,
@@ -875,10 +864,11 @@
             this.Type,
             this.barButtonItem34,
             this.barButtonItem35,
-            this.barButtonItem36});
+            this.barButtonItem36,
+            this.barButtonItem27});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ribbonControl1.MaxItemId = 43;
+            this.ribbonControl1.MaxItemId = 44;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.PageAdmin,
@@ -906,7 +896,7 @@
             // 
             // workspaceManager1
             // 
-            this.workspaceManager1.TransitionType = pushTransition2;
+            this.workspaceManager1.TransitionType = pushTransition4;
             // 
             // barButtonItem1
             // 
@@ -1210,24 +1200,24 @@
             // 
             // tileItem25
             // 
-            tileItemElement37.Text = "الموردين";
-            this.tileItem25.Elements.Add(tileItemElement37);
+            tileItemElement109.Text = "الموردين";
+            this.tileItem25.Elements.Add(tileItemElement109);
             this.tileItem25.Id = 1;
             this.tileItem25.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem25.Name = "tileItem25";
             // 
             // tileItem26
             // 
-            tileItemElement38.Text = "العملاء";
-            this.tileItem26.Elements.Add(tileItemElement38);
+            tileItemElement110.Text = "العملاء";
+            this.tileItem26.Elements.Add(tileItemElement110);
             this.tileItem26.Id = 3;
             this.tileItem26.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem26.Name = "tileItem26";
             // 
             // tileItem27
             // 
-            tileItemElement39.Text = "االعملاء المزدوجين";
-            this.tileItem27.Elements.Add(tileItemElement39);
+            tileItemElement111.Text = "االعملاء المزدوجين";
+            this.tileItem27.Elements.Add(tileItemElement111);
             this.tileItem27.Id = 2;
             this.tileItem27.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem27.Name = "tileItem27";
@@ -1244,40 +1234,40 @@
             // 
             // tileItem28
             // 
-            tileItemElement40.Text = "تقرير كل الحسابات بالارصدة";
-            this.tileItem28.Elements.Add(tileItemElement40);
+            tileItemElement112.Text = "تقرير كل الحسابات بالارصدة";
+            this.tileItem28.Elements.Add(tileItemElement112);
             this.tileItem28.Id = 12;
             this.tileItem28.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem28.Name = "tileItem28";
             // 
             // tileItem29
             // 
-            tileItemElement41.Text = "دفتر الاستاذ بالمجاميع";
-            this.tileItem29.Elements.Add(tileItemElement41);
+            tileItemElement113.Text = "دفتر الاستاذ بالمجاميع";
+            this.tileItem29.Elements.Add(tileItemElement113);
             this.tileItem29.Id = 6;
             this.tileItem29.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem29.Name = "tileItem29";
             // 
             // tileItem30
             // 
-            tileItemElement42.Text = "دفتر الاستاذ بالارصدة";
-            this.tileItem30.Elements.Add(tileItemElement42);
+            tileItemElement114.Text = "دفتر الاستاذ بالارصدة";
+            this.tileItem30.Elements.Add(tileItemElement114);
             this.tileItem30.Id = 7;
             this.tileItem30.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem30.Name = "tileItem30";
             // 
             // tileItem31
             // 
-            tileItemElement43.Text = "ميزان المراجع بالمجاميع";
-            this.tileItem31.Elements.Add(tileItemElement43);
+            tileItemElement115.Text = "ميزان المراجع بالمجاميع";
+            this.tileItem31.Elements.Add(tileItemElement115);
             this.tileItem31.Id = 8;
             this.tileItem31.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem31.Name = "tileItem31";
             // 
             // tileItem32
             // 
-            tileItemElement44.Text = "ميزان المراجع بالارصدة";
-            this.tileItem32.Elements.Add(tileItemElement44);
+            tileItemElement116.Text = "ميزان المراجع بالارصدة";
+            this.tileItem32.Elements.Add(tileItemElement116);
             this.tileItem32.Id = 13;
             this.tileItem32.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem32.Name = "tileItem32";
@@ -1291,16 +1281,16 @@
             // 
             // tileItem33
             // 
-            tileItemElement45.Text = "تقرير بالمبيعات في فترة زمنية ";
-            this.tileItem33.Elements.Add(tileItemElement45);
+            tileItemElement117.Text = "تقرير بالمبيعات في فترة زمنية ";
+            this.tileItem33.Elements.Add(tileItemElement117);
             this.tileItem33.Id = 9;
             this.tileItem33.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem33.Name = "tileItem33";
             // 
             // tileItem34
             // 
-            tileItemElement46.Text = "تقرير بالمشتريات في فترة زمنية";
-            this.tileItem34.Elements.Add(tileItemElement46);
+            tileItemElement118.Text = "تقرير بالمشتريات في فترة زمنية";
+            this.tileItem34.Elements.Add(tileItemElement118);
             this.tileItem34.Id = 10;
             this.tileItem34.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem34.Name = "tileItem34";
@@ -1313,8 +1303,8 @@
             // 
             // tileItem35
             // 
-            tileItemElement47.Text = "بيانات بالاصناف في المخزن";
-            this.tileItem35.Elements.Add(tileItemElement47);
+            tileItemElement119.Text = "بيانات بالاصناف في المخزن";
+            this.tileItem35.Elements.Add(tileItemElement119);
             this.tileItem35.Id = 11;
             this.tileItem35.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem35.Name = "tileItem35";
@@ -1322,16 +1312,16 @@
             // 
             // tileItem36
             // 
-            tileItemElement48.Text = "تقرير ب مستخدمي النظام";
-            this.tileItem36.Elements.Add(tileItemElement48);
+            tileItemElement120.Text = "تقرير ب مستخدمي النظام";
+            this.tileItem36.Elements.Add(tileItemElement120);
             this.tileItem36.Id = 14;
             this.tileItem36.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem36.Name = "tileItem36";
             // 
             // tileItem12
             // 
-            tileItemElement49.Text = "تقرير ب مستخدمي النظام";
-            this.tileItem12.Elements.Add(tileItemElement49);
+            tileItemElement121.Text = "تقرير ب مستخدمي النظام";
+            this.tileItem12.Elements.Add(tileItemElement121);
             this.tileItem12.Id = 14;
             this.tileItem12.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem12.Name = "tileItem12";
@@ -1344,24 +1334,24 @@
             // 
             // tileItem9
             // 
-            tileItemElement50.Text = "بيانات بالاصناف في المخزن";
-            this.tileItem9.Elements.Add(tileItemElement50);
+            tileItemElement122.Text = "بيانات بالاصناف في المخزن";
+            this.tileItem9.Elements.Add(tileItemElement122);
             this.tileItem9.Id = 11;
             this.tileItem9.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem9.Name = "tileItem9";
             // 
             // tileItem8
             // 
-            tileItemElement51.Text = "تقرير بالمشتريات في فترة زمنية";
-            this.tileItem8.Elements.Add(tileItemElement51);
+            tileItemElement123.Text = "تقرير بالمشتريات في فترة زمنية";
+            this.tileItem8.Elements.Add(tileItemElement123);
             this.tileItem8.Id = 10;
             this.tileItem8.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem8.Name = "tileItem8";
             // 
             // tileItem7
             // 
-            tileItemElement52.Text = "تقرير بالمبيعات في فترة زمنية ";
-            this.tileItem7.Elements.Add(tileItemElement52);
+            tileItemElement124.Text = "تقرير بالمبيعات في فترة زمنية ";
+            this.tileItem7.Elements.Add(tileItemElement124);
             this.tileItem7.Id = 9;
             this.tileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem7.Name = "tileItem7";
@@ -1375,32 +1365,32 @@
             // 
             // tileItem11
             // 
-            tileItemElement53.Text = "ميزان المراجع بالارصدة";
-            this.tileItem11.Elements.Add(tileItemElement53);
+            tileItemElement125.Text = "ميزان المراجع بالارصدة";
+            this.tileItem11.Elements.Add(tileItemElement125);
             this.tileItem11.Id = 13;
             this.tileItem11.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem11.Name = "tileItem11";
             // 
             // tileItem6
             // 
-            tileItemElement54.Text = "ميزان المراجع بالمجاميع";
-            this.tileItem6.Elements.Add(tileItemElement54);
+            tileItemElement126.Text = "ميزان المراجع بالمجاميع";
+            this.tileItem6.Elements.Add(tileItemElement126);
             this.tileItem6.Id = 8;
             this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem6.Name = "tileItem6";
             // 
             // tileItem5
             // 
-            tileItemElement55.Text = "دفتر الاستاذ بالارصدة";
-            this.tileItem5.Elements.Add(tileItemElement55);
+            tileItemElement127.Text = "دفتر الاستاذ بالارصدة";
+            this.tileItem5.Elements.Add(tileItemElement127);
             this.tileItem5.Id = 7;
             this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem5.Name = "tileItem5";
             // 
             // tileItem10
             // 
-            tileItemElement56.Text = "تقرير كل الحسابات بالارصدة";
-            this.tileItem10.Elements.Add(tileItemElement56);
+            tileItemElement128.Text = "تقرير كل الحسابات بالارصدة";
+            this.tileItem10.Elements.Add(tileItemElement128);
             this.tileItem10.Id = 12;
             this.tileItem10.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem10.Name = "tileItem10";
@@ -1417,32 +1407,32 @@
             // 
             // tileItem4
             // 
-            tileItemElement57.Text = "دفتر الاستاذ بالمجاميع";
-            this.tileItem4.Elements.Add(tileItemElement57);
+            tileItemElement129.Text = "دفتر الاستاذ بالمجاميع";
+            this.tileItem4.Elements.Add(tileItemElement129);
             this.tileItem4.Id = 6;
             this.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem4.Name = "tileItem4";
             // 
             // tileItem2
             // 
-            tileItemElement58.Text = "االعملاء المزدوجين";
-            this.tileItem2.Elements.Add(tileItemElement58);
+            tileItemElement130.Text = "االعملاء المزدوجين";
+            this.tileItem2.Elements.Add(tileItemElement130);
             this.tileItem2.Id = 2;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
             // 
             // tileItem3
             // 
-            tileItemElement59.Text = "العملاء";
-            this.tileItem3.Elements.Add(tileItemElement59);
+            tileItemElement131.Text = "العملاء";
+            this.tileItem3.Elements.Add(tileItemElement131);
             this.tileItem3.Id = 3;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem3.Name = "tileItem3";
             // 
             // tileItem1
             // 
-            tileItemElement60.Text = "الموردين";
-            this.tileItem1.Elements.Add(tileItemElement60);
+            tileItemElement132.Text = "الموردين";
+            this.tileItem1.Elements.Add(tileItemElement132);
             this.tileItem1.Id = 1;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem1.Name = "tileItem1";
@@ -1473,8 +1463,8 @@
             // 
             // tileItem13
             // 
-            tileItemElement61.Text = "تقرير ب مستخدمي النظام";
-            this.tileItem13.Elements.Add(tileItemElement61);
+            tileItemElement133.Text = "تقرير ب مستخدمي النظام";
+            this.tileItem13.Elements.Add(tileItemElement133);
             this.tileItem13.Id = 14;
             this.tileItem13.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem13.Name = "tileItem13";
@@ -1487,24 +1477,24 @@
             // 
             // tileItem14
             // 
-            tileItemElement62.Text = "بيانات بالاصناف في المخزن";
-            this.tileItem14.Elements.Add(tileItemElement62);
+            tileItemElement134.Text = "بيانات بالاصناف في المخزن";
+            this.tileItem14.Elements.Add(tileItemElement134);
             this.tileItem14.Id = 11;
             this.tileItem14.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem14.Name = "tileItem14";
             // 
             // tileItem15
             // 
-            tileItemElement63.Text = "تقرير بالمشتريات في فترة زمنية";
-            this.tileItem15.Elements.Add(tileItemElement63);
+            tileItemElement135.Text = "تقرير بالمشتريات في فترة زمنية";
+            this.tileItem15.Elements.Add(tileItemElement135);
             this.tileItem15.Id = 10;
             this.tileItem15.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem15.Name = "tileItem15";
             // 
             // tileItem16
             // 
-            tileItemElement64.Text = "تقرير بالمبيعات في فترة زمنية ";
-            this.tileItem16.Elements.Add(tileItemElement64);
+            tileItemElement136.Text = "تقرير بالمبيعات في فترة زمنية ";
+            this.tileItem16.Elements.Add(tileItemElement136);
             this.tileItem16.Id = 9;
             this.tileItem16.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem16.Name = "tileItem16";
@@ -1518,32 +1508,32 @@
             // 
             // tileItem17
             // 
-            tileItemElement65.Text = "ميزان المراجع بالارصدة";
-            this.tileItem17.Elements.Add(tileItemElement65);
+            tileItemElement137.Text = "ميزان المراجع بالارصدة";
+            this.tileItem17.Elements.Add(tileItemElement137);
             this.tileItem17.Id = 13;
             this.tileItem17.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem17.Name = "tileItem17";
             // 
             // tileItem18
             // 
-            tileItemElement66.Text = "ميزان المراجع بالمجاميع";
-            this.tileItem18.Elements.Add(tileItemElement66);
+            tileItemElement138.Text = "ميزان المراجع بالمجاميع";
+            this.tileItem18.Elements.Add(tileItemElement138);
             this.tileItem18.Id = 8;
             this.tileItem18.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem18.Name = "tileItem18";
             // 
             // tileItem19
             // 
-            tileItemElement67.Text = "دفتر الاستاذ بالارصدة";
-            this.tileItem19.Elements.Add(tileItemElement67);
+            tileItemElement139.Text = "دفتر الاستاذ بالارصدة";
+            this.tileItem19.Elements.Add(tileItemElement139);
             this.tileItem19.Id = 7;
             this.tileItem19.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem19.Name = "tileItem19";
             // 
             // tileItem20
             // 
-            tileItemElement68.Text = "تقرير كل الحسابات بالارصدة";
-            this.tileItem20.Elements.Add(tileItemElement68);
+            tileItemElement140.Text = "تقرير كل الحسابات بالارصدة";
+            this.tileItem20.Elements.Add(tileItemElement140);
             this.tileItem20.Id = 12;
             this.tileItem20.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem20.Name = "tileItem20";
@@ -1560,35 +1550,64 @@
             // 
             // tileItem21
             // 
-            tileItemElement69.Text = "دفتر الاستاذ بالمجاميع";
-            this.tileItem21.Elements.Add(tileItemElement69);
+            tileItemElement141.Text = "دفتر الاستاذ بالمجاميع";
+            this.tileItem21.Elements.Add(tileItemElement141);
             this.tileItem21.Id = 6;
             this.tileItem21.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem21.Name = "tileItem21";
             // 
             // tileItem22
             // 
-            tileItemElement70.Text = "االعملاء المزدوجين";
-            this.tileItem22.Elements.Add(tileItemElement70);
+            tileItemElement142.Text = "االعملاء المزدوجين";
+            this.tileItem22.Elements.Add(tileItemElement142);
             this.tileItem22.Id = 2;
             this.tileItem22.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem22.Name = "tileItem22";
             // 
             // tileItem23
             // 
-            tileItemElement71.Text = "العملاء";
-            this.tileItem23.Elements.Add(tileItemElement71);
+            tileItemElement143.Text = "العملاء";
+            this.tileItem23.Elements.Add(tileItemElement143);
             this.tileItem23.Id = 3;
             this.tileItem23.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem23.Name = "tileItem23";
             // 
             // tileItem24
             // 
-            tileItemElement72.Text = "الموردين";
-            this.tileItem24.Elements.Add(tileItemElement72);
+            tileItemElement144.Text = "الموردين";
+            this.tileItem24.Elements.Add(tileItemElement144);
             this.tileItem24.Id = 1;
             this.tileItem24.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem24.Name = "tileItem24";
+            // 
+            // ribbonPageGroup21
+            // 
+            this.ribbonPageGroup21.AllowTextClipping = false;
+            this.ribbonPageGroup21.ItemLinks.Add(this.barButtonItem26);
+            this.ribbonPageGroup21.Name = "ribbonPageGroup21";
+            this.ribbonPageGroup21.ShowCaptionButton = false;
+            // 
+            // barButtonItem37
+            // 
+            this.barButtonItem37.Caption = "الأسعار";
+            this.barButtonItem37.Glyph = global::Purchase.Properties.Resources.bosale_16x16;
+            this.barButtonItem37.Id = 28;
+            this.barButtonItem37.LargeGlyph = global::Purchase.Properties.Resources.bosale_32x32;
+            this.barButtonItem37.Name = "barButtonItem37";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem27);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            // 
+            // barButtonItem27
+            // 
+            this.barButtonItem27.Caption = "التقارير";
+            this.barButtonItem27.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem27.Glyph")));
+            this.barButtonItem27.Id = 43;
+            this.barButtonItem27.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem27.LargeGlyph")));
+            this.barButtonItem27.Name = "barButtonItem27";
+            this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick);
             // 
             // MainAr
             // 
@@ -1638,11 +1657,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage PageSales;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup20;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup22;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem27;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup23;
+        private DevExpress.XtraBars.BarButtonItem barButton;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
@@ -1788,6 +1805,10 @@
         private DevExpress.XtraEditors.TileGroup tileGroup11;
         private DevExpress.XtraEditors.TileItem tileItem35;
         private DevExpress.XtraEditors.TileItem tileItem36;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem37;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem27;
 
     }
 }

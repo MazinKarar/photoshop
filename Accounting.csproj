@@ -158,6 +158,9 @@
     <Compile Include="accountmain.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="accountmains1.cs">
+      <DependentUpon>AccountingModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Accounts_Balance.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
@@ -346,6 +349,12 @@
     <Compile Include="PirachseReturn.designer.cs">
       <DependentUpon>PirachseReturn.cs</DependentUpon>
     </Compile>
+    <Compile Include="priceshow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="priceshow.Designer.cs">
+      <DependentUpon>priceshow.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -364,11 +373,23 @@
     <Compile Include="ReportsPage.Designer.cs">
       <DependentUpon>ReportsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="rptSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="rptSales.Designer.cs">
+      <DependentUpon>rptSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="RtpVendor.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="RtpVendor.Designer.cs">
       <DependentUpon>RtpVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleInv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SaleInv.designer.cs">
+      <DependentUpon>SaleInv.cs</DependentUpon>
     </Compile>
     <Compile Include="SaleInvoiceDetail.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
@@ -383,6 +404,7 @@
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SalesInvoices.cs" />
+    <Compile Include="salesItems.Designer.cs" />
     <Compile Include="SelectAccounts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -394,6 +416,12 @@
     </Compile>
     <Compile Include="ShowItems.Designer.cs">
       <DependentUpon>ShowItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowSaleInv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShowSaleInv.Designer.cs">
+      <DependentUpon>ShowSaleInv.cs</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs">
       <SubType>Form</SubType>
@@ -449,6 +477,9 @@
     </Compile>
     <Compile Include="VendorSet.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vendorset.Designer.cs">
+      <DependentUpon>VendorSet.cs</DependentUpon>
     </Compile>
     <Compile Include="VenforSuppliersReview.cs">
       <SubType>UserControl</SubType>
@@ -554,6 +585,9 @@
     <EmbeddedResource Include="PirachseReturn.resx">
       <DependentUpon>PirachseReturn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="priceshow.resx">
+      <DependentUpon>priceshow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
@@ -567,14 +601,23 @@
     <EmbeddedResource Include="ReportsPage.resx">
       <DependentUpon>ReportsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptSales.resx">
+      <DependentUpon>rptSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RtpVendor.resx">
       <DependentUpon>RtpVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleInv.resx">
+      <DependentUpon>SaleInv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectAccounts.resx">
       <DependentUpon>SelectAccounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowItems.resx">
       <DependentUpon>ShowItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowSaleInv.resx">
+      <DependentUpon>ShowSaleInv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Startup.resx">
       <DependentUpon>Startup.cs</DependentUpon>

@@ -234,8 +234,11 @@ namespace Purchase
 
         private void barButtonItem24_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmSales f = new frmSales();
-            f.Show();
+            Control item = new SaleInv();
+            documentManager1.View.AddDocument(item).Caption = " فاتورة مبيعات";
+            int index = tabbedView1.Documents.Count - 1;
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.Document doc = tabbedView1.Documents[index] as DevExpress.XtraBars.Docking2010.Views.Tabbed.Document;
+            tabbedView1.Controller.Select(doc);
         }
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
@@ -359,6 +362,33 @@ namespace Purchase
             int index = tabbedView1.Documents.Count - 1;
             DevExpress.XtraBars.Docking2010.Views.Tabbed.Document doc = tabbedView1.Documents[index] as DevExpress.XtraBars.Docking2010.Views.Tabbed.Document;
             tabbedView1.Controller.Select(doc);*/
+        }
+
+        private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Control item = new ShowSaleInv();
+            documentManager1.View.AddDocument(item).Caption = "مرتجع مبيعات";
+            int index = tabbedView1.Documents.Count - 1;
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.Document doc = tabbedView1.Documents[index] as DevExpress.XtraBars.Docking2010.Views.Tabbed.Document;
+            tabbedView1.Controller.Select(doc);
+        }
+
+        private void barButtonItem27_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            Control item = new priceshow();
+            documentManager1.View.AddDocument(item).Caption = "عروض الاسعار";
+            int index = tabbedView1.Documents.Count - 1;
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.Document doc = tabbedView1.Documents[index] as DevExpress.XtraBars.Docking2010.Views.Tabbed.Document;
+            tabbedView1.Controller.Select(doc);
+        }
+
+        private void barButtonItem27_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Control item = new rptSales();
+            documentManager1.View.AddDocument(item).Caption = "تقارير المبيعات";
+            int index = tabbedView1.Documents.Count - 1;
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.Document doc = tabbedView1.Documents[index] as DevExpress.XtraBars.Docking2010.Views.Tabbed.Document;
+            tabbedView1.Controller.Select(doc);
         }
 
      

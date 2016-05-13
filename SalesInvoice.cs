@@ -36,5 +36,6 @@ namespace Purchase
         public Nullable<int> Canceled { get; set; }
     
         public virtual ICollection<SaleInvoiceDetail> SaleInvoiceDetails { get; set; }
+        public virtual VendorSet VendorSet { get; set; }
     }
 }

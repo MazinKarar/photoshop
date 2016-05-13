@@ -14,6 +14,11 @@ namespace Purchase
     
     public partial class VendorSet
     {
+        public VendorSet()
+        {
+            this.SalesInvoices = new HashSet<SalesInvoice>();
+        }
+    
         public int Id { get; set; }
         public string VendorId { get; set; }
         public string VendorName { get; set; }
@@ -36,5 +41,7 @@ namespace Purchase
         public string VendorBankNoAccount { get; set; }
         public string VendorBankName { get; set; }
         public string VendorBankBranach { get; set; }
+    
+        public virtual ICollection<SalesInvoice> SalesInvoices { get; set; }
     }
 }
