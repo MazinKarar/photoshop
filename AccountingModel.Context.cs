@@ -52,6 +52,5 @@ namespace Purchase
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<VendorSet> VendorSets { get; set; }
         public virtual DbSet<Wharehous> Wharehouses { get; set; }
-        public virtual DbSet<accountmains1> accountmains1 { get; set; }
     }
 }

@@ -42,7 +42,6 @@
         <AssociationConnector Association="AccountingModel.FK_ItemMeasurementUnits_Items" />
         <AssociationConnector Association="AccountingModel.FK_WharehouseItems" />
         <AssociationConnector Association="AccountingModel.FK_SaleInvoiceDetails_SalesInvoices" />
-        <EntityTypeShape EntityType="AccountingModel.accountmains1" Width="1.5" PointX="16.375" PointY="14.75" />
         <AssociationConnector Association="AccountingModel.FK_SalesInvoices_VendorSets" />
       </Diagram>
     </edmx:Diagrams>

@@ -158,9 +158,6 @@
     <Compile Include="accountmain.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="accountmains1.cs">
-      <DependentUpon>AccountingModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Accounts_Balance.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
